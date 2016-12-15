@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'univers_47';
+    src: url('univ47-webfont.eot');
+    src: url('univ47-webfont.eot?#iefix') format('embedded-opentype'), url('univ47-webfont.svg#univers_47_lightcond47LtCn') format('svg'), url('univ47-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.teste-fontes{
+	font-family: 'univers_47';
+}

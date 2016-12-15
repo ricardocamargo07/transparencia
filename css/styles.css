@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'univers_47';
+    src: url('../univ47-webfont.eot');
+    src: url('../univ47-webfont.eot?#iefix') format('embedded-opentype'), url('../univ47-webfont.svg#univers_47_lightcond47LtCn') format('svg'), url('../univ47-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'dinregular';
+    src: url('../fonts/dinr52-webfont.eot');
+    src: url('../fonts/dinr52-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/dinr52-webfont.svg#dinregular') format('svg'), url('../fonts/dinr52-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dinlight';
+    src: url('../fonts/dinl48-webfont.eot');
+    src: url('../fonts/dinl48-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/dinl48-webfont.svg#dinlight') format('svg'), url('../fonts/dinl48-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dinbold';
+    src: url('../fonts/din-bold-webfont.eot');
+    src: url('../fonts/din-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/din-bold-webfont.svg#dinbold') format('svg'), url('../fonts/din-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+.fundo {
+    background: url("https://i.imgsafe.org/17d3befffc.jpg");
+}
+.col-md-4.text-center .box:hover {
+    background: #f7f8f2;
+    color: #fafbf5;
+}
+
+.transparencia {
+    font-family: 'dinlight';
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+
+.transparencia h3{
+    font-family: 'univers_47';
+    font-size: 28px;
+}
+
+.itens-transparencia {
+    font-family: 'dinlight';
+    height: 130px;
+}
+
+
+.transparencia .btn-primary {
+    color: #fff;
+    background-color: #ff6600;
+    // background-color: #b6ba8d;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+}
+
+.transparencia .btn-primary:hover, .transparencia .btn-primary:active, .transparencia .btn-primary:focus   {
+    color: #fff;
+    background-color: #d44100;
+    border: none;
+
+}
+
+.transparencia ul,.transparencia ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+    list-style-type: none;
+    -webkit-padding-start: 0px;
+}
+
+.transparencia li {
+    background: #eff1e4;
+    margin-bottom: 3px;
+    padding: 5px 0;
+}
+
+.transparencia li:hover{
+    background-color: #253255;
+
+}
+
+.transparencia ul li a {
+    color: #7d824f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.transparencia ul li a:hover{
+    color: #f4f6e8;
+}
+.transparencia li:hover a {
+    color: #f4f6e8;
+}
+
+.tag-title {
+    color: #253255;
+    min-height: 70px;
+}
+
+.tag-icon {
+    margin:15px 0 30px 0;
+}
+
+.tag-icon-interna {
+    margin:15px 0 30px 0;
+    max-height: 60px;
+    margin-right: 20px;
+}
+
+
+.box {
+  background:#fff;
+  transition:all 0.2s ease;
+  border:2px dashed #d1d5b0;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-clip: padding-box;
+  padding:0 20px 20px 20px;
+  min-height:545px;
+}
+
+.box:hover {
+  border:2px solid #9ea74a;
+}
+
+.box span.box-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.box .box-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+.box .box-content p {
+  color:#515c66;
+  text-transform:none;
+}
+
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
