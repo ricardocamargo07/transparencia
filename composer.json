@@ -1,0 +1,23 @@
+{
+    "name": "alerj/transparencia",
+    "description": "Portal da Transparência da ALERJ.",
+    "keywords": [
+    ],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+    },
+    "require-dev": {
+    },
+    "autoload": {
+    },
+    "autoload-dev": {
+    },
+    "scripts": {
+    },
+    "config": {
+    },
+    "repositories": [
+    ],
+    "minimum-stability": "dev"
+}
