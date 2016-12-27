@@ -1,0 +1,86 @@
+
+
+#rates {
+    width: 100%;
+    font-size: 12px;
+    color: #253255;
+    margin-top:20px;
+    font-weight: 600;
+}
+
+
+#rates .row:nth-of-type(odd){
+    background: #f7f8f2;
+}
+
+
+
+#rates .row > div {
+    display: table;
+    padding: 0 4px;
+    border-right: 2px solid #d1d5b0;
+    border-bottom: 2px solid #d1d5b0;
+    text-align: center;
+}
+
+#rates .row > div .item {
+    height: 110px;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#rates .row > div:first-child {
+    border-left: 2px solid #d1d5b0;
+    text-align: left;
+}
+
+#rates .row.head > div {
+    height: 20px;
+    text-align: center;
+}
+
+#rates .row.head > div:first-child {
+    border: solid 2px #d1d5b0;
+    background-color: #EFF1E4;
+    padding-top: 20px;
+}
+
+#rates .row.head span {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#rates .row.head .form-btn {
+    display: block;
+}
+
+#rates .row.head .form-btn a {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 0 6px;
+    border: 2px solid #d1d5b0;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    #rates {
+        font-size: 16px;
+    }
+    #rates .row > div {
+        padding: 0 15px;
+    }
+    #rates .row > div .item {
+        height: 80px;
+    }
+    #rates .row.head > div {
+        height: 70px;
+    }
+    #rates .row.head span {
+        font-size: 20px;
+    }
+    #rates .row.head .form-btn a {
+        padding: 0 10px;
+    }
+}
