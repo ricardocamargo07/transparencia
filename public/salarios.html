@@ -4,7 +4,28 @@
 <head>
 
 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Bruto',     11],
+                ['Previdencia',      2],
+                ['IR',  2],
+                ['Líquido',    7]
+            ]);
 
+            var options = {
+                title: 'Salários dos Deputados ',
+                is3D: true,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+        }
+    </script>
 
 <head>
     <!--[if IE]>
@@ -207,16 +228,20 @@
          <div class="row  text-center">
          <div class="col-md-12 text-center">
          <h1>Portal da Transparência</h1>
+                 <h2>DEPUTADOS</h2>
+             <img class="tag-icon" src="images/icones_0003.png">
          </div>
 
 
 
-            <div class="col-md-offset-2 col-md-8 text-center">
+            <div class="col-md-offset-1 col-md-10 text-center">
                <div class="box">
                   <div class="box-content">
-                   <h2>DEPUTADOS, GABINETES E LIDERANÇAS</h2>
-                    <img class="tag-icon" src="images/icones_0003.png">
-                     <h3 class="tag-title">Salários</h3>
+                      <h3 class="tag-title">Salários</h3>
+                      <p>Os salários dos deputados estaduais são limitados a 75% dos salários dos deputados federais, conforme determina o artigo 27 da Constituição Federal. Atualmente, o valor bruto é de R$ 25.322,25.</p>
+                      <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+
+                     <!--<h3 class="tag-title">Salários</h3>-->
                      <ul>
                         <li><a href="#">2016</a></li>
                         <li><a href="#">2015</a></li>
