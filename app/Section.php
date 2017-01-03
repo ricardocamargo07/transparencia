@@ -44,7 +44,7 @@ class Section
         ],
 
         2 => [
-            'webservice' => 'DEPUTADOS',
+            'title' => 'DEPUTADOS',
             'slug' => 'deputados',
             'icon' => '/images/icones_0003.png',
             'links' => [
@@ -72,7 +72,7 @@ class Section
         ],
 
         3 => [
-            'webservice' => 'VIAGENS AUTORIZADAS',
+            'title' => 'VIAGENS AUTORIZADAS',
             'slug' => 'viagens-autorizadas',
             'icon' => '/images/icones_0011.png',
             'links' => [
@@ -90,7 +90,7 @@ class Section
         ],
 
         4 => [
-            'webservice' => 'BOLSA REFORÇO ESCOLAR',
+            'title' => 'BOLSA REFORÇO ESCOLAR',
             'slug' => 'bolsa-reforco-escolar',
             'icon' => '/images/icones_0012.png',
             'links' => [
@@ -118,7 +118,7 @@ class Section
         ],
 
         5 => [
-            'webservice' => 'FUNCIONÁRIOS',
+            'title' => 'FUNCIONÁRIOS',
             'slug' => 'funcionarios',
             'icon' => '/images/icones_0004.png',
             'links' => [
@@ -141,7 +141,7 @@ class Section
         ],
 
         6 => [
-            'webservice' => 'ESTAGIÁRIOS',
+            'title' => 'ESTAGIÁRIOS',
             'slug' => 'estagiarios',
             'icon' => '/images/icones_0007.png',
             'links' => [
@@ -160,7 +160,7 @@ class Section
 
 
         7 => [
-            'webservice' => 'ORÇAMENTO E FINANÇAS',
+            'title' => 'ORÇAMENTO E FINANÇAS',
             'slug' => 'orcamento-e-financa',
             'icon' => '/images/icones_0006.png',
             'links' => [
@@ -178,7 +178,7 @@ class Section
         ],
 
         8 => [
-            'webservice' => 'TRANSPARÊNCIA NO RIO DE JANEIRO',
+            'title' => 'TRANSPARÊNCIA NO RIO DE JANEIRO',
             'slug' => 'transparenciaRJ',
             'icon' => '/images/icones_0009.png',
             'links' => [
@@ -211,7 +211,7 @@ class Section
         ],
 
         9 => [
-            'webservice' => 'DIÁRIO OFICIAL',
+            'title' => 'DIÁRIO OFICIAL',
             'slug' => 'diario-oficial',
             'icon' => '/images/icones_0010.png',
             'links' => [
@@ -240,9 +240,12 @@ class Section
                     'slug' => 'tribunal-de-contas',
                     'link' => 'route:section',
                 ],
-            ]
+            ],
         ],
 
+        9 => [
+            'webservice' => 'deputados',
+        ],
     ];
 
     public function __construct()
