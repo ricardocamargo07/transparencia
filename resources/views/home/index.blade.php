@@ -26,7 +26,7 @@
                             <img class="tag-icon" src="{{ $section['icon'] }}">
 
                             <ul class="itens-transparencia">
-                                @foreach(collect($section['links'])->slice(1, config('app.items_limit_on_home')) as $link)
+                                @foreach(collect($section['links'])->slice(0, config('app.items_limit_on_home')) as $link)
                                     <li><a href="{{ $link['link'] }}">{{ $link['title'] }}</a></li>
                                 @endforeach
                             </ul>
