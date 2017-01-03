@@ -52,6 +52,8 @@
 .transparencia h3{
     font-family: 'univers_47';
     font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 
@@ -62,8 +64,8 @@
 }
 
 .transparencia p {
-    font-size: 21px;
-    line-height: 26px;
+    font-size: 18px !important;
+    line-height: 22px;
     margin: 20px 0;
     font-weight: 600;
 }
