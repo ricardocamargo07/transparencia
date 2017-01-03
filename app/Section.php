@@ -267,8 +267,11 @@ class Section
 
     private function loadFromWebService($item)
     {
-        return $this->sections[2];
+        $section = $this->sections[2];
 
+        $section['title'] = 'DO WEBSERVICE';
+
+        return $section;
         // return $this->webservice->getSection(1);
     }
 
