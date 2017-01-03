@@ -14,6 +14,8 @@ return [
 
     'name' => 'Laravel',
 
+    'items_limit_on_home' => 5,
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
