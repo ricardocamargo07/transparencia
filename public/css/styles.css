@@ -10,24 +10,24 @@
 
 @font-face {
     font-family: 'dinregular';
-    src: url('../fonts/dinr52-webfont.eot');
-    src: url('../fonts/dinr52-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/dinr52-webfont.svg#dinregular') format('svg'), url('../fonts/dinr52-webfont.ttf') format('truetype');
+    src: url('/fonts/dinr52-webfont.eot');
+    src: url('/fonts/dinr52-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/dinr52-webfont.svg#dinregular') format('svg'), url('/fonts/dinr52-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'dinlight';
-    src: url('../fonts/dinl48-webfont.eot');
-    src: url('../fonts/dinl48-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/dinl48-webfont.svg#dinlight') format('svg'), url('../fonts/dinl48-webfont.ttf') format('truetype');
+    src: url('/fonts/dinl48-webfont.eot');
+    src: url('/fonts/dinl48-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/dinl48-webfont.svg#dinlight') format('svg'), url('/fonts/dinl48-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'dinbold';
-    src: url('../fonts/din-bold-webfont.eot');
-    src: url('../fonts/din-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/din-bold-webfont.svg#dinbold') format('svg'), url('../fonts/din-bold-webfont.ttf') format('truetype');
+    src: url('/fonts/din-bold-webfont.eot');
+    src: url('/fonts/din-bold-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/din-bold-webfont.svg#dinbold') format('svg'), url('/fonts/din-bold-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
