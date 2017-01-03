@@ -1,0 +1,80 @@
+[
+    {
+        "IdCategoria": 1,
+        "Nome": "Despesas",
+        "DatPublicacao": "21/10/2016",
+        "status": "S"
+    },
+    {
+        "IdCategoria": 2,
+        "Nome": "Contratos",
+        "DatPublicacao": "13/06/2012",
+        "status": "S"
+    },
+    {
+        "IdCategoria": 3,
+        "Nome": "Tabela de Remuneração",
+        "DatPublicacao": "13/06/2012",
+        "status": "S"
+    },
+    {
+        "IdCategoria": 4,
+        "Nome": "Viagens",
+        "DatPublicacao": "14/06/2012",
+        "status": "S"
+    },
+    {
+        "IdCategoria": 5,
+        "Nome": "Auxílio Educação",
+        "DatPublicacao": "14/06/2012",
+        "status": "S"
+    },
+    {
+        "IdCategoria": 6,
+        "Nome": "Licitações",
+        "DatPublicacao": "14/06/2012",
+        "status": "S"
+    },
+    {
+        "IdCategoria": 7,
+        "Nome": "Relatório de Gestão Fiscal",
+        "DatPublicacao": "15/06/2012",
+        "status": "S"
+    },
+    {
+        "IdCategoria": 8,
+        "Nome": "Diárias/Passagens",
+        "DatPublicacao": "14/06/2012",
+        "status": "S"
+    },
+    {
+        "IdCategoria": 9,
+        "Nome": "Relatório Anual de Atividades",
+        "DatPublicacao": "15/06/2012",
+        "status": "S"
+    },
+    {
+        "IdCategoria": 10,
+        "Nome": "Deputados",
+        "DatPublicacao": "19/06/2012",
+        "status": "S"
+    },
+    {
+        "IdCategoria": 11,
+        "Nome": "Contabilidade Pública",
+        "DatPublicacao": "03/07/2012",
+        "status": "S"
+    },
+    {
+        "IdCategoria": 12,
+        "Nome": "Registro de Preço Vigente",
+        "DatPublicacao": "29/06/2016",
+        "status": "S"
+    },
+    {
+        "IdCategoria": 20,
+        "Nome": "teste",
+        "DatPublicacao": "21/10/2016",
+        "status": "S"
+    }
+]

@@ -49,6 +49,11 @@ class Section
         ],
     ];
 
+    public function __construct()
+    {
+        $this->webservice = app(Webservice::class);
+    }
+
     public static function all()
     {
         $me = new static();
@@ -64,6 +69,8 @@ class Section
     private function loadFromWebService($item)
     {
         return $this->sections[1];
+
+        return $this->webservice->getSection(1);
     }
 
     private function loadSections()
