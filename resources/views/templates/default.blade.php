@@ -156,10 +156,10 @@
                         <li><a class="ativo" href="/" id="lkbInicio">INÍCIO</a></li>
 
                         <li class="pai">
-                            <a href="/about" target="" class="titulo">Como Funciona?</a>
+                            <a href="/about" target="" class="titulo">Contato</a>
                         </li>
 
-                        <li class="pai">
+                      {{--  <li class="pai">
                             <a href="#" class="titulo" title="Ideia Legislativa">Ideia Legislativa <span class="caret"></span></a>
 
                             <div class="submenu" style="display: none;">
@@ -175,18 +175,18 @@
                                     </li>
                                 </ul>
                             </div>
-                        </li>
+                        </li>--}}
 
                         <!-- relationship commissions -->
-                        <li class="pai"><a href="/committee" class="titulo " title="Comissões">Nossas comissões</a></li>
+                    {{--    <li class="pai"><a href="/committee" class="titulo " title="Comissões">Nossas comissões</a></li>
                         <li class="pai"><a href="/terms" class="titulo " title="Comissões">Termos de uso</a></li>
-                        <li class="pai"><a href="/contact" class="titulo " title="Contato">Contato</a></li>
+                        <li class="pai"><a href="/contact" class="titulo " title="Contato">Contato</a></li>--}}
 
                         <!-- Authentication Links -->
 
-                        <li class="pai">
+                        {{--<li class="pai">
                             <a href="http://local.legislaqui.com/login" class="titulo" title="Login | Registro">Login | Registro</a>
-                        </li>
+                        </li>--}}
                     </ul>
                 </div>
             </div>
