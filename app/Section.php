@@ -6,9 +6,10 @@ class Section
 {
     private $sections = [
         1 => [
+            'id' => 1,
             'title' => 'PERGUNTAS FREQUENTES',
             'slug' => 'faq',
-            'icon' => 'images/icones_0001.png',
+            'icon' => 'images/icons/perguntas-frequentes.svg',
             'links' => [
                 [
                     'title' => 'Perguntas e Respostas - FAQ',
@@ -44,9 +45,10 @@ class Section
         ],
 
         2 => [
+            'id' => 2,
             'title' => 'DEPUTADOS',
             'slug' => 'deputados',
-            'icon' => '/images/icones_0003.png',
+            'icon' => '/images/icons/deputados.svg',
             'links' => [
                 [
                     'title' => 'Salário',
@@ -72,9 +74,10 @@ class Section
         ],
 
         3 => [
+            'id' => 3,
             'title' => 'VIAGENS AUTORIZADAS',
             'slug' => 'viagens-autorizadas',
-            'icon' => '/images/icones_0011.png',
+            'icon' => '/images/icons/viagens-autorizadas.svg',
             'links' => [
                 [
                     'title' => 'Deputados',
@@ -90,9 +93,10 @@ class Section
         ],
 
         4 => [
+            'id' => 4,
             'title' => 'BOLSA REFORÇO ESCOLAR',
             'slug' => 'bolsa-reforco-escolar',
-            'icon' => '/images/icones_0012.png',
+            'icon' => '/images/icons/bolsa-reforco-escolar.svg',
             'links' => [
                 [
                     'title' => 'Geral',
@@ -118,9 +122,10 @@ class Section
         ],
 
         5 => [
+            'id' => 5,
             'title' => 'FUNCIONÁRIOS',
             'slug' => 'funcionarios',
-            'icon' => '/images/icones_0004.png',
+            'icon' => '/images/icons/funcionarios.svg',
             'links' => [
                 [
                     'title' => 'Tabela de Vencimentos',
@@ -141,9 +146,10 @@ class Section
         ],
 
         6 => [
+            'id' => 6,
             'title' => 'ESTAGIÁRIOS',
             'slug' => 'estagiarios',
-            'icon' => '/images/icones_0007.png',
+            'icon' => '/images/icons/estagiarios.svg',
             'links' => [
                 [
                     'title' => 'Nível médio',
@@ -160,9 +166,10 @@ class Section
 
 
         7 => [
+            'id' => 7,
             'title' => 'ORÇAMENTO E FINANÇAS',
             'slug' => 'orcamento-e-financa',
-            'icon' => '/images/icones_0006.png',
+            'icon' => '/images/icons/orcamento-e-financas.svg',
             'links' => [
                 [
                     'title' => 'Relatório de Gestão Fiscal',
@@ -178,9 +185,10 @@ class Section
         ],
 
         8 => [
+            'id' => 8,
             'title' => 'TRANSPARÊNCIA NO RIO DE JANEIRO',
             'slug' => 'transparenciaRJ',
-            'icon' => '/images/icones_0009.png',
+            'icon' => '/images/icons/transparencia-no-rj.svg',
             'links' => [
                 [
                     'title' => 'Executivo',
@@ -211,9 +219,10 @@ class Section
         ],
 
         9 => [
+            'id' => 9,
             'title' => 'DIÁRIO OFICIAL',
             'slug' => 'diario-oficial',
-            'icon' => '/images/icones_0010.png',
+            'icon' => '/images/icons/diario-oficial.svg',
             'links' => [
                 [
                     'title' => 'Poder Legislativo',
@@ -245,6 +254,7 @@ class Section
 
         10 => [
             'webservice' => 'deputados',
+            'slug' => 'deputados',
         ],
     ];
 
@@ -267,12 +277,12 @@ class Section
 
     private function loadFromWebService($item)
     {
-        $section = $this->sections[2];
+//        $section = $this->sections[2];
 
-        $section['title'] = 'DO WEBSERVICE';
+//        $section['title'] = 'DO WEBSERVICE';
 
-        return $section;
-        // return $this->webservice->getSection(1);
+//        return $section;
+        return $this->webservice->getSection($item['slug']);
     }
 
     private function loadSections()
