@@ -36,6 +36,7 @@ class Webservice
                 'section_id' => $item['Categoria']['IdCategoria'],
                 'title' => $item['Titulo'],
                 'body' => $item['Texto'],
+                'link' => 'route:section',
                 'published_at' => $item['DatPublicacao'],
                 'status' => $item['Status'] == 'S',
                 'url' => $item['Url'],
