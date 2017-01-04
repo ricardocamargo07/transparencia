@@ -33,10 +33,10 @@ class Webservice
         return $data->map(function ($item) {
             return [
                 'id' => $item['IdInformacao'],
-                'section_id' => $item['Categoria']['IdCategoria'],
+                'section_id' => $section_id = $item['Categoria']['IdCategoria'],
                 'title' => $item['Titulo'],
                 'body' => $item['Texto'],
-                'link' => 'route:section',
+                'link' => route('section', [$section_id]),
                 'published_at' => $item['DatPublicacao'],
                 'status' => $item['Status'] == 'S',
                 'url' => $item['Url'],

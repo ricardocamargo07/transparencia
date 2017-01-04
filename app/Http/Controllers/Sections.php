@@ -8,8 +8,8 @@ class Sections extends Controller
 {
     public function show($slug)
     {
-        $section = SectionModel::findBySlug($slug);
+        $section = SectionModel::findById($slug);
 
-        return view('partials.section', compact('section'));
+        return view('home.section', compact('section'));
     }
 }
