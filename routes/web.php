@@ -9,3 +9,4 @@ Route::get('/', function () {
 });
 
 Route::get('/section/{slug}', ['as' => 'section', 'SectionsController@show']);
+

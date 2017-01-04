@@ -11,15 +11,27 @@ class Webservice
 
     public function getSection($sectionId)
     {
-        $data = $this->readJson('file'.$sectionId.'.json');
+        $data = $this->requestJson('file'.$sectionId.'.json');
 
         return $this->convertDatamodel($data);
     }
 
-    private function readJson($file)
+    public function get($sectionId)
+    {
+        $data = $this->requestJson('file'.$sectionId.'.json');
+
+        return $this->convertDatamodel($data);
+    }
+
+    private function requestJson($file)
     {
        return json_decode(
            file_get_contents(database_path($file))
        );
+    }
+
+    public function getSections()
+    {
+        return $this->requestJson();
     }
 }
