@@ -8,5 +8,6 @@ Route::get('/', function () {
     return view('home.index')->with('sections', $sections);
 });
 
-Route::get('/section/{slug}', ['as' => 'section', 'uses' => 'Sections@show']);
+Route::get('/section/{id}', ['as' => 'section', 'uses' => 'Sections@section']);
 
+Route::get('/section/report/{id}', ['as' => 'report', 'uses' => 'Sections@report']);
