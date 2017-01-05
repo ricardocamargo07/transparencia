@@ -29,14 +29,19 @@
                             </div>
 
                             <ul class="itens-transparencia">
-                                @foreach(collect($section['links'])->take(config('app.items_limit_on_home')) as $link)
+                                @foreach(collect($section['links'])->take($countLimit = config('app.items_limit_on_home')) as $link)
                                     <li><a href="{{ $link['link'] }}">{{ $link['title'] }}</a></li>
                                 @endforeach
                             </ul>
 
                             <br />
-
-                            <a href="{{ route('section', [$section['id']]) }}" class="btn btn-block btn-primary"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                            @if (collect($section['links'])->count() > $countLimit)
+                                <a href="{{ route('section', [$section['id']]) }}" class="btn btn-block btn-primary">
+                                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                </a>
+                            @else
+                                <span class="btn btn-block btn-primary"></span>
+                            @endif
                         </div>
                     </div>
                 </div>

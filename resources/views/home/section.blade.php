@@ -24,4 +24,12 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-12" style="margin-top: 80px;">
+            <button onclick="goBack()" class="btn btn-block btn-primary">
+                Voltar
+            </button>
+        </div>
+    </div>
 @stop
