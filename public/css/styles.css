@@ -66,9 +66,16 @@
 
 .itens-transparencia {
     font-family: 'dinlight';
-    height: 150px;
+    height: 191px;
 }
 
+
+
+.itens-transparencia li.btn {
+    width: 100%;
+    border-radius: 0;
+    font-size: 16px;
+}
 
 .transparencia .btn-primary {
     color: #fff;
@@ -79,6 +86,7 @@
     font-weight: 600;
 /*    font-size: 30px;*/
     letter-spacing: 0.5px;
+    min-height: 48px !important;
 }
 
 .transparencia .btn-primary:hover, .transparencia .btn-primary:active, .transparencia .btn-primary:focus   {
