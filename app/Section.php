@@ -261,18 +261,28 @@ class Section
     public function __construct()
     {
         $this->webservice = app(Webservice::class);
+
+        $this->loadSections();
     }
 
     public static function all()
     {
-        $me = new static();
-
-        return $me->loadSections();
+        return (new static())->getSections();
     }
 
     public static function findBySlug($slug)
     {
         return static::all()->where('slug', $slug);
+    }
+
+    public static function findById($slug)
+    {
+        return static::all()->where('id', $slug);
+    }
+
+    private function getSections()
+    {
+        return $this->sections;
     }
 
     private function loadFromWebService($item)
@@ -287,9 +297,9 @@ class Section
 
     private function loadSections()
     {
-        $sections = collect($this->sections);
+        $this->sections = collect($this->sections);
 
-        $sections = $sections->map(function($item) {
+        $this->sections = $this->sections->map(function($item) {
             if (isset($item['webservice'])) {
                 return $this->loadFromWebService($item);
             }
@@ -297,7 +307,7 @@ class Section
             return $this->populate($item);
         });
 
-        return $sections;
+        return $this->sections;
     }
 
     private function populate($item)
