@@ -21,9 +21,12 @@
                 <div class="col-md-6 col-lg-4 text-center">
                     <div class="box">
                         <div class="box-content">
+
                             <h3 class="tag-title">{{ $section['title'] }}</h3>
 
-                            <img class="tag-icon" src="{{ $section['icon'] }}">
+                            <div class="icones-tranparencia">
+                                <img class="tag-icon" src="{{ $section['icon'] }}">
+                            </div>
 
                             <ul class="itens-transparencia">
                                 @foreach(collect($section['links'])->slice(0, config('app.items_limit_on_home')) as $link)

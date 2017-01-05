@@ -49,12 +49,6 @@
     padding-bottom: 70px;
 }
 
-.transparencia h3{
-    font-family: 'univers_47';
-    font-size: 28px;
-    margin-top: 20px;
-    margin-bottom: 0px;
-}
 
 
 .transparencia h2{
@@ -102,7 +96,7 @@
 }
 
 .transparencia li {
-    background: #eff1e4;
+    background: #fff;
     margin-bottom: 5px;
     padding: 7px 0;
 }
@@ -126,12 +120,24 @@
 }
 
 .tag-title {
-    color: #253255;
-    min-height: 70px;
+    color: #fff;
+    background: #1d2d52;
+    padding: 10px 0 ;
+    /*min-height: 70px;*/
+    border-bottom: solid #ec6629 2px;
 }
 
+
+.transparencia h3{
+    font-family: 'univers_47';
+    font-size: 22px;
+    margin-top: 00px;
+    margin-bottom: 0px;
+}
+
+
 .tag-icon {
-    margin:15px 0 30px 0;
+    margin:30px;
 }
 
 .tag-icon-interna {
@@ -146,14 +152,14 @@
 }
 
 .box {
-  background:#fff;
+  background:#f0f1e4;
   transition:all 0.2s ease;
   border:2px dashed #d1d5b0;
   margin-top: 10px;
   box-sizing: border-box;
   border-radius: 5px;
   background-clip: padding-box;
-  padding:0 20px 40px 20px;
+  padding:0 ;
 /*  display: table;*/
 }
 
@@ -169,14 +175,20 @@
 }
 
 .box .box-content {
-  padding: 16px;
-  border-radius: 0 0 2px 2px;
+  padding: 0 px;
+  border-radius: 0 0 0px 0px;
   background-clip: padding-box;
   box-sizing: border-box;
 }
 .box .box-content p {
   color:#515c66;
   text-transform:none;
+}
+
+
+.icones-tranparencia {
+    background: #b7ba8f;
+    margin-bottom: 5px;
 }
 
 
