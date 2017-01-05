@@ -1,7 +1,7 @@
 @extends('templates.default')
 
 @section('content')
-    <div class="row">
+    <div class="row ">
         <div class="col-md-12 text-center conteudo">
             <h1>Portal da Transparência</h1>
 
@@ -29,14 +29,14 @@
                             </div>
 
                             <ul class="itens-transparencia">
-                                @foreach(collect($section['links'])->slice(0, config('app.items_limit_on_home')) as $link)
+                                @foreach(collect($section['links'])->take(config('app.items_limit_on_home')) as $link)
                                     <li><a href="{{ $link['link'] }}">{{ $link['title'] }}</a></li>
                                 @endforeach
                             </ul>
 
                             <br />
 
-                            <a href="{{ route('section', [$section['slug']]) }}" class="btn btn-block btn-primary">Saiba Mais</a>
+                            <a href="{{ route('section', [$section['id']]) }}" class="btn btn-block btn-primary">Saiba Mais</a>
                         </div>
                     </div>
                 </div>

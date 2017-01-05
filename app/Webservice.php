@@ -32,11 +32,11 @@ class Webservice
 
         return $data->map(function ($item) {
             return [
-                'id' => $item['IdInformacao'],
+                'id' => $report_id = $item['IdInformacao'],
                 'section_id' => $section_id = $item['Categoria']['IdCategoria'],
                 'title' => $item['Titulo'],
                 'body' => $item['Texto'],
-                'link' => route('section', [$section_id]),
+                'link' => route('report', [$report_id]),
                 'published_at' => $item['DatPublicacao'],
                 'status' => $item['Status'] == 'S',
                 'url' => $item['Url'],
@@ -45,7 +45,12 @@ class Webservice
                 'start_date' => $item['DatAgendaEntrada'],
                 'end_date' => $item['DatAgendaSaida'],
                 'redirect_file' => $item['RedirecionaArquivo'],
-                'section' => $item['Categoria'],
+                'section' => [
+                    'id' => $item['Categoria']['IdCategoria'],
+                    'title' => $item['Categoria']['Nome'],
+                    'published_at' => $item['Categoria']['DatPublicacao'],
+                    'status' => $item['Categoria']['status'] == 'S',
+                ],
                 'files' => $item['ListaArquivos'],
             ];
         });
