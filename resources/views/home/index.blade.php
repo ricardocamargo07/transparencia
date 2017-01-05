@@ -36,7 +36,7 @@
 
                             <br />
 
-                            <a href="{{ route('section', [$section['slug']]) }}" class="btn btn-block btn-primary">Saiba Mais</a>
+                            <a href="{{ route('section', [$section['slug']]) }}" class="btn btn-block btn-primary"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
