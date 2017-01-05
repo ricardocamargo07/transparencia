@@ -32,11 +32,10 @@ class Webservice
                 'type' => $item['Tipo'],
                 'published_at_string' => $item['DatPublicacao'],
                 'published_at' => $this->convertDate($item['DatPublicacao']),
+                'year' => 2016,
                 'url' => $item['Url'],
             ];
-        });
-
-        if ($files->count()) dd($files);
+        })->groupBy('year');
 
         return $files;
     }
