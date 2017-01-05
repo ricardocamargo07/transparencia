@@ -155,6 +155,9 @@ i.fa.fa-plus-circle {
     border-bottom: solid #ec6629 2px;
 }
 
+.transparencia h1{
+    line-height: 1.2;
+}
 
 .transparencia h3{
     font-family: 'univers_47';
@@ -242,3 +245,12 @@ i.fa.fa-plus-circle {
     color: #ffffff;
 }
 
+
+
+a.btn.btn-block.btn-primary.voltar {
+    font-size: 20px;
+    padding: 5px 0 0 0 !important;
+    line-height: 2;
+    margin-top: 50px;
+
+}
