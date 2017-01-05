@@ -113,10 +113,26 @@ i.fa.fa-plus-circle {
     padding: 7px 0;
 }
 
-.transparencia li:hover{
-    background-color: #253255;
 
+.transparencia li:hover {
+    background-color: #253255 !important;
+    color: #fff;
 }
+
+
+.meses i.fa.fa-file-pdf-o {
+    /*background: #f0f;*/
+    padding: 5px 10px;
+    border-bottom: solid;
+}
+
+.meses i.fa.fa-file-pdf-o:hover {
+    background: #253255;
+    padding: 5px 10px;
+    border-bottom: solid;
+}
+
+
 
 .transparencia ul li a {
     color: #7d824f;
@@ -149,7 +165,8 @@ i.fa.fa-plus-circle {
 
 
 .tag-icon {
-    margin:30px;
+    margin:0px;
+    max-width: 110px;
 }
 
 .tag-icon-interna {
@@ -213,4 +230,15 @@ i.fa.fa-plus-circle {
 
 
 
+
+.btn-blue {
+    background:#212e52;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+.btn-blue:hover {
+    background:#344983;
+    color: #ffffff;
+}
 

@@ -22,6 +22,7 @@
 
                     @if ($report['files']->count())
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
                             @foreach ($report['files'] as $year => $files)
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="heading1">
@@ -40,6 +41,7 @@
                                     </div>
                                 </div>
                             @endforeach
+
                         </div>
                     </div>
                 @endif
