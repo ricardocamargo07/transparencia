@@ -77,15 +77,19 @@
     border: none;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 16px;
-    letter-spacing: 1.5px;
+/*    font-size: 30px;*/
+    letter-spacing: 0.5px;
 }
 
 .transparencia .btn-primary:hover, .transparencia .btn-primary:active, .transparencia .btn-primary:focus   {
     color: #fff;
     background-color: #d44100;
     border: none;
+}
 
+i.fa.fa-plus-circle {
+    font-size: 30px;
+    margin-top: 3px;
 }
 
 .transparencia ul,.transparencia ol {
@@ -159,7 +163,7 @@
   box-sizing: border-box;
   border-radius: 5px;
   background-clip: padding-box;
-  padding:0 ;
+  padding:5px ;
 /*  display: table;*/
 }
 
