@@ -49,8 +49,8 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12">
-                <a href="{{ URL::previous() }}" class="btn btn-block btn-primary voltar">Voltar</a>
+            <div class="col-md-offset-5 col-md-2">
+                <a href="{{ URL::previous() }}" class="btn btn-block btn-primary voltar"> <i class="fa fa-step-backward" aria-hidden="true"></i> Voltar</a>
             </div>
         </div>
     </div>
