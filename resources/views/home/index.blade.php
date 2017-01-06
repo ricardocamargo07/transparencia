@@ -47,13 +47,13 @@
                             </ul>
 
                             <br />
-                            @if (collect($section['links'])->count() > $countLimit)
-                                <a href="{{ route('section', [$section['id']]) }}" class="btn btn-block btn-primary">
-                                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                </a>
-                            @else
-                                <span class="btn btn-block btn-primary"></span>
-                            @endif
+                            {{--@if (collect($section['links'])->count() > $countLimit)--}}
+                                {{--<a href="{{ route('section', [$section['id']]) }}" class="btn btn-block btn-primary">--}}
+                                    {{--<i class="fa fa-plus-circle" aria-hidden="true"></i>--}}
+                                {{--</a>--}}
+                            {{--@else--}}
+                                {{--<span class="btn btn-block btn-primary"></span>--}}
+                            {{--@endif--}}
                         </div>
                     </div>
                 </div>
