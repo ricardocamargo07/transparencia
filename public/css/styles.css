@@ -193,12 +193,23 @@ i.fa.fa-plus-circle {
 }
 
 
-.transparencia h3{
-    font-family: 'univers_47';
+.transparencia h3 {
+    /*font-family: 'univers_47';*/
     font-size: 22px;
-    margin-top: 00px;
-    margin-bottom: 0px;
+    /*margin-top: 0px;*/
+    /*margin-bottom: 0px;*/
+    /*color: #212e52;*/
+    /*font-weight: 600;*/
+    margin-top: 0;
+    padding-top: 0;
+    color: #1d2d52;
+    text-transform: initial;
+    font-family: 'univers_47';
+    font-weight: 600;
+    margin-bottom: 25px;
 }
+
+
 
 
 .tag-icon {
@@ -306,3 +317,35 @@ a.btn.btn-block.btn-primary.voltar {
     margin: 20px 0;
 }
 
+
+.transparencia .panel-default {
+    border-color: #b7ba8f;
+}
+
+.transparencia .panel-default>.panel-heading {
+    background: #b7ba8f;
+}
+
+.transparencia .panel-heading h4 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.transparencia  .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top: none;
+    min-height: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #e9ead7;
+}
+
+
+.transparencia .accordion li:hover {
+    background-color: #dcddbe;
+    color: #253255;
+}
+
+.transparencia .accordion li:hover a {
+    color: #fff;
+}
