@@ -61,7 +61,7 @@
 }
 
 .transparencia p {
-    font-size: 18px !important;
+    font-size: 18px ;
     line-height: 22px;
     margin: 20px 0;
     font-weight: 600;
@@ -160,22 +160,37 @@ i.fa.fa-plus-circle {
 
 /*---------------Titulo Tranparencia --------------------------*/
 
-
-.transparencia h1{
-    line-height: 3;
-}
-
 .container-full.titulo-portal.text-center {
     background: #1d2d52 !important;
 }
 
 .transparencia .titulo-portal h1 {
     color: #fff;
+    line-height: 2.2;
+    font-size: 52px;
 }
 
 
-
 /*---------------FIM Titulo Tranparencia --------------------------*/
+
+
+.transparencia .introducao h3 {
+    margin-top: 0;
+    padding-top: 0;
+    color: #1d2d52;
+    text-transform: initial;
+    font-family: 'univers_47';
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+
+.transparencia .introducao p {
+    font-size: 16px !important;
+    line-height: 22px;
+    margin: 20px 0;
+    font-weight: 600;
+}
 
 
 .transparencia h3{
