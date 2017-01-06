@@ -218,7 +218,7 @@ i.fa.fa-plus-circle {
 }
 
 .box {
-  background:#f0f1e4;
+  background:#e9ead7;
   transition:all 0.2s ease;
   border:2px solid #d1d5b0;
   margin-top: 10px;
@@ -255,6 +255,7 @@ i.fa.fa-plus-circle {
 .icones-tranparencia {
     background: #b7ba8f;
     margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 
