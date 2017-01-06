@@ -220,7 +220,7 @@ i.fa.fa-plus-circle {
 .box {
   background:#f0f1e4;
   transition:all 0.2s ease;
-  border:2px dashed #d1d5b0;
+  border:2px solid #d1d5b0;
   margin-top: 10px;
   box-sizing: border-box;
   border-radius: 5px;
