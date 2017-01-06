@@ -306,3 +306,24 @@ a.btn.btn-block.btn-primary.voltar {
     margin: 20px 0;
 }
 
+
+.transparencia .panel-default {
+    border-color: #b7ba8f;
+}
+
+.transparencia .panel-default>.panel-heading {
+    background: #b7ba8f;
+}
+
+.transparencia .panel-heading h4 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.transparencia  .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top: none;
+    min-height: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

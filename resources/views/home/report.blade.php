@@ -3,13 +3,13 @@
 @section('content')
     <div class="row">
         <div class="col-md-12 text-center conteudo">
-            <h1>Portal da Transparência</h1>
+            {{--<h1>Portal da Transparência</h1>--}}
 
             <h2>{{ $report['section']['title'] }}</h2>
         </div>
 
         <div class="col-md-offset-2 col-md-8 text-center">
-            <div class="box">
+            <div class="">
                 <div class="box-content">
                     <h3>{{ $report['title'] }}</h3>
                     <p></p>
