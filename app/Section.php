@@ -367,6 +367,11 @@ class Section
                 'webservice' => 'deputados',
                 'slug' => 'deputados',
             ],
+
+            12 => [
+                'webservice' => 'licitacoes',
+                'slug' => 'licitacoes',
+            ],
         ];
     }
 }
