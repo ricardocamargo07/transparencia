@@ -3,6 +3,7 @@
 namespace App;
 
 use Carbon\Carbon;
+use GuzzleHttp\Client as Guzzle;
 
 class Webservice
 {
@@ -18,6 +19,11 @@ class Webservice
     private function getIcon($slug)
     {
         return "/images/icons/$slug.svg";
+    }
+
+    private function makeUrl($url, $parameters)
+    {
+        return vsprintf($url, $parameters);
     }
 
     private function toFiles($ListaArquivos)
@@ -96,7 +102,7 @@ class Webservice
 
     private function getSectionLinks($id)
     {
-        return $this->toSection($this->requestJson('file-licitacoes.json'))->toArray();
+        return $this->toSection($this->requestJson(config('app.webservice.urls.section'), ['id' => $id]))->toArray();
     }
 
     public function getSection($sectionId)
@@ -104,15 +110,42 @@ class Webservice
         return $this->getSections()->where('slug', $sectionId)->values()[0];
     }
 
-    private function requestJson($url)
+    private function requestJson($url, $parameters = [], $method = 'GET')
     {
-       return json_decode(file_get_contents(database_path($url)), true);
+        $client = new Guzzle();
+
+        $url = $this->makeUrl($url, $parameters);
+
+        $response = $client->request($method, $url);
+
+        if ($response->getStatusCode() !== 200) {
+            return null;
+        }
+
+       return $this->xmlToJson($response->getBody());
     }
 
     public function getSections()
     {
         return $this->toSections(
-            $this->requestJson('file-sections.json')
+            $this->requestJson(config('app.webservice.urls.all_sections'))
         );
+    }
+
+    private function xmlToJson($xml)
+    {
+        if ($json = json_decode($xml, true)) {
+            return $json;
+        }
+
+        try {
+            $xml = simplexml_load_string($xml);
+        } catch (\Exception $exception) {
+            return null;
+        }
+
+        $json = json_encode($xml);
+
+        return json_decode($json, true);
     }
 }

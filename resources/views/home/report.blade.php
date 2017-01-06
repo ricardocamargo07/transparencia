@@ -3,16 +3,12 @@
 @section('content')
     <div class="row">
         <div class="col-md-12 text-center conteudo">
-            {{--<h1>Portal da Transparência</h1>--}}
-
             <h2>{{ $report['section']['title'] }}</h2>
         </div>
-
         <div class="col-md-offset-2 col-md-8 text-center">
             <div class="">
                 <div class="box-content">
                     <h3>{{ $report['title'] }}</h3>
-                    <p></p>
 
                     @if ($report['body'])
                         <div class="introduction">
@@ -22,7 +18,6 @@
 
                     @if ($report['files']->count())
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
                             @foreach ($report['files'] as $year => $files)
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="heading1">
@@ -41,7 +36,6 @@
                                     </div>
                                 </div>
                             @endforeach
-
                         </div>
                     @endif
                 </div>
