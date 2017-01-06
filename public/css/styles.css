@@ -45,7 +45,7 @@
 
 .transparencia {
     font-family: 'dinlight';
-    padding-top: 30px;
+    padding-top: 0px;
     padding-bottom: 70px;
 }
 
@@ -54,6 +54,9 @@
 .transparencia h2{
     font-weight: 600;
     text-transform: uppercase;
+    color: #ec6629 ;
+    font-family: 'univers_47';
+    font-size: 38px;
 
 }
 
@@ -155,9 +158,25 @@ i.fa.fa-plus-circle {
     border-bottom: solid #ec6629 2px;
 }
 
+/*---------------Titulo Tranparencia --------------------------*/
+
+
 .transparencia h1{
-    line-height: 1.2;
+    line-height: 3;
 }
+
+.container-full.titulo-portal.text-center {
+    background: #1d2d52 !important;
+}
+
+.transparencia .titulo-portal h1 {
+    color: #fff;
+}
+
+
+
+/*---------------FIM Titulo Tranparencia --------------------------*/
+
 
 .transparencia h3{
     font-family: 'univers_47';
@@ -252,5 +271,22 @@ a.btn.btn-block.btn-primary.voltar {
     padding: 5px 0 0 0 !important;
     line-height: 2;
     margin-top: 50px;
-
 }
+
+
+
+
+.intro01 {
+    background: #ec6629;
+    color: #fff;
+    padding: 20px 40px;
+}
+
+
+
+.intro2 {
+    background: #fff;
+    padding: 20px 30px;
+    margin: 20px 0;
+}
+
