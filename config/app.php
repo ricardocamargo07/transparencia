@@ -14,7 +14,14 @@ return [
 
     'name' => 'Laravel',
 
-    'items_limit_on_home' => 6,
+    'items_limit_on_home' => 5,
+
+    'webservice' => [
+        'urls' => [
+            'all_sections' => env('WEBSERVICE_ALL_SECTIONS_URL'),
+            'section' => env('WEBSERVICE_SECTION_URL'),
+        ],
+    ],
 
     /*
     |--------------------------------------------------------------------------
