@@ -3,8 +3,6 @@
 @section('content')
     <div class="row">
         <div class="col-md-12 text-center conteudo">
-            <h1>Portal da Transparência</h1>
-
             <h2>{{ $report['section']['title'] }}</h2>
         </div>
 
