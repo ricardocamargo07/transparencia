@@ -192,6 +192,9 @@
             </div>
 
             <div class="fundo transparencia">
+                <div class="container-full titulo-portal text-center">
+                    <h1>Portal da Transparência</h1>
+                </div>
                 <div class="container">
                     @yield('content')
                 </div>
