@@ -2,6 +2,10 @@
     color: #ffffff;
 }
 
+.row.tabelas {
+    margin: 30px;
+}
+
 #rates {
     width: 100%;
     font-size: 12px;
@@ -12,18 +16,20 @@
 
 
 #rates .row:nth-of-type(odd){
-    background: #e9ead7;
-}
-
-#rates .row:nth-of-type(even){
     background: #f7f8f2;
 }
 
+#rates .row:nth-of-type(even){
+    background: #dcddbe;
+}
 
 
 
 
 
+#rates .row:first-child > div {
+    border-top: 2px solid #b7ba8f;
+}
 
 #rates .row > div {
     display: table;
