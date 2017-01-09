@@ -453,3 +453,14 @@ h3.tag-title{
     margin-bottom: 2px;
 }
 
+
+
+.grafico-box {
+    background: #ffffff;
+    border-bottom: solid  #1d2d52 ;
+}
+
+.graficos-desc{
+    margin: 5px 25px;
+}
+
