@@ -1,6 +1,7 @@
 <?php
 
 use App\Section;
+use App\User;
 
 Route::get('/', function () {
     $sections = Section::all();
@@ -11,3 +12,10 @@ Route::get('/', function () {
 Route::get('/section/{id}', ['as' => 'section', 'uses' => 'Sections@section']);
 
 Route::get('/section/report/{id}', ['as' => 'report', 'uses' => 'Sections@report']);
+
+Route::get('/gettype', function () {
+    $remates = new User();
+
+    return (string)(gettype($remates) != 'NULL');
+});
+

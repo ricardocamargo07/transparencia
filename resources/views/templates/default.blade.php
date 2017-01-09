@@ -21,6 +21,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/css/custom.css" />
         <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/tabelas.css">
     </head>
 
     <body>
