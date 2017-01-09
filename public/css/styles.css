@@ -227,17 +227,17 @@ i.fa.fa-plus-circle {
 .box {
   background:#e9ead7;
   transition:all 0.2s ease;
-  border:2px solid #d1d5b0;
+  border:3px solid #b7ba8f;
   margin-top: 10px;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
   background-clip: padding-box;
   padding:5px ;
 /*  display: table;*/
 }
 
 .box:hover {
-  border:2px solid #9ea74a;
+  border:3px solid #9ea74a;
 }
 
 .box span.box-title {
@@ -462,5 +462,16 @@ h3.tag-title{
 
 .graficos-desc{
     margin: 5px 25px;
+}
+
+
+
+
+
+.panel-group .panel {
+    border-radius: 0px;
+}
+.panel-heading {
+    border-radius: 0px;
 }
 
