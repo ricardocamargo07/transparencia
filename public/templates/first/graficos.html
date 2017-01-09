@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html>
 
-<head>
 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Bruto',     11],
+                ['Previdencia',      2],
+                ['IR',  2],
+                ['Líquido',    7]
+            ]);
 
+            var options = {
+                title: 'Salários dos Deputados ',
+                is3D: true,
+            };
 
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+        }
+    </script>
 
 <head>
     <!--[if IE]>
@@ -26,13 +45,14 @@
     <!-- Loading Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="http://legislaqui.antoniocarlosribeiro.com/templates/alerj/css/custom.css" />
+    <link rel="stylesheet" href="/css/tabelas.css">
 
 
 
 
 
 
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="/css/styles.css">
 
 </head>
 
@@ -200,46 +220,74 @@
     </div>
 </div>
 
-
 <div class="fundo transparencia">
-   <div class="container">
-      <div class="row ">
-         <div class="row  text-center">
-         <div class="col-md-12 text-center">
-         <h1>Portal da Transparência</h1>
-  
-         </div>
+    <div class="container-full titulo-portal text-center">
+        <h1>Portal da Transparência</h1>
+    </div>
+    <div class="container">
+        <div class="row  text-center">
+            <div class="col-md-12 text-center">
+                <h2>Deputados</h2>
+                <h3>Salários dos Deputados</h3>
+                <div class="intro2">
+                    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+
+                    <p>Os salários dos deputados estaduais são limitados a 75% dos salários dos deputados federais, conforme determina o artigo 27 da Constituição Federal. Atualmente, o valor bruto é de R$ 25.322,25.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+
+            <div class="col-md-offset-1 col-md-10 text-center">
 
 
 
-            <div class="col-md-offset-2 col-md-8 text-center">
-               <div class="box">
-                  <div class="box-content">
-                    <h2>Deputados</h2>
-                    <img class="tag-icon" src="images/icones_0003.png">
-                     
-                     <ul>
-                        <li><a href="salarios.html">Salários</a></li>
-                        <li><a href="#">Subsidios, vencimentos e gratificações</a></li>
-                        <li><a href="#">Alimentação</a></li>
-                        <li><a href="#">Lista de presença</a></li>
-                        <li><a href="#">Bolsa de Reforço Escolar</a></li>
-                        <li><a href="#">Auxilio Moradia </a></li>
-                        <li><a href="#">Viagens</a></li>
-                        <li><a href="#">Benefícios</a></li>
-                     </ul>
-                     
-                  </div>
-               </div>
-     
-
-
-
-         </div>
-      </div>
-   </div>
-</div>
-
-
+                <div class="tabelas" id="rates">
+                    <div class="row head">
+                        <div class="col-xs-12 text-center">
+                            <h3>Salários dos deputados</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-8">
+                            <div class="item">Bruto</div>
+                        </div>
+                        <div class="col-xs-3 col-sm-4">
+                            <div class="item">R$  25.322,25</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-8">
+                            <div class="item">Previdência</div>
+                        </div>
+                        <div class="col-xs-3 col-sm-4">
+                            <div class="item">R$ 	513,01</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-8">
+                            <div class="item">IR</div>
+                        </div>
+                        <div class="col-xs-3 col-sm-4">
+                            <div class="item">R$ 	5.996,39</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-8">
+                            <div class="item">Líquido</div>
+                        </div>
+                        <div class="col-xs-3 col-sm-4">
+                            <div class="item">R$ 	18.812,85</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+

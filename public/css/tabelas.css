@@ -1,4 +1,6 @@
-
+.tabelas h3{
+    color: #ffffff;
+}
 
 #rates {
     width: 100%;
@@ -10,16 +12,24 @@
 
 
 #rates .row:nth-of-type(odd){
+    background: #e9ead7;
+}
+
+#rates .row:nth-of-type(even){
     background: #f7f8f2;
 }
+
+
+
+
 
 
 
 #rates .row > div {
     display: table;
     padding: 0 4px;
-    border-right: 2px solid #d1d5b0;
-    border-bottom: 2px solid #d1d5b0;
+    border-right: 2px solid #b7ba8f;
+    border-bottom: 2px solid #b7ba8f;
     text-align: center;
 }
 
@@ -31,7 +41,7 @@
 }
 
 #rates .row > div:first-child {
-    border-left: 2px solid #d1d5b0;
+    border-left: 2px solid #b7ba8f;
     text-align: left;
 }
 
@@ -41,8 +51,8 @@
 }
 
 #rates .row.head > div:first-child {
-    border: solid 2px #d1d5b0;
-    background-color: #EFF1E4;
+    border: solid 2px #b7ba8f;
+    background-color: #b7ba8f;
     padding-top: 20px;
 }
 
@@ -60,7 +70,7 @@
     display: inline-block;
     margin-top: 14px;
     padding: 0 6px;
-    border: 2px solid #d1d5b0;
+    border: 2px solid #b7ba8f;
     border-radius: 10px;
 }
 

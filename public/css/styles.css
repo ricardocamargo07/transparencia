@@ -118,7 +118,7 @@ i.fa.fa-plus-circle {
 
 
 .transparencia li:hover {
-    background-color: #253255 !important;
+    background-color: #253255 ;
     color: #fff;
 }
 
@@ -150,13 +150,6 @@ i.fa.fa-plus-circle {
     color: #f4f6e8;
 }
 
-.tag-title {
-    color: #fff;
-    background: #1d2d52;
-    padding: 10px 0 ;
-    /*min-height: 70px;*/
-    border-bottom: solid #ec6629 2px;
-}
 
 /*---------------Titulo Tranparencia --------------------------*/
 
@@ -172,6 +165,9 @@ i.fa.fa-plus-circle {
 
 
 /*---------------FIM Titulo Tranparencia --------------------------*/
+
+
+
 
 
 .transparencia .introducao h3 {
@@ -340,6 +336,10 @@ a.btn.btn-block.btn-primary.voltar {
     background: #e9ead7;
 }
 
+.transparencia .accordion li{
+    font-weight: 600;
+    text-transform: uppercase;
+}
 
 .transparencia .accordion li:hover {
     background-color: #dcddbe;
@@ -347,5 +347,120 @@ a.btn.btn-block.btn-primary.voltar {
 }
 
 .transparencia .accordion li:hover a {
-    color: #fff;
+    color: #253255;
 }
+
+.transparencia .accordion li .btn {
+    background: #b7ba8f;
+    color: #ffffff;
+    text-transform: none;
+}
+
+.transparencia .accordion li .btn:hover {
+    background: #253255;
+    color: #ffffff;
+}
+
+/******* LINHA MÊS **********/
+.row.linha-mes {
+    margin: 0 35px 3px 35px;
+    line-height: 2.2;
+    font-weight: 600;
+}
+
+.row.linha-mes:hover .mes-label{
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.mes-label {
+    background: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+}
+
+.transparencia .accordion .row.linha-mes  .btn {
+    background: #b7ba8f;
+    color: #ffffff;
+    text-transform: none;
+    border-radius: 0;
+}
+
+.transparencia .accordion .row.linha-mes .btn:hover {
+    background: #253255;
+    color: #ffffff;
+}
+/******* FIM LINHA MÊS **********/
+
+
+
+/******* LINHA QUADRIMESTRE **********/
+.row.linha-quadrimestre {
+    margin: 0 35px 8px 35px;
+    line-height: 1;
+    font-weight: 600;
+}
+
+
+.quad-label {
+    background: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+.row.linha-quadrimestre:hover .quad-label{
+    background: rgba(255, 255, 255, 0.9);
+
+}
+
+
+
+.transparencia .accordion .row.linha-quadrimestre  .btn {
+    background: #b7ba8f;
+    color: #ffffff;
+    text-transform: none;
+    border-radius: 0;
+    padding: 15px 20px;
+    margin-right: 5px;
+}
+
+.transparencia .accordion .row.linha-quadrimestre .btn:hover {
+    background: #253255;
+    color: #ffffff;
+}
+/******* FIM LINHA QUADRIMESTRE **********/
+
+
+span.quadrimeste {
+    text-transform: lowercase;
+    font-size: 80%;
+    clear: left;
+}
+
+
+
+
+
+
+.tag-title {
+    color: #fff !important;
+    background: #1d2d52;
+    padding: 10px 0 ;
+    /*min-height: 70px;*/
+    border-bottom: solid #ec6629 2px;
+}
+
+h3.tag-title{
+    padding: 10px 0 ;
+    margin-bottom: 2px;
+}
+
+
+
+.grafico-box {
+    background: #ffffff;
+    border-bottom: solid  #1d2d52 ;
+}
+
+.graficos-desc{
+    margin: 5px 25px;
+}
+
