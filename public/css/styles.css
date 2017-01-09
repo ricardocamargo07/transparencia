@@ -33,19 +33,7 @@
 }
 
 
-.fundo {
-    background: url("https://i.imgsafe.org/17d3befffc.jpg");
-}
-.col-md-4.text-center .box:hover {
-    background: #f7f8f2;
-    color: #fafbf5;
-}
-
-.transparencia {
-    font-family: 'dinlight';
-    padding-top: 0px;
-    padding-bottom: 70px;
-
+.fundo.tratransparencia{
     min-height: 100%;
     min-width: 1024px;
 
@@ -59,12 +47,23 @@
     left: 0;
 }
 
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-    .tranparencia {
-        left: 50%;
-        margin-left: -512px;   /* 50% */
-    }
+.fundo {
+    background: url("https://i.imgsafe.org/17d3befffc.jpg");
 }
+.col-md-4.text-center .box:hover {
+    background: #f7f8f2;
+    color: #fafbf5;
+}
+
+.transparencia {
+    font-family: 'dinlight';
+    padding-top: 0px;
+    padding-bottom: 70px;
+
+
+}
+
+
 
 .transparencia h2{
     font-weight: 600;
