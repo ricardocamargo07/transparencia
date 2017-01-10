@@ -80,7 +80,7 @@
 #rates .row.head > div:first-child {
     border: solid 2px #b7ba8f;
     background-color: #b7ba8f;
-    padding-top: 20px;
+    padding-top: 16px;
 }
 
 #rates .row.head span {
@@ -118,6 +118,11 @@
     #rates .row > div .item {
         height: 55px;
     }
+    #rates.tabelamaior .row > div .item {
+        height: 80px;
+    }
+
+
     #rates .row.head > div {
         height: 70px;
     }
