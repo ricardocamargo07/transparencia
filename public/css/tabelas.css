@@ -16,11 +16,12 @@
 
 
 #rates .row:nth-of-type(odd){
-    background: #f7f8f2;
+    background: #dcddbe;
+
 }
 
 #rates .row:nth-of-type(even){
-    background: #dcddbe;
+    background: #f7f8f2;
 }
 
 
@@ -44,17 +45,37 @@
     width: 100%;
     display: table-cell;
     vertical-align: middle;
+    font-size: 15px;
 }
 
 #rates .row > div:first-child {
     border-left: 2px solid #b7ba8f;
     text-align: left;
+    min-width: 119px;
 }
+
+#rates .row > div:last-child {
+    /*text-align: right;*/
+}
+
+
 
 #rates .row.head > div {
     height: 20px;
     text-align: center;
 }
+
+
+#rates .row.head > div {
+    height: 20px;
+    text-align: center;
+}
+
+#rates .row.primeiralinha > div {
+    background: #b7ba8f;
+}
+
+
 
 #rates .row.head > div:first-child {
     border: solid 2px #b7ba8f;
@@ -95,7 +116,7 @@
         padding: 0 15px;
     }
     #rates .row > div .item {
-        height: 80px;
+        height: 55px;
     }
     #rates .row.head > div {
         height: 70px;
