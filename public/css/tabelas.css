@@ -16,11 +16,12 @@
 
 
 #rates .row:nth-of-type(odd){
-    background: #f7f8f2;
+    background: #dcddbe;
+
 }
 
 #rates .row:nth-of-type(even){
-    background: #dcddbe;
+    background: #f7f8f2;
 }
 
 
@@ -64,6 +65,18 @@
     text-align: center;
 }
 
+
+#rates .row.head > div {
+    height: 20px;
+    text-align: center;
+}
+
+#rates .row.primeiralinha > div {
+    background: #b7ba8f;
+}
+
+
+
 #rates .row.head > div:first-child {
     border: solid 2px #b7ba8f;
     background-color: #b7ba8f;
@@ -103,7 +116,7 @@
         padding: 0 15px;
     }
     #rates .row > div .item {
-        height: 80px;
+        height: 55px;
     }
     #rates .row.head > div {
         height: 70px;

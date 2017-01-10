@@ -304,15 +304,18 @@ class Section
                         'id' => 'report-'.$id++,
                         'title' => 'Tabela de Vencimentos',
                         'body' => '
- <div class="row tabelas">
+                             <div class="row tabelas">
+                             <h3 class="fonteazul">Quadro Remuneratório</h3>
 
                                 <div id="rates">
+<!--
                                     <div class="row head">
                                         <div class="col-xs-12 text-center">
                                             <h3>Quadro Remuneratório</h3>
                                         </div>
                                     </div>
-                                    <div class="row">
+-->
+                                    <div class="row primeiralinha">
                                         <div class="col-xs-2 col-sm-2 ">
                                             <div class="item text-center">Cargo</div>
                                         </div>
@@ -653,27 +656,6 @@ class Section
                                             </div>
                                             <div class="col-xs-2 col-sm-2">
                                                 <div class="item">R$ 6.377,44</div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="row">
-                                            <div class="col-xs-2 col-sm-2">
-                                                <div class="item">  </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2">
-                                                <div class="item">  </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2">
-                                                <div class="item">  </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2">
-                                                <div class="item">  </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2">
-                                                <div class="item">  </div>
-                                            </div>
-                                            <div class="col-xs-2 col-sm-2">
-                                                <div class="item">  </div>
                                             </div>
                                         </div>
                                         <div class="row">
