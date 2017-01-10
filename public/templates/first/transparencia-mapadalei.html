@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <![endif]-->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0"/>
+    <link rel="stylesheet" type="text/css"
+          href="http://legislaqui.antoniocarlosribeiro.com/www.alerj.rj.gov.br/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="http://legislaqui.antoniocarlosribeiro.com/www.alerj.rj.gov.br/colorpicker.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="http://legislaqui.antoniocarlosribeiro.com/www.alerj.rj.gov.br/datepicker.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="http://legislaqui.antoniocarlosribeiro.com/www.alerj.rj.gov.br/lightbox.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="http://legislaqui.antoniocarlosribeiro.com/www.alerj.rj.gov.br/jquery.jscrollpane.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="http://legislaqui.antoniocarlosribeiro.com/www.alerj.rj.gov.br/jquery-ui.theme.css">
+    <link rel="stylesheet" type="text/css"
+          href="http://legislaqui.antoniocarlosribeiro.com/www.alerj.rj.gov.br/jquery-ui.structure.css">
+    <link rel="stylesheet" type="text/css"
+          href="http://legislaqui.antoniocarlosribeiro.com/www.alerj.rj.gov.br/estilos.css"/>
+
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Loading Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css"/>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="../../css/tabelas.css">
+
+</head>
+
+<body>
+
+
+<div class="superior">
+    <div class="brilho ">
+        <div class="conteudo">
+            <div class="logotipo">
+                <a href="http://www.alerj.rj.gov.br/">
+                    <img src="http://www.alerj.rj.gov.br/Content/imagens/logotipo.png" class="sem_altocontraste"
+                         width="210" alt="Assembléia Legislativa do Estado do Rio de Janeiro"
+                         title="Assembléia Legislativa do Estado do Rio de Janeiro">
+                    <img src="http://www.alerj.rj.gov.br/Content/imagens/logotipo_altocontraste.png" width="210"
+                         class="altocontraste" alt="Assembléia Legislativa do Estado do Rio de Janeiro"
+                         title="Assembléia Legislativa do Estado do Rio de Janeiro">
+                </a>
+            </div>
+
+            <div class="coluna pull-right">
+                <div>
+
+                </div>
+                <div class="redes_sociais">
+                    <div class="logotipo_redes">
+                        <a target="_blank" href="https://instagram.com/instalerj/" title="Instagram">
+                            <img src="http://www.alerj.rj.gov.br/Content/imagens/icone_36.png" width="20" height="20"
+                                 alt="Instagram" title="Instagram"></a>
+                    </div>
+
+                    <div class="logotipo_redes">
+                        <a target="_blank" href="https://www.facebook.com/assembleiaRJ" title="Facebook">
+                            <img src="http://www.alerj.rj.gov.br/Content/imagens/icone_06.png" width="20" height="20"
+                                 alt="Facebook" title="Facebook"></a>
+                    </div>
+                    <div class="logotipo_redes">
+                        <a target="_blank" href="https://plus.google.com/u/0/+alerj/posts" title="Google Mais">
+                            <img src="http://www.alerj.rj.gov.br/Content/imagens/icone_07.png" width="20" height="20"
+                                 alt="Google Mais" title="Google Mais"></a>
+                    </div>
+                    <div class="logotipo_redes">
+                        <a target="_blank" href="https://twitter.com/alerj" title="Twitter">
+                            <img src="http://www.alerj.rj.gov.br/Content/imagens/icone_08.png" width="20" height="20"
+                                 alt="Twitter" title="Twitter"></a>
+                    </div>
+                    <div class="logotipo_redes">
+                        <a target="_blank" href="https://www.youtube.com/user/dcsalerj" title="Youtube">
+                            <img src="http://www.alerj.rj.gov.br/Content/imagens/icone_09.png" width="20" height="20"
+                                 alt="Youtube" title="Youtube"></a>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="base_menu">
+    <a href="javascript:;" class="quadrado"></a>
+    <div class="menu_movel">
+        <div class="controle">
+            <div class="menu_select">
+                <div class="descricao">INÍCIO</div>
+                <div class="icone Expandir">
+                    <a href="javascript:;" title="Expandir Menu">
+                        <img src="http://www.alerj.rj.gov.br/Content/imagens/icone_21.png" width="40" height="34"
+                             alt="Expandir Menu" title="Expandir Menu" border="0"></a>
+                </div>
+                <div class="icone Recuar" style="display: none;">
+                    <a href="javascript:;" title="Recolher Menu">
+                        <img src="http://www.alerj.rj.gov.br/Content/imagens/icone_22.png" width="40" height="34"
+                             alt="Recolher Menu" title="Recolher Menu" border="0"></a>
+                </div>
+            </div>
+            <div class="posicao_menu_movel" style="display: none;">
+                <div class="fundo_submovel">
+                    <ul>
+                        <li><a href="/" id="lkbInicioMovel">Início</a></li>
+
+                        <li class="pai">
+                            <a target="" href="javascript:;" class="titulo" title="ALERJ">Alerj <span
+                                    class="caret"></span></a>
+
+                            <div class="submenu_movel">
+                                <ul>
+                                    <li>
+                                        <a target="" href="http://www.alerj.rj.gov.br/Alerj/ComoFunciona"
+                                           title="Como Funciona">Como Funciona</a>
+                                    </li>
+                                    <li>
+                                        <a target="" href="http://www.alerj.rj.gov.br/Alerj/MesaDiretora"
+                                           title="Mesa Diretora">Mesa Diretora</a>
+                                    </li>
+                                    <li>
+                                        <a target="" href="http://www.alerj.rj.gov.br/Alerj/Historia" title="História">História</a>
+                                    </li>
+                                    <li>
+                                        <a target="" href="http://www.alerj.rj.gov.br/Alerj/VisitaGuiada"
+                                           title="Visita Guiada">Visita Guiada</a>
+                                    </li>
+                                    <li>
+                                        <a target="" href="http://www.alerj.rj.gov.br/Alerj/TourVirtual"
+                                           title="Tour Virtual">Tour Virtual</a>
+                                    </li>
+                                    <li>
+                                        <a target="" href="http://www.alerj.rj.gov.br/Alerj/Biblioteca"
+                                           title="Biblioteca">Biblioteca</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li><a href="http://local.legislaqui.com/about" target="" class="titulo">Como Funciona?</a></li>
+
+                        <li class="pai">
+                            <a target="" href="javascript:;" class="titulo" title="Ideia Legislativa">Ideia Legislativa
+                                <span class="caret"></span></a>
+
+                            <div class="submenu_movel">
+                                <ul>
+                                    <li><a target="" href="http://local.legislaqui.com/proposals/create">Proponha uma
+                                        ideia legislativa logando ou registrando-se aqui</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="http://local.legislaqui.com/terms">Termos de Uso</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+
+                        <li><a href="/contact" class="titulo " title="Contato">Contato</a></li>
+
+
+                        <!-- Authentication Links -->
+
+                        <li>
+                            <a href="http://local.legislaqui.com/login" class="titulo" title="Login | Registro">Login |
+                                Registro</a></li>
+
+
+                    </ul>
+                </div>
+                <div class="detalhe"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a class="ativo" href="/" id="lkbInicio">INÍCIO</a></li>
+
+            <li class="pai">
+                <a href="/about" target="" class="titulo">Como Funciona?</a>
+            </li>
+
+            <li class="pai">
+                <a href="#" class="titulo" title="Ideia Legislativa">Ideia Legislativa <span class="caret"></span></a>
+
+                <div class="submenu" style="display: none;">
+                    <ul>
+                        <li>
+                            <div><a href="http://local.legislaqui.com/proposals/create">Proponha uma ideia legislativa
+                                logando ou registrando-se aqui</a></div>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li>
+                            <div><a href="http://local.legislaqui.com/terms">Termos de Uso</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!-- relationship commissions -->
+            <li class="pai"><a href="/committee" class="titulo " title="Comissões">Nossas comissões</a></li>
+            <li class="pai"><a href="/terms" class="titulo " title="Comissões">Termos de uso</a></li>
+            <li class="pai"><a href="/contact" class="titulo " title="Contato">Contato</a></li>
+
+            <!-- Authentication Links -->
+
+            <li class="pai">
+                <a href="http://local.legislaqui.com/login" class="titulo" title="Login | Registro">Login | Registro</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="fundo transparencia">
+
+    <div class="container-full titulo-portal text-center">
+        <h1>Portal da Transparência</h1>
+    </div>
+
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12 text-center">
+                <h2>Perguntas Frequentes</h2>
+            </div>
+            <div class="col-md-offset-2 col-md-8 text-center">
+                <div class="box ">
+                    <div class="box-content">
+                        <h3 class="tag-title">Mapa da Lei</h3>
+
+                        <div class="row tabelas">
+                            <!--<h3 class="fonteazul">Quadro Remuneratório</h3>-->
+                            <div id="rates" class="tabelamaior">
+                                <div class="row primeiralinha">
+                                    <div class="col-xs-2 col-sm-4 ">
+                                        <div class="item text-center">Tema</div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-3">
+                                        <div class="item">Onde Encontrar</div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-5">
+                                        <div class="item">Palavras-Chave</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-2 col-sm-4 ">
+                                        <div class="item text-center">Garantias do direito de acesso</div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-3">
+                                        <div class="item">Artigos <a href="artigos-2016.asp#3">3</a>,
+                                            <a href="artigos-2016.asp#6">6</a>,
+                                            <a href="artigos-2016.asp#7">7</a></div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-5">
+                                        <div class="item">Princípios do direito de acesso/Compromisso do Estado</div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-2 col-sm-4 ">
+                                        <div class="item text-center">
+                                            Regras sobre a divulgação de rotina ou proativa de informações
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-3">
+                                        <div class="item">
+                                            <a href="artigos-2016.asp#8">Artigos 8 e 9</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-5">
+                                        <div class="item">
+                                            Categorias de informação/Serviço de Informações ao Cidadão/Modos de divulgar
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-2 col-sm-4 ">
+                                        <div class="item text-center">
+                                            Processamento de pedidos de Informação
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-3">
+                                        <div class="item">
+                                            <a href="artigos-2016.asp#10">Artigos
+                                                10,11,12,13 e 14</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-5">
+                                        <div class="item">
+                                            Identificação e pesquisa de documentos/Meios de divulgação/Custos/Prazos de atendimento
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-2 col-sm-4 ">
+                                        <div class="item text-center">
+                                            Direito de recurso a recusa de liberação de informação
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-3">
+                                        <div class="item">
+                                            <a href="artigos-2016.asp#15">Artigos 15 ao 20</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-5">
+                                        <div class="item">
+                                            Pedido de desclassificação/Autoridades responsáveis/Ritos legais
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-2 col-sm-4 ">
+                                        <div class="item text-center">
+                                            Exceções ao direito de acesso
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-3">
+                                        <div class="item">
+                                            <a href="artigos-2016.asp#21">Artigos 21 ao 30</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-5">
+                                        <div class="item">
+                                            Níveis de classificação/Regras/Justificativa do não-acesso
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-2 col-sm-4 ">
+                                        <div class="item text-center">
+                                            Tratamento de informações Pessoais
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-3">
+                                        <div class="item">
+                                            <a href="artigos-2016.asp#31">Artigo 31</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-5">
+                                        <div class="item">
+                                            Respeito às liberdades e garantias individuais
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-xs-2 col-sm-4 ">
+                                        <div class="item text-center">
+                                            Responsabilidade dos agentes públicos
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-3">
+                                        <div class="item">
+                                            <a href="artigos-2016.asp#32">Artigos 32, 33, 34</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-5">
+                                        <div class="item">
+                                            Condutas ilícitas/Princípio do contraditório
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

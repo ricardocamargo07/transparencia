@@ -118,7 +118,6 @@ class Section
                 'slug' => 'diario-oficial',
             ],
 
-//
 //            [
 //                'webservice' => 'deputados',
 //                'slug' => 'deputados',

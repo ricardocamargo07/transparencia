@@ -177,6 +177,7 @@ i.fa.fa-plus-circle {
     color: #fff;
     line-height: 2.2;
     font-size: 52px;
+    text-transform: uppercase;
 }
 
 
@@ -464,9 +465,19 @@ span.quadrimeste {
     border-bottom: solid #ec6629 2px;
 }
 
-h3.tag-title{
+.row.head h3.tag-title{
     padding: 10px 0 ;
     margin-bottom: 2px;
+}
+
+.box-content h3.tag-title{
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+
+h4 {
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 
