@@ -44,12 +44,20 @@
     width: 100%;
     display: table-cell;
     vertical-align: middle;
+    font-size: 15px;
 }
 
 #rates .row > div:first-child {
     border-left: 2px solid #b7ba8f;
     text-align: left;
+    min-width: 119px;
 }
+
+#rates .row > div:last-child {
+    /*text-align: right;*/
+}
+
+
 
 #rates .row.head > div {
     height: 20px;

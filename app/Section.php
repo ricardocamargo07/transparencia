@@ -313,8 +313,8 @@ class Section
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-xs-2 col-sm-2">
-                                            <div class="item">Cargo</div>
+                                        <div class="col-xs-2 col-sm-2 ">
+                                            <div class="item text-center">Cargo</div>
                                         </div>
                                         <div class="col-xs-2 col-sm-2">
                                             <div class="item">Nível</div>
@@ -332,50 +332,850 @@ class Section
                                             <div class="item">Líquido</div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-xs-2 col-sm-2">
-                                            <div class="item">Especialista Legislativo</div>
+
+                                           
+                                    
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Especialista Legislativo</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">1.000</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 5.546,19</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 610,08</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 531,28</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 4.404,83</div>
+                                            </div>
                                         </div>
-                                        <div class="col-xs-2 col-sm-2">
-                                            <div class="item">1.000</div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Especialista Legislativo</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">1.100</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 5.750,00</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 632,50</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 581,16</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 4.536,34</div>
+                                            </div>
                                         </div>
-                                        <div class="col-xs-2 col-sm-2">
-                                            <div class="item">R$ 5.546,19</div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Especialista Legislativo</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">1.200</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 5.953,81</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 654,92</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 631,04</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 4.667,85</div>
+                                            </div>
                                         </div>
-                                        <div class="col-xs-2 col-sm-2">
-                                            <div class="item">R$ 610,08</div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Especialista Legislativo</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">1.300</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 6.157,61</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 677,34</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 680,93</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 4.799,35</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Especialista Legislativo</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">1.400</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 6.361,42</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 699,76</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 730,81</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 4.930,86</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Especialista Legislativo</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">1.500</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 6.565,23</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 722,18</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 780,69</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 5.062,36</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Especialista Legislativo</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">1.600</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 6.769,04</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 744,59</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 830,57</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 5.193,87</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Especialista Legislativo</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">1.700</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 6.972,85</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 767,01</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 880,46</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 5.325,38</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Especialista Legislativo</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">1.800</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 7.176,65</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 789,43</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 930,34</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 5.456,88</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Especialista Legislativo</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">1.900</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 7.380,46</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 811,85</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 980,22</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 5.588,39</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Especialista Legislativo</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">2.000</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 7.584,27</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 834,27</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.030,10</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 5.719,90</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Especialista Legislativo</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">2.100</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 7.788,08</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 856,69</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.079,98</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 5.851,41</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Especialista Legislativo</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">2.200</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 7.991,89</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 879,11</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.129,87</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 5.982,92</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Especialista Legislativo</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">2.300</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 8.195,69</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 901,53</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.179,75</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 6.114,42</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Especialista Legislativo</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">2.400</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 8.399,50</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 923,95</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.229,63</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 6.245,93</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Especialista Legislativo</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">2.500</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 8.603,31</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 946,36</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.279,51</div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 6.377,44</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">  </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">  </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">  </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">  </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">  </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">  </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Procurador* </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 33.763,00 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 3.713,93 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 7.437,34 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 22.611,73</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">Deputado </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 25.322,25 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 513,01 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 5.996,39 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 18.812,85</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">SE* </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 30.471,11 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 513,01 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 7.412,33 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 22.545,77</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">SS* </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 30.471,11 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 513,01 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 7.412,33 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 22.545,77</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">DG* </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 30.471,11 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 513,01 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 7.412,33 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 22.545,77</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">AE-1 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 23.091,09 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 513,01 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 5.382,82 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 17.195,26</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">AE-2 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 13.854,66 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 513,01 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 2.842,80 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 10.498,85</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">AE-3 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 9.236,42 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 513,01 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.572,79 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 7.150,62</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">A-1 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 17.630,51 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 513,01 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 3.881,16 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 13.236,34</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">A-2 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 10.578,33 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 513,01 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.941,81 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 8.123,51</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">A-3 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 7.052,23 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 513,01 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 972,14 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 5.567,08</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">CCDAL-1 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 9.835,63 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 513,01 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.737,57 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 7.585,05</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">CCDAL-2 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 8.999,22 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 513,01 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.507,56 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 6.978,65</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">CCDAL-3 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 8.162,93 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 513,01 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.277,58 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 6.372,34</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">CCDAL-4 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 7.326,64 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 513,01 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.047,60 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 5.766,03</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">CCDAL-5 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 6.490,35 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 513,01 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 817,62 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 5.159,72</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">CCDAL-6 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 3.934,23 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 432,77 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 190,19 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 3.311,27</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">CCDAL-7 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 2.950,66 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 324,57 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 62,88 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 2.563,21</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">CCDAL-8 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.967,14 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 177,04 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 0,00 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.790,10</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">CCDAL-9 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 983,57 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 78,69 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 0,00 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 904,88</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">CAI-16 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 5.486,76 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 0,00 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 682,71 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 4.804,05</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">CAI-17 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 2.194,71 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 0,00 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 0,00 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 2.194,71</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">CAI-18 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.646,05 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 0,00 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 0,00 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.646,05</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">CAI-19 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.097,34 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 0,00 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 0,00 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 1.097,34</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">    </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">CAI-20 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 548,68 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 0,00 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 0,00 </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2">
+                                                <div class="item">R$ 548,68</div>
+                                            </div>
                                         </div>                                        
-                                        <div class="col-xs-2 col-sm-2">
-                                            <div class="item">R$ 531,28 </div>
-                                        </div>
-                                        <div class="col-xs-2 col-sm-2">
-                                            <div class="item">R$ 4.404,83</div>
-                                        </div>
-                                    </div>       
-                                    <div class="row">
-                                        <div class="col-xs-2 col-sm-2">
-                                            <div class="item">Especialista Legislativo</div>
-                                        </div>
-                                        <div class="col-xs-2 col-sm-2">
-                                            <div class="item">1.100</div>
-                                        </div>
-                                        <div class="col-xs-2 col-sm-2">
-                                            <div class="item">R$ 5.750,00</div>
-                                        </div>
-                                        <div class="col-xs-2 col-sm-2">
-                                            <div class="item">R$ 632,50</div>
-                                        </div>                                        
-                                        <div class="col-xs-2 col-sm-2">
-                                            <div class="item">R$ 581,16</div>
-                                        </div>
-                                        <div class="col-xs-2 col-sm-2">
-                                            <div class="item">R$ 4.536,34</div>
-                                        </div>
-                                    </div>                                                                       
-                                    
-                                    
-                                    
-                                    
                                 </div>
                         </div>
 
