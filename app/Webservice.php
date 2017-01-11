@@ -2,11 +2,20 @@
 
 namespace App;
 
+use HTMLPurifier;
+use HTMLPurifier_Config;
 use Carbon\Carbon;
 use GuzzleHttp\Client as Guzzle;
 
 class Webservice
 {
+    private $purifier;
+
+    public function __construct()
+    {
+        $this->purifier = new HTMLPurifier(HTMLPurifier_Config::createDefault());
+    }
+
     public function convertDate($date)
     {
         if (! $date) {
@@ -24,6 +33,11 @@ class Webservice
     private function makeUrl($url, $parameters)
     {
         return vsprintf($url, $parameters);
+    }
+
+    private function purify($html)
+    {
+        return $this->purifier->purify($html);
     }
 
     private function toFiles($ListaArquivos)
@@ -80,7 +94,7 @@ class Webservice
                 'section_id' => $section_id = $item['Categoria']['IdCategoria'],
                 'title' => $item['Titulo'],
                 'body' => $item['Texto'],
-                'html' => isset($item['Html']) ? $item['Html'] : '',
+                'html' => $this->purify(isset($item['TextoHtml']) ? $item['TextoHtml'] : ''),
                 'link' => route('report', [$report_id]),
                 'published_at_string' => $item['DatPublicacao'],
                 'published_at' => $this->convertDate($item['DatPublicacao']),

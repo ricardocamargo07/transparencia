@@ -14,7 +14,7 @@ return [
 
     'name' => 'Laravel',
 
-    'items_limit_on_home' => 5,
+    'items_limit_on_home' => 7,
 
     'webservice' => [
         'urls' => [
