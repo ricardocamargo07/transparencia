@@ -104,14 +104,19 @@
 
 .row.faq {
     text-align: left;
+    padding-bottom: 20px;
     margin: 20px 10px;
     border-bottom: 1px solid #212e52;
 }
 
-
 .row.faq i.fa.fa-question-circle {
     margin-right: 10px;
     font-size: 20px;
+}
+
+.row.faq p {
+    font-size: 95%;
+    margin: 0 32px 10px;
 }
 
 @media (min-width: 768px) {
