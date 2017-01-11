@@ -510,13 +510,18 @@ span.label-dowload-tipo {
 }
 
 .fonteazul {
-    color: #253255 !important;
+    color: #25427F !important;
 }
 
 .col-xs-1.refresh-cache.pull-right {
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 .col-xs-1.refresh-cache.pull-right i.fa.fa-refresh {
-    color: #fff;
+    color: #1d2d52 ;
+    font-size: 40px;
+}
+
+.col-xs-1.refresh-cache.pull-right i.fa.fa-refresh:hover {
+    color: #535E7F;
 }
