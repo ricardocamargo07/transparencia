@@ -47,7 +47,7 @@ class Section
 
     private function loadSections()
     {
-        $this->sections = Cache::remember('loadSections', 10, function () {
+        $this->sections = Cache::remember('loadSections', 180, function () {
             $this->populateInternalSections();
 
             $this->sections = collect($this->sections);
