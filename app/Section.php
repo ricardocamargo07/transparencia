@@ -243,7 +243,7 @@ class Section
 //                        </div>
 //                        <div class="row tabelas">
 //
-//                                <div id="rates">
+//                                <div class="rates">
 //                                    <!--<div class="row head">-->
 //                                        <!--<div class="col-xs-12 text-center">-->
 //                                            <!--<h3>Salários dos deputados</h3>-->
@@ -295,7 +295,7 @@ class Section
 //                        </div>
 //                        <div class="row tabelas">
 //
-//                                <div id="rates">
+//                                <div class="rates">
 //                                    <!--<div class="row head">-->
 //                                        <!--<div class="col-xs-12 text-center">-->
 //                                            <!--<h3>Salários dos deputados</h3>-->
@@ -412,7 +412,7 @@ class Section
 //                             <div class="row tabelas">
 //                             <h3 class="fonteazul">Quadro Remuneratório</h3>
 //
-//                                <div id="rates">
+//                                <div class="rates">
 //<!--
 //                                    <div class="row head">
 //                                        <div class="col-xs-12 text-center">
@@ -1440,7 +1440,7 @@ class Section
 //                        </div>
 //                        <div class="row tabelas">
 //
-//                                <div id="rates">
+//                                <div class="rates">
 //                                    <!--<div class="row head">-->
 //                                        <!--<div class="col-xs-12 text-center">-->
 //                                            <!--<h3>Salários dos deputados</h3>-->
