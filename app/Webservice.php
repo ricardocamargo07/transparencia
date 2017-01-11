@@ -38,7 +38,9 @@ class Webservice
                 'type' => $item['Tipo'],
                 'published_at_string' => $item['DatPublicacao'],
                 'published_at' => $this->convertDate($item['DatPublicacao']),
-                'year' => 2016,
+                'year' => $item['AnoRef'],
+                'period' => $item['PeriodoRef'],
+                'period_type' => $item['TipoPeriodoRef'],
                 'url' => $item['Url'],
             ];
         })->groupBy('year');
