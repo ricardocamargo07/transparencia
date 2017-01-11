@@ -6,7 +6,7 @@
     margin: 30px;
 }
 
-#rates {
+#rate. {
     width: 100%;
     font-size: 12px;
     color: #253255;
@@ -15,12 +15,12 @@
 }
 
 
-#rates .row:nth-of-type(odd){
+#rate. .row:nth-of-type(odd){
     background: #dcddbe;
 
 }
 
-#rates .row:nth-of-type(even){
+#rate. .row:nth-of-type(even){
     background: #f7f8f2;
 }
 
@@ -28,11 +28,11 @@
 
 
 
-#rates .row:first-child > div {
+#rate. .row:first-child > div {
     border-top: 2px solid #b7ba8f;
 }
 
-#rates .row > div {
+#rate. .row > div {
     display: table;
     padding: 0 4px;
     border-right: 2px solid #b7ba8f;
@@ -40,7 +40,7 @@
     text-align: center;
 }
 
-#rates .row > div .item {
+#rate. .row > div .item {
     height: 110px;
     width: 100%;
     display: table-cell;
@@ -48,88 +48,88 @@
     font-size: 15px;
 }
 
-#rates .row > div:first-child {
+#rate. .row > div:first-child {
     border-left: 2px solid #b7ba8f;
     text-align: left;
     min-width: 119px;
 }
 
-#rates .row > div:last-child {
+#rate. .row > div:last-child {
     /*text-align: right;*/
 }
 
 
 
-#rates .row.head > div {
+#rate. .row.head > div {
     height: 20px;
     text-align: center;
 }
 
 
-#rates .row.head > div {
+#rate. .row.head > div {
     height: 20px;
     text-align: center;
 }
 
-#rates .row.primeiralinha > div {
+#rate. .row.primeiralinha > div {
     background: #b7ba8f;
 }
 
 
 
-#rates .row.head > div:first-child {
+#rate. .row.head > div:first-child {
     border: solid 2px #b7ba8f;
     background-color: #b7ba8f;
     padding-top: 16px;
 }
 
-#rates .row.head span {
+#rate. .row.head span {
     display: block;
     font-size: 14px;
     font-weight: bold;
 }
 
-#rates .row.head .form-btn {
+#rate. .row.head .form-btn {
     display: block;
 }
 
-#rates .row.head .form-btn a {
+#rate. .row.head .form-btn a {
     display: inline-block;
     margin-top: 14px;
     padding: 0 6px;
     border: 2px solid #b7ba8f;
     border-radius: 10px;
 }
-#rates .col-xs-3.col-sm-4.text-right {
+#rate. .col-xs-3.col-sm-4.text-right {
     text-align: right !important;
 }
 
-#rates .col-xs-3.col-sm-6.text-center {
+#rate. .col-xs-3.col-sm-6.text-center {
     text-align: center !important;
 }
 
 @media (min-width: 768px) {
-    #rates {
+    .rates {
         font-size: 16px;
     }
-    #rates .row > div {
+    .rates .row > div {
         padding: 0 15px;
     }
-    #rates .row > div .item {
+    .rates .row > div .item {
         height: 55px;
     }
-    #rates.tabelamaior .row > div .item {
+    .rates.tabelamaior .row > div .item {
         height: 80px;
     }
 
 
-    #rates .row.head > div {
+    .rates .row.head > div {
         height: 70px;
     }
-    #rates .row.head span {
+    .rates .row.head span {
         font-size: 20px;
     }
-    #rates .row.head .form-btn a {
+    .rates .row.head .form-btn a {
         padding: 0 10px;
     }
 }
