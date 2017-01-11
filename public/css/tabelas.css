@@ -102,6 +102,17 @@
     margin: 25px 10px;
 }
 
+.row.faq {
+    text-align: left;
+    margin: 20px 10px;
+    border-bottom: 1px solid #212e52;
+}
+
+
+.row.faq i.fa.fa-question-circle {
+    margin-right: 10px;
+    font-size: 20px;
+}
 
 @media (min-width: 768px) {
     .rates {
