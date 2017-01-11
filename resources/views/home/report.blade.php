@@ -11,9 +11,9 @@
                     <h3 class="tag-title">{{ $report['title'] }}</h3>
 
                     <div class="">
-                        @if ($report['body'])
+                        @if ($body = $report['html'] ?: $report['body'])
                             <div class="introduction">
-                                {!! $report['body'] !!}
+                                {!! $body !!}
                             </div>
                         @endif
                     </div>

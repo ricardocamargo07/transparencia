@@ -13,6 +13,8 @@ Route::get('/section/{id}', ['as' => 'section', 'uses' => 'Sections@section']);
 
 Route::get('/section/report/{id}', ['as' => 'report', 'uses' => 'Sections@report']);
 
+Route::get('/cache/clear/{key?}', ['as' => 'cache.clear', 'uses' => 'Cache@clear']);
+
 Route::get('/gettype', function () {
     $remates = new User();
 

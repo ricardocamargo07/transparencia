@@ -2,6 +2,8 @@
 
 namespace App;
 
+use Cache;
+
 class Section
 {
     private $sections;
@@ -45,19 +47,21 @@ class Section
 
     private function loadSections()
     {
-        $this->populateInternalSections();
+        $this->sections = Cache::remember('loadSections', 10, function () {
+            $this->populateInternalSections();
 
-        $this->sections = collect($this->sections);
+            $this->sections = collect($this->sections);
 
-        $this->sections = $this->sections->map(function($item) {
-            if (isset($item['webservice'])) {
-                return $this->loadFromWebService($item);
-            }
+            $this->sections = $this->sections->map(function($item) {
+                if (isset($item['webservice'])) {
+                    return $this->loadFromWebService($item);
+                }
 
-            return $this->populate($item);
+                return $this->populate($item);
+            });
+
+            return $this->sections;
         });
-
-        return $this->sections;
     }
 
     private function populate($item)
@@ -103,10 +107,10 @@ class Section
                 'slug' => 'estagiarios',
             ],
 
-//            [
-//                'webservice' => 'orcamento-e-financas',
-//                'slug' => 'orcamento-e-financas',
-//            ],
+            [
+                'webservice' => 'orcamento-e-financas',
+                'slug' => 'orcamento-e-financas',
+            ],
 
             [
                 'webservice' => 'transparencia-no-rio-de-janeiro',

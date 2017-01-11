@@ -78,6 +78,7 @@ class Webservice
                 'section_id' => $section_id = $item['Categoria']['IdCategoria'],
                 'title' => $item['Titulo'],
                 'body' => $item['Texto'],
+                'html' => isset($item['Html']) ? $item['Html'] : '',
                 'link' => route('report', [$report_id]),
                 'published_at_string' => $item['DatPublicacao'],
                 'published_at' => $this->convertDate($item['DatPublicacao']),

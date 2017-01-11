@@ -195,6 +195,10 @@
             <div class="fundo transparencia">
                 <div class="container-full titulo-portal text-center">
                     <h1>Portal da Transparência</h1>
+
+                    <a href="{{ route('cache.clear') }}">
+                        <i class="fa fa-refresh"></i>
+                    </a>
                 </div>
                 <div class="container">
                     @yield('content')
