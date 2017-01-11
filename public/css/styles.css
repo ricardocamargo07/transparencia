@@ -85,7 +85,7 @@
 
 .itens-transparencia {
     font-family: 'dinlight';
-    height: 228px;
+    height: 287px;
 }
 
 
@@ -219,7 +219,7 @@ i.fa.fa-plus-circle {
     text-transform: initial;
     font-family: 'univers_47';
     font-weight: 600;
-    margin-bottom: 25px;
+    /*margin-bottom: 25px;*/
 }
 
 
