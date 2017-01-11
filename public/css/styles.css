@@ -512,3 +512,11 @@ span.label-dowload-tipo {
 .fonteazul {
     color: #253255 !important;
 }
+
+.col-xs-1.refresh-cache.pull-right {
+    padding-top: 50px;
+}
+
+.col-xs-1.refresh-cache.pull-right i.fa.fa-refresh {
+    color: #fff;
+}
