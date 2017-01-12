@@ -102,22 +102,38 @@
     margin: 25px 10px;
 }
 
+
+
+
+
+
 .row.faq {
     text-align: left;
     padding-bottom: 20px;
     margin: 20px 10px;
-    border-bottom: 1px solid #212e52;
+    border: 1px solid #a8ab76;
+    border-radius: 10px;
+    padding: 20px 30px;
+    background: #fff;
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.38);
+    -moz-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.38);
+    box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.38);
 }
 
-.row.faq i.fa.fa-question-circle {
-    margin-right: 10px;
-    font-size: 20px;
+.row.faq h4 {
+    color: #ff6600 ;
+
 }
 
 .row.faq p {
     font-size: 95%;
-    margin: 0 32px 10px;
+/*    margin: 0 32px 10px;*/
 }
+
+
+
+
+
 
 @media (min-width: 768px) {
     .rates {
@@ -132,7 +148,7 @@
     .rates.tabelamaior .row > div .item {
         height: 80px;
     }
-    .#rates .row.head > div {
+    .rates .row.head > div {
         height: 70px;
     }
     .rates .row.head span {
