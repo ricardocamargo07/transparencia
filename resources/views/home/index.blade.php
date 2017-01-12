@@ -4,7 +4,7 @@
     <div class="row ">
         <div class="col-md-12 text-center conteudo">
             <div class="introducao">
-                <h2>INFORMAÇÃO É PODER </h2>
+                <h2 class="subtitle-home">INFORMAÇÃO É PODER</h2>
                 <h3>Seja bem-vindo ao Portal da Transparência da Alerj!</h3>
 
                 <div class="intro01">

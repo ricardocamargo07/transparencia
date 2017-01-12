@@ -565,6 +565,16 @@ h2 {
 }
 
 
+h2.subtitle-home {
+    background: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ec6629 ;
+    font-family: 'univers_47';
+    font-size: 38px;
+    margin-top: 30px;
+}
+
 h3{
     font-weight: 600;
     text-transform: uppercase;
@@ -572,6 +582,8 @@ h3{
     font-family: 'univers_47';
     font-size: 38px;
 }
+
+
 
 
 /*---------------FIM Titulo Tranparencia --------------------------*/
