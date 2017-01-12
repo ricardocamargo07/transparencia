@@ -6,13 +6,13 @@
             <h2>{{ $item['section']['title'] }}</h2>
         </div>
 
-
-        <div class="col-md-offset-2 col-md-8 text-center">
+        <div class="col-md-offset-1 col-md-10 text-center">
             <div class="{{ ($class = array_get($item, 'section.webservice.classes.box')) ? $class : 'box' }}">
                 <div class="box-content">
-                    <h4 class="{{ ($class = array_get($item, 'section.webservice.classes.tag-title')) ? $class : 'tag-title' }}">{{ $item['title'] }}</h4>
+                    <h3 class="{{ ($class = array_get($item, 'section.webservice.classes.tag-title')) ? $class : 'tag-title' }}">{{ $item['title'] }}</h3>
 
                     <div class="">
+
                         @if ($body = $item['html'] ?: $item['body'])
                             <div class="introduction">
                                 {!! $body !!}
