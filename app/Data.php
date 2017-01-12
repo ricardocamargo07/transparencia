@@ -4,55 +4,23 @@ namespace App;
 
 use Cache;
 
-class Section
+class Data extends BaseArrayModel
 {
-    private $sections;
+    protected $webservice;
 
     public function __construct()
     {
         $this->webservice = app(Webservice::class);
 
-        $this->loadSections();
+        parent::__construct();
     }
 
-    public static function all()
+    protected function loadData()
     {
-        return (new static())->getSections();
-    }
+        $this->data = Cache::remember('loadData', 180, function () {
+            $data = collect($this->getRawData());
 
-    public static function findBySlug($slug)
-    {
-        return static::all()->where('slug', $slug);
-    }
-
-    public static function findById($slug)
-    {
-        return static::all()->where('id', $slug)->first();
-    }
-
-    private function getSections()
-    {
-        return $this->sections;
-    }
-
-    private function loadFromWebService($item)
-    {
-//        $section = $this->sections[2];
-
-//        $section['title'] = 'DO WEBSERVICE';
-
-//        return $section;
-        return $this->webservice->getSection($item['slug']);
-    }
-
-    private function loadSections()
-    {
-        $this->sections = Cache::remember('loadSections', 180, function () {
-            $this->populateInternalSections();
-
-            $this->sections = collect($this->sections);
-
-            $this->sections = $this->sections->map(function($item) {
+            $data = $data->map(function($item) {
                 if (isset($item['webservice'])) {
                     return $this->loadFromWebService($item);
                 }
@@ -60,11 +28,16 @@ class Section
                 return $this->populate($item);
             });
 
-            return $this->sections;
+            return $data;
         });
     }
 
-    private function populate($item)
+    protected function loadFromWebService($item)
+    {
+        return $this->webservice->getItem($item['slug']);
+    }
+
+    protected function populate($item)
     {
         foreach ($item['links'] as $key => $link) {
             list($command, $name) = explode(':', $link['link']);
@@ -77,11 +50,11 @@ class Section
         return $item;
     }
 
-    private function populateInternalSections()
+    protected function getRawData()
     {
         $id = 1000000001;
 
-        $this->sections = [
+        return [
             [
                 'webservice' => 'perguntas-frequentes',
                 'slug' => 'perguntas-frequentes',

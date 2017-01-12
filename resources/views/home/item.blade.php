@@ -3,16 +3,16 @@
 @section('content')
     <div class="row">
         <div class="col-md-12 text-center conteudo">
-            <h2>{{ $report['section']['title'] }}</h2>
+            <h2>{{ $item['section']['title'] }}</h2>
         </div>
 
         <div class="col-md-offset-2 col-md-8 text-center">
             <div class="box">
                 <div class="box-content">
-                    <h3 class="tag-title">{{ $report['title'] }}</h3>
+                    <h3 class="tag-title">{{ $item['title'] }}</h3>
 
                     <div class="">
-                        @if ($body = $report['html'] ?: $report['body'])
+                        @if ($body = $item['html'] ?: $item['body'])
                             <div class="introduction">
                                 {!! $body !!}
                             </div>
@@ -21,9 +21,9 @@
                 </div>
             </div>
 
-            @if (isset($report['files']) && $report['files']->count())
+            @if (isset($item['files']) && $item['files']->count())
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    @foreach ($report['files'] as $year => $files)
+                    @foreach ($item['files'] as $year => $files)
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="heading-{{ $year }}">
                                 <h4 class="panel-title">

@@ -2,7 +2,7 @@
 
 namespace App;
 
-class Report extends Section
+class Item extends Data
 {
     public static function findById($id)
     {

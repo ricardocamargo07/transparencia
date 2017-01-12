@@ -3,15 +3,11 @@
 use App\Section;
 use App\User;
 
-Route::get('/', function () {
-    $sections = Section::all();
+Route::get('/', ['as' => 'home', 'uses' => 'Home@index']);
 
-    return view('home.index')->with('sections', $sections);
-});
+Route::get('/section/{id}', ['as' => 'section', 'uses' => 'Home@data']);
 
-Route::get('/section/{id}', ['as' => 'section', 'uses' => 'Sections@section']);
-
-Route::get('/section/report/{id}', ['as' => 'report', 'uses' => 'Sections@report']);
+Route::get('/section/report/{id}', ['as' => 'report', 'uses' => 'Home@item']);
 
 Route::get('/cache/clear/{key?}', ['as' => 'cache.clear', 'uses' => 'Cache@clear']);
 
@@ -20,4 +16,3 @@ Route::get('/gettype', function () {
 
     return (string)(gettype($remates) != 'NULL');
 });
-

@@ -62,7 +62,7 @@ class Webservice
         return $files;
     }
 
-    private function toSections($data)
+    private function toData($data)
     {
         $data = collect($data);
 
@@ -72,11 +72,11 @@ class Webservice
              * @return static
              */
             return [
-                'id' => $section_id = $item['IdCategoria'],
+                'id' => $data_id = $item['IdCategoria'],
                 'title' => $item['Nome'],
                 'slug' => $slug = str_slug($item['Nome']),
                 'icon' => $this->getIcon($slug),
-                'links' => $this->getSectionLinks($section_id),
+                'links' => $this->getLinks($data_id),
                 'published_at_string' => $item['DatPublicacao'],
                 'published_at' => $this->convertDate($item['DatPublicacao']),
                 'status' => $item['status'] == 'S',
@@ -84,14 +84,14 @@ class Webservice
         });
     }
 
-    private function toSection($data)
+    private function toItem($data)
     {
         $data = collect($data);
 
         return $data->map(function ($item) {
             return [
                 'id' => $report_id = $item['IdInformacao'],
-                'section_id' => $section_id = $item['Categoria']['IdCategoria'],
+                'data_id' => $data_id = $item['Categoria']['IdCategoria'],
                 'title' => $item['Titulo'],
                 'body' => $item['Texto'],
                 'html' => $this->purify(isset($item['TextoHtml']) ? $item['TextoHtml'] : ''),
@@ -105,7 +105,7 @@ class Webservice
                 'start_date' => $this->convertDate($item['DatAgendaEntrada']),
                 'end_date' => $this->convertDate($item['DatAgendaSaida']),
                 'redirect_file' => $item['RedirecionaArquivo'] == 'S',
-                'section' => [
+                'data' => [
                     'id' => $item['Categoria']['IdCategoria'],
                     'title' => $item['Categoria']['Nome'],
                     'published_at_string' => $item['DatPublicacao'],
@@ -117,14 +117,14 @@ class Webservice
         });
     }
 
-    private function getSectionLinks($id)
+    private function getLinks($id)
     {
-        return $this->toSection($this->requestJson(config('app.webservice.urls.section'), ['id' => $id]))->toArray();
+        return $this->toItem($this->requestJson(config('app.webservice.urls.section'), ['id' => $id]))->toArray();
     }
 
-    public function getSection($sectionId)
+    public function getItem($sectionId)
     {
-        return $this->getSections()->where('slug', $sectionId)->values()[0];
+        return $this->getData()->where('slug', $sectionId)->values()[0];
     }
 
     private function requestJson($url, $parameters = [], $method = 'GET')
@@ -142,9 +142,9 @@ class Webservice
        return $this->xmlToJson($response->getBody());
     }
 
-    public function getSections()
+    public function getData()
     {
-        return $this->toSections(
+        return $this->toData(
             $this->requestJson(config('app.webservice.urls.all_sections'))
         );
     }
