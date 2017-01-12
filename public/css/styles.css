@@ -67,14 +67,7 @@
 
 
 
-.transparencia h2{
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #ec6629 ;
-    font-family: 'univers_47';
-    font-size: 38px;
 
-}
 
 .transparencia p {
     font-size: 18px ;
@@ -167,21 +160,6 @@ i.fa.fa-plus-circle {
 }
 
 
-/*---------------Titulo Tranparencia --------------------------*/
-
-.container-full.titulo-portal.text-center {
-    background: #1d2d52 !important;
-}
-
-.transparencia .titulo-portal h1 {
-    color: #fff;
-    line-height: 2.2;
-    font-size: 52px;
-    text-transform: uppercase;
-}
-
-
-/*---------------FIM Titulo Tranparencia --------------------------*/
 
 
 
@@ -205,22 +183,6 @@ i.fa.fa-plus-circle {
     font-weight: 600;
 }
 
-
-.transparencia h3 {
-    /*font-family: 'univers_47';*/
-    font-size: 22px;
-    /*margin-top: 0px;*/
-    /*margin-bottom: 0px;*/
-    /*color: #212e52;*/
-    /*font-weight: 600;*/
-    margin-top: 0;
-    padding-top: 0;
-    color: #1d2d52;
-    text-transform: initial;
-    font-family: 'univers_47';
-    font-weight: 600;
-    /*margin-bottom: 25px;*/
-}
 
 
 
@@ -564,4 +526,66 @@ span.label-dowload-tipo {
 
 .transparencia .atodaalerj .deputados p {
     line-height: 5px;
+}
+
+
+
+
+/*---------------Titulo Tranparencia --------------------------*/
+
+.container-full.titulo-portal.text-center {
+    background: #1d2d52 !important;
+}
+
+h1 {
+    color: #fff;
+    line-height: 1.5;
+    font-size: 52px;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+h2 {
+    font-size: 22px;
+    margin-top: 0;
+    padding-bottom: 10px;
+    padding-top: 0;
+    color: #ffffff;
+    background:#1d2d52;
+    text-transform: initial;
+    font-family: 'univers_47';
+    font-weight: 300;
+    text-transform: uppercase;
+
+}
+
+
+h3{
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ec6629 ;
+    font-family: 'univers_47';
+    font-size: 38px;
+}
+
+
+/*---------------FIM Titulo Tranparencia --------------------------*/
+
+
+
+
+
+@media only screen and (max-width: 1016px) {
+
+}
+@media only screen and (max-width: 836px) {
+
+}
+@media only screen and (max-width: 496px) {
+
+    h1 {
+        color: #fff;
+        line-height: 1.6;
+        font-size: 24px;
+    }
+
 }
