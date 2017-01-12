@@ -1,11 +1,11 @@
 @extends('templates.default')
 
+@section('h2-title')
+    <h2>{{ $item['section']['title'] }}</h2>
+@stop
+
 @section('content')
     <div class="row">
-        <div class="col-md-12 text-center conteudo">
-            <h2>{{ $item['section']['title'] }}</h2>
-        </div>
-
         <div class="col-md-offset-1 col-md-10 text-center">
             <div class="{{ ($class = array_get($item, 'section.webservice.classes.box')) ? $class : 'box' }}">
                 <div class="box-content">

@@ -197,6 +197,7 @@
             <div class="row">
                 <div class="col-xs-6 col-xs-offset-3">
                     <h1>Portal da Transparência</h1>
+                    <h2>@yield('h2-title')</h2>
                 </div>
                 <div class="col-xs-1 refresh-cache pull-right" >
                     <div class="">
