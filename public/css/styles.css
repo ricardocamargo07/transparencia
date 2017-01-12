@@ -544,10 +544,10 @@ span.label-dowload-tipo {
 
 h1 {
     color: #fff;
-    line-height: 1.1;
+    line-height: 0.8;
     font-size: 52px;
     text-transform: uppercase;
-    padding-top: 25px;
+    padding-top: 40px;
 }
 
 
@@ -555,14 +555,13 @@ h2 {
     font-size: 22px;
     margin-top: 0;
     padding-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     color: #ffffff;
-    background:#1d2d52;
+    background: #1d2d52;
     text-transform: initial;
     font-family: 'univers_47';
     font-weight: 300;
     text-transform: uppercase;
-
 }
 
 
