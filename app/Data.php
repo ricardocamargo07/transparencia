@@ -15,26 +15,22 @@ class Data extends BaseArrayModel
         parent::__construct();
     }
 
-    protected function loadData()
+    protected function loadAllData()
     {
-        $this->data = Cache::remember('loadData', 180, function () {
-            $data = collect($this->getRawData());
+        $data = collect($this->getRawData())->map(function($item) {
+            if (isset($item['webservice'])) {
+                return $this->loadFromWebService($item);
+            }
 
-            $data = $data->map(function($item) {
-                if (isset($item['webservice'])) {
-                    return $this->loadFromWebService($item);
-                }
-
-                return $this->populate($item);
-            });
-
-            return $data;
+            return $this->populate($item);
         });
+
+        return $data;
     }
 
     protected function loadFromWebService($item)
     {
-        return $this->webservice->getItem($item['slug']);
+        return $this->webservice->getItem($item);
     }
 
     protected function populate($item)
@@ -58,6 +54,10 @@ class Data extends BaseArrayModel
             [
                 'webservice' => 'perguntas-frequentes',
                 'slug' => 'perguntas-frequentes',
+                'classes' => [
+                    'box' => 'no-class',
+                    'tag-title' => 'no-class',
+                ],
             ],
 
             [

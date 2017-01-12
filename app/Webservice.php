@@ -122,9 +122,13 @@ class Webservice
         return $this->toItem($this->requestJson(config('app.webservice.urls.section'), ['id' => $id]))->toArray();
     }
 
-    public function getItem($sectionId)
+    public function getItem($item)
     {
-        return $this->getData()->where('slug', $sectionId)->values()[0];
+        $data = $this->getData()->where('slug', $item['slug'])->values()[0];
+
+        $data['webservice'] = $item;
+
+        return $data;
     }
 
     private function requestJson($url, $parameters = [], $method = 'GET')
@@ -145,7 +149,9 @@ class Webservice
     public function getData()
     {
         return $this->toData(
-            $this->requestJson(config('app.webservice.urls.all_sections'))
+            $this->requestJson(
+                config('app.webservice.urls.all_sections')
+            )
         );
     }
 

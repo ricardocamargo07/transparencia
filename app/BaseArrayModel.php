@@ -6,6 +6,8 @@ use Cache;
 
 abstract class BaseArrayModel
 {
+    const CACHE_KEY = 'transparency-data';
+
     protected $data;
 
     public function __construct()
@@ -32,5 +34,24 @@ abstract class BaseArrayModel
     {
         return $this->data;
     }
-}
 
+    protected function loadData()
+    {
+        $this->data = Cache::remember(self::CACHE_KEY, $this->getCacheTime(), function () {
+            return $this->loadAllData();
+        });
+    }
+
+    public static function update() {
+        Cache::put(
+            self::CACHE_KEY,
+            (new static())->loadAllData(),
+            (new static())->getCacheTime()
+        );
+    }
+
+    protected function getCacheTime()
+    {
+        return config('app.data_cache_time', 180);
+    }
+}

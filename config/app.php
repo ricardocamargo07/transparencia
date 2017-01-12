@@ -16,6 +16,8 @@ return [
 
     'items_limit_on_home' => 7,
 
+    'data_cache_time' => 180,
+
     'webservice' => [
         'urls' => [
             'all_sections' => env('WEBSERVICE_ALL_SECTIONS_URL'),

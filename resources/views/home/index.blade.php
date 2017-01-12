@@ -1,9 +1,6 @@
 @extends('templates.default')
 
 @section('content')
-
-
-
     <div class="row ">
         <div class="col-md-12 text-center conteudo">
             <div class="introducao">
@@ -21,7 +18,6 @@
                     <p>Informação é Poder. E, na Alerj, você tem poder!</p>
                 </div>
             </div>
-
 
             @foreach($data as $item)
                 <div class="col-md-6 col-lg-4 text-center">
