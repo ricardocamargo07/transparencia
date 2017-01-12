@@ -12,7 +12,6 @@
                     <h3 class="{{ ($class = array_get($item, 'section.webservice.classes.tag-title')) ? $class : 'tag-title' }}">{{ $item['title'] }}</h3>
 
                     <div class="">
-
                         @if ($body = $item['html'] ?: $item['body'])
                             <div class="introduction">
                                 {!! $body !!}
