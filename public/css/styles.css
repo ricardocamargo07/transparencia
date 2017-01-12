@@ -357,7 +357,7 @@ a.btn.btn-block.btn-primary.voltar {
     text-transform: uppercase;
 }
 
-.transparencia .accordion .row.linha-mes  .btn {
+.row.linha-mes  .btn {
     background: #b7ba8f;
     color: #ffffff;
     text-transform: none;
