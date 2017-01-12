@@ -432,9 +432,10 @@ span.quadrimeste {
     margin-bottom: 2px;
 }
 
-.box-content h3.tag-title{
+.box .box-content h3.tag-title{
     text-transform: uppercase;
     padding-top: 10px;
+    font-size: 20px;
 }
 
 h4 {
@@ -442,6 +443,10 @@ h4 {
     text-transform: uppercase;
 }
 
+
+.box-content-item {
+    margin: 40px 0;
+}
 
 
 .grafico-box {
@@ -539,23 +544,24 @@ span.label-dowload-tipo {
 
 h1 {
     color: #fff;
-    line-height: 1.5;
+    line-height: 0.8;
     font-size: 52px;
     text-transform: uppercase;
-    padding-top: 10px;
+    padding-top: 40px;
 }
+
+
 h2 {
     font-size: 22px;
     margin-top: 0;
-    padding-bottom: 10px;
     padding-top: 0;
+    margin-bottom: 10px;
     color: #ffffff;
-    background:#1d2d52;
+    background: #1d2d52;
     text-transform: initial;
     font-family: 'univers_47';
     font-weight: 300;
     text-transform: uppercase;
-
 }
 
 

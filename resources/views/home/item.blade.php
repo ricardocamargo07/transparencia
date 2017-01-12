@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-md-offset-1 col-md-10 text-center">
             <div class="{{ ($class = array_get($item, 'section.webservice.classes.box')) ? $class : 'box' }}">
-                <div class="box-content">
+                <div class="box-content-item">
                     <h3 class="{{ ($class = array_get($item, 'section.webservice.classes.tag-title')) ? $class : 'tag-title' }}">{{ $item['title'] }}</h3>
 
                     <div class="">
