@@ -23,19 +23,19 @@
             </div>
 
 
-            @foreach($sections as $section)
+            @foreach($data as $item)
                 <div class="col-md-6 col-lg-4 text-center">
                     <div class="box">
                         <div class="box-content">
 
-                            <h3 class="tag-title">{{ $section['title'] }}</h3>
+                            <h3 class="tag-title">{{ $item['title'] }}</h3>
 
                             <div class="icones-tranparencia">
-                                <img class="tag-icon" src="{{ $section['icon'] }}">
+                                <img class="tag-icon" src="{{ $item['icon'] }}">
                             </div>
 
                             <ul class="itens-transparencia">
-                                @foreach(collect($section['links'])->take($countLimit = config('app.items_limit_on_home')) as $link)
+                                @foreach(collect($item['links'])->take($countLimit = config('app.items_limit_on_home')) as $link)
                                     <li class="btn"><a href="{{ $link['link'] }}">{{ $link['title'] }}</a></li>
                                 @endforeach
                             </ul>
