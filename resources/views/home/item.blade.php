@@ -7,17 +7,15 @@
 @section('content')
     <div class="row">
         <div class="col-md-offset-1 col-md-10 text-center">
-            <div class="{{ ($class = array_get($item, 'section.webservice.classes.box')) ? $class : 'box' }}">
+            <div class="">
                 <div class="box-content-item">
-                    <h3 class="{{ ($class = array_get($item, 'section.webservice.classes.tag-title')) ? $class : 'tag-title' }}">{{ $item['title'] }}</h3>
+                    <h3 class="">{{ $item['title'] }}</h3>
 
-                    <div class="">
-                        @if ($body = $item['html'] ?: $item['body'])
-                            <div class="introduction">
-                                {!! $body !!}
-                            </div>
-                        @endif
-                    </div>
+                    @if ($body = $item['html'] ?: $item['body'])
+                        <div class="introduction">
+                            {!! $body !!}
+                        </div>
+                    @endif
                 </div>
             </div>
 
@@ -37,7 +35,7 @@
                                     @foreach ($files as $file)
                                         <div class="row linha-mes">
                                             <div class="col-md-offset-3 col-md-3 mes-label">
-                                                {{ $file['title'] }}
+                                               {{ $file['title'] }}
                                             </div>
 
                                             <div class="col-md-3">
