@@ -13,7 +13,14 @@ class Webservice
 
     public function __construct()
     {
-        $this->purifier = new HTMLPurifier(HTMLPurifier_Config::createDefault());
+        $config = HTMLPurifier_Config::createDefault();
+
+        $config->set('HTML.SafeIframe', true);
+        $config->set('URI.SafeIframeRegexp', '%^(http.?:)?//alerjln1.alerj.rj.gov.br%');
+
+
+        http:///ordemdia.nsf/presint?OpenForm
+        $this->purifier = new HTMLPurifier($config);
     }
 
     public function convertDate($date)

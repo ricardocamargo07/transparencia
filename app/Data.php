@@ -54,10 +54,6 @@ class Data extends BaseArrayModel
             [
                 'webservice' => 'perguntas-frequentes',
                 'slug' => 'perguntas-frequentes',
-                'classes' => [
-                    'box' => 'no-class',
-                    'tag-title' => 'no-class',
-                ],
             ],
 
             [
