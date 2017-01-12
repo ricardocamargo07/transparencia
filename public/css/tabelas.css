@@ -115,9 +115,9 @@
     border-radius: 10px;
     padding: 20px 30px;
     background: #fff;
-    -webkit-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.38);
-    -moz-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.38);
-    box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.38);
+    -webkit-box-shadow: 5px 5px 1px 0px rgba(215,216,210,1);
+    -moz-box-shadow: 5px 5px 1px 0px rgba(215,216,210,1);
+    box-shadow: 5px 5px 1px 0px rgba(215,216,210,1);
 }
 
 .row.faq h4 {
