@@ -525,3 +525,43 @@ span.label-dowload-tipo {
 .col-xs-1.refresh-cache.pull-right i.fa.fa-refresh:hover {
     color: #535E7F;
 }
+
+.atodaalerj{
+    text-align: left;
+    margin: 20px;
+}
+
+.atodaalerj .numerodoartigo{
+    font-weight: 900;
+    font-size: 110%;
+
+}
+
+.atodaalerj .data {
+    margin: 10px 20px;
+    font-weight: 600;
+
+}
+
+.transparencia .atodaalerj  ul {
+    list-style-type: circle;
+    margin: 10px 20px;
+}
+
+.transparencia .atodaalerj  li {
+    background: none;
+    margin-bottom: 5px;
+    padding: 7px 0;
+}
+
+.transparencia .atodaalerj li:hover {
+    color: inherit;
+}
+
+.transparencia .atodaalerj .deputados {
+    margin: 40px 30px;
+}
+
+.transparencia .atodaalerj .deputados p {
+    line-height: 5px;
+}
