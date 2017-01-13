@@ -32,7 +32,7 @@
 
                             <ul class="itens-transparencia">
                                 @foreach(collect($item['links'])->take($countLimit = config('app.items_limit_on_home')) as $link)
-                                    <li class="btn"><a href="{{ $link['link'] }}">{{ $link['title'] }}</a></li>
+                                    <a href="{{ $link['link'] }}"><li class="btn">{{ $link['title'] }}</li></a>
                                 @endforeach
                             </ul>
                         </div>

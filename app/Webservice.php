@@ -108,7 +108,9 @@ class Webservice
                 'period_type' => $item['TipoPeriodoRef'],
                 'url' => $item['Url'],
             ];
-        })->groupBy('year');
+        })->groupBy('year')->sortByDesc(function($item, $key) {
+            return $key;
+        });
 
         return $files;
     }
