@@ -5,7 +5,7 @@
         <div class="col-md-12 text-center conteudo">
             <div class="introducao">
                 <h2 class="subtitle-home">INFORMAÇÃO É PODER</h2>
-                <h3>Seja bem-vindo ao Portal da Transparência da Alerj!</h3>
+                <h3 class="subtitle-home">Seja bem-vindo ao Portal da Transparência da Alerj!</h3>
 
                 <div class="intro01">
                     <p>A Assembleia Legislativa do Estado do Rio de Janeiro (Alerj), honrando sua tradição de pioneirismo, foi a primeira casa legislativa do país e a primeira instituição pública do estado a lançar seu Portal da Transparência, em 21 de maio de 2012.</p>

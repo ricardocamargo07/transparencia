@@ -119,17 +119,6 @@ i.fa.fa-plus-circle {
     -webkit-padding-start: 0px;
 }
 
-.transparencia li {
-    background: #fff;
-    margin-bottom: 5px;
-    padding: 7px 0;
-}
-
-
-.transparencia li:hover {
-    background-color: #253255 ;
-    color: #fff;
-}
 
 
 .meses i.fa.fa-file-pdf-o {
@@ -159,6 +148,27 @@ i.fa.fa-plus-circle {
     color: #f4f6e8;
 }
 
+.transparencia ul li.btn{
+    color: #7d824f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.transparencia ul li:hover .btn{
+    color: #ffffff;
+}
+
+.transparencia li {
+    background: #fff;
+    margin-bottom: 5px;
+    padding: 7px 0;
+}
+
+
+.transparencia li:hover {
+    background-color: #253255 ;
+    color: #fff !important;
+}
 
 
 
@@ -452,7 +462,7 @@ h4 {
 
 .grafico-box {
     background: #ffffff;
-    border-bottom: solid  #1d2d52 ;
+    border-bottom: solid #D7D8D2 ;
 }
 
 .graficos-desc{
@@ -475,7 +485,7 @@ h4 {
 span.label-dowload-tipo {
     font-family: dinlight;
     font-weight: 900;
-    margin-right:5px;
+    margin-left:5px;
 }
 
 .fonteazul {
@@ -584,11 +594,9 @@ h3{
     font-family: 'univers_47';
     font-size: 38px;
 }
-h3.subtitle-home {
-    font-size: 22px;
+.transparencia .introducao h3.subtitle-home {
+    font-size: 36px;
 }
-
-
 
 /*---------------FIM Titulo Tranparencia --------------------------*/
 
