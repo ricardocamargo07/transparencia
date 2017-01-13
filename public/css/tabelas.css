@@ -32,7 +32,7 @@
     padding: 0 4px;
     border-right: 2px solid #b7ba8f;
     border-bottom: 2px solid #b7ba8f;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .rates .row > div .item {
@@ -45,7 +45,7 @@
 
 .rates .row > div:first-child {
     border-left: 2px solid #b7ba8f;
-    text-align: left;
+    /*text-align: left;*/
     min-width: 119px;
 }
 
@@ -135,6 +135,33 @@
 
 
 
+
+.rates.quadroremuneratorio .row.primeiralinha > div {
+    text-align:center;
+}
+
+.rates.quadroremuneratorio .row > div:first-child {
+    text-align: center;
+    min-width: 138px;
+}
+
+.rates.quadroremuneratorio .row > div {
+    text-align: right;
+}
+
+
+.rates.beneficios .row > div:first-child {
+    text-align: center;
+}
+
+.rates.beneficios .row > div{
+    text-align: center;
+}
+
+
+
+
+
 @media (min-width: 768px) {
     .rates {
         font-size: 16px;
@@ -158,3 +185,4 @@
         padding: 0 10px;
     }
 }
+
