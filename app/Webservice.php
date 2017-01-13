@@ -11,6 +11,8 @@ class Webservice
 {
     private $purifier;
 
+    private $requestCache;
+
     public function __construct()
     {
         $config = HTMLPurifier_Config::createDefault();
@@ -18,8 +20,6 @@ class Webservice
         $config->set('HTML.SafeIframe', true);
         $config->set('URI.SafeIframeRegexp', '%^(http.?:)?//alerjln1.alerj.rj.gov.br%');
 
-
-        http:///ordemdia.nsf/presint?OpenForm
         $this->purifier = new HTMLPurifier($config);
     }
 
@@ -37,6 +37,35 @@ class Webservice
         return "/images/icons/$slug.svg";
     }
 
+    private function makeData($item)
+    {
+        return [
+            'id' => $report_id = $item['IdInformacao'],
+            'data_id' => $data_id = $item['Categoria']['IdCategoria'],
+            'title' => $item['Titulo'],
+            'body' => $item['Texto'],
+            'html' => $this->purify(isset($item['TextoHtml']) ? $item['TextoHtml'] : ''),
+            'link' => route('report', [$report_id]),
+            'published_at_string' => $item['DatPublicacao'],
+            'published_at' => $this->convertDate($item['DatPublicacao']),
+            'status' => $item['Status'] == 'S',
+            'url' => $item['Url'],
+            'schedule_start' => $item['AgendarEntrada'] == 'S',
+            'schedule_end' => $item['AgendarSaida'] == 'S',
+            'start_date' => $this->convertDate($item['DatAgendaEntrada']),
+            'end_date' => $this->convertDate($item['DatAgendaSaida']),
+            'redirect_file' => $item['RedirecionaArquivo'] == 'S',
+            'data' => [
+                'id' => $item['Categoria']['IdCategoria'],
+                'title' => $item['Categoria']['Nome'],
+                'published_at_string' => $item['DatPublicacao'],
+                'published_at' => $this->convertDate($item['DatPublicacao']),
+                'status' => $item['Categoria']['status'] == 'S',
+            ],
+            'files' => $this->toFiles($item['ListaArquivos']),
+        ];
+    }
+
     private function makeUrl($url, $parameters)
     {
         return vsprintf($url, $parameters);
@@ -45,6 +74,21 @@ class Webservice
     private function purify($html)
     {
         return $this->purifier->purify($html);
+    }
+
+    private function requestCache($url, $data = null)
+    {
+        if ($data) {
+            $this->requestCache[$url] = $data;
+
+            return $data;
+        }
+
+        if ($data = array_get($this->requestCache, $url)) {
+            return $data;
+        }
+
+        return null;
     }
 
     private function toFiles($ListaArquivos)
@@ -64,20 +108,16 @@ class Webservice
                 'period_type' => $item['TipoPeriodoRef'],
                 'url' => $item['Url'],
             ];
-        })->groupBy('year');
+        })->groupBy('year')->sortByDesc(function($item, $key) {
+            return $key;
+        });
 
         return $files;
     }
 
     private function toData($data)
     {
-        $data = collect($data);
-
-        return $data->map(function ($item) {
-            /**
-             * @param $item
-             * @return static
-             */
+        return collect($data)->map(function ($item) {
             return [
                 'id' => $data_id = $item['IdCategoria'],
                 'title' => $item['Nome'],
@@ -93,40 +133,16 @@ class Webservice
 
     private function toItem($data)
     {
-        $data = collect($data);
-
-        return $data->map(function ($item) {
-            return [
-                'id' => $report_id = $item['IdInformacao'],
-                'data_id' => $data_id = $item['Categoria']['IdCategoria'],
-                'title' => $item['Titulo'],
-                'body' => $item['Texto'],
-                'html' => $this->purify(isset($item['TextoHtml']) ? $item['TextoHtml'] : ''),
-                'link' => route('report', [$report_id]),
-                'published_at_string' => $item['DatPublicacao'],
-                'published_at' => $this->convertDate($item['DatPublicacao']),
-                'status' => $item['Status'] == 'S',
-                'url' => $item['Url'],
-                'schedule_start' => $item['AgendarEntrada'] == 'S',
-                'schedule_end' => $item['AgendarSaida'] == 'S',
-                'start_date' => $this->convertDate($item['DatAgendaEntrada']),
-                'end_date' => $this->convertDate($item['DatAgendaSaida']),
-                'redirect_file' => $item['RedirecionaArquivo'] == 'S',
-                'data' => [
-                    'id' => $item['Categoria']['IdCategoria'],
-                    'title' => $item['Categoria']['Nome'],
-                    'published_at_string' => $item['DatPublicacao'],
-                    'published_at' => $this->convertDate($item['DatPublicacao']),
-                    'status' => $item['Categoria']['status'] == 'S',
-                ],
-                'files' => $this->toFiles($item['ListaArquivos']),
-            ];
+        return collect($data)->map(function ($item) {
+            return $this->makeData($item);
         });
     }
 
     private function getLinks($id)
     {
-        return $this->toItem($this->requestJson(config('app.webservice.urls.section'), ['id' => $id]))->toArray();
+        return $this->toItem(
+            $this->requestJson(config('app.webservice.urls.section'), ['id' => $id])
+        )->toArray();
     }
 
     public function getItem($item)
@@ -140,9 +156,13 @@ class Webservice
 
     private function requestJson($url, $parameters = [], $method = 'GET')
     {
-        $client = new Guzzle();
-
         $url = $this->makeUrl($url, $parameters);
+
+        if ($data = $this->requestCache($url)) {
+            return $data;
+        }
+
+        $client = new Guzzle();
 
         $response = $client->request($method, $url);
 
@@ -150,7 +170,11 @@ class Webservice
             return null;
         }
 
-       return $this->xmlToJson($response->getBody());
+        $data = $this->xmlToJson($response->getBody());
+
+        $this->requestCache($url, $data);
+
+        return $data;
     }
 
     public function getData()
