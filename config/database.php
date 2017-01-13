@@ -79,6 +79,18 @@ return [
             'sslmode' => 'prefer',
         ],
 
+        'alerj' => [
+            'driver' => 'sqlsrv',
+            'host' => env('DB_ALERJ_HOST', '127.0.0.1'),
+            'port' => env('DB_ALERJ_PORT', '5432'),
+            'database' => env('DB_ALERJ_DATABASE', 'forge'),
+            'username' => env('DB_ALERJ_USERNAME', 'forge'),
+            'password' => env('DB_ALERJ_PASSWORD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+            'sslmode' => 'prefer',
+        ],
     ],
 
     /*
