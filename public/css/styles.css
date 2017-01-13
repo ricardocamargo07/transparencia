@@ -173,6 +173,7 @@ i.fa.fa-plus-circle {
     font-family: 'univers_47';
     font-weight: 600;
     margin-bottom: 25px;
+    font-size: 22px;
 }
 
 
@@ -356,7 +357,7 @@ a.btn.btn-block.btn-primary.voltar {
     text-transform: uppercase;
 }
 
-.transparencia .accordion .row.linha-mes  .btn {
+.row.linha-mes  .btn {
     background: #b7ba8f;
     color: #ffffff;
     text-transform: none;
@@ -582,7 +583,9 @@ h3{
     font-family: 'univers_47';
     font-size: 38px;
 }
-
+h3.subtitle-home {
+    font-size: 22px;
+}
 
 
 
