@@ -627,6 +627,14 @@ p.form-intro {
 }
 
 
+.form-botoes .btn-primary {
+    background: #1d2d52 !important;
+}
+
+.form-botoes .btn-primary:hover {
+    background: #334263 !important;
+}
+
 
 
 @media only screen and (max-width: 1016px) {
