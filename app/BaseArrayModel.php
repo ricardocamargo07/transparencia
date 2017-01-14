@@ -52,6 +52,6 @@ abstract class BaseArrayModel
 
     protected function getCacheTime()
     {
-        return config('app.data_cache_time', 180);
+        return config('app.data_cache_time');
     }
 }

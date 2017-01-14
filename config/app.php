@@ -2,16 +2,6 @@
 
 return [
 
-    /*
-    |--------------------------------------------------------------------------
-    | Application Name
-    |--------------------------------------------------------------------------
-    |
-    | This value is the name of your application. This value is used when the
-    | framework needs to place the application's name in a notification or
-    | any other location as required by the application or its packages.
-    */
-
     'name' => 'Laravel',
 
     'items_limit_on_home' => 7,
@@ -22,6 +12,8 @@ return [
         'urls' => [
             'all_sections' => env('WEBSERVICE_ALL_SECTIONS_URL'),
             'section' => env('WEBSERVICE_SECTION_URL'),
+            'files' => env('WEBSERVICE_FILES'),
+            'file' => env('WEBSERVICE_FILE_URL'),
         ],
     ],
 
@@ -75,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Sao_Paulo',
 
     /*
     |--------------------------------------------------------------------------

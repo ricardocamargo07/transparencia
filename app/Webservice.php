@@ -2,9 +2,10 @@
 
 namespace App;
 
+use Cache;
 use HTMLPurifier;
-use HTMLPurifier_Config;
 use Carbon\Carbon;
+use HTMLPurifier_Config;
 use GuzzleHttp\Client as Guzzle;
 
 class Webservice
@@ -13,7 +14,47 @@ class Webservice
 
     private $requestCache;
 
-    public function __construct()
+    private $rawData;
+
+    protected $data;
+
+    public function __construct($rawData = null)
+    {
+        $this->rawData = $rawData;
+
+        $this->initializePurifier();
+    }
+
+    public function convertDate($date)
+    {
+        if (! $date) {
+            return null;
+        }
+
+        return Carbon::parse($date);
+    }
+
+    private function dataIsNeeded($slug)
+    {
+        return $this->rawData->where('slug', $slug)->count();
+    }
+
+    private function getData()
+    {
+        return $this->data;
+    }
+
+    public function getFiles($id)
+    {
+        return $this->toFiles($this->requestJson(config('app.webservice.urls.files'), $id));
+    }
+
+    private function getIcon($slug)
+    {
+        return "/images/icons/$slug.svg";
+    }
+
+    private function initializePurifier()
     {
         $config = HTMLPurifier_Config::createDefault();
 
@@ -23,47 +64,41 @@ class Webservice
         $this->purifier = new HTMLPurifier($config);
     }
 
-    public function convertDate($date)
-    {
-        if (! $date) {
-            return null;
-        }
-
-        return Carbon::createFromFormat('d/m/Y', $date);
-    }
-
-    private function getIcon($slug)
-    {
-        return "/images/icons/$slug.svg";
-    }
-
     private function makeData($item)
     {
         return [
-            'id' => $report_id = $item['IdInformacao'],
-            'data_id' => $data_id = $item['Categoria']['IdCategoria'],
-            'title' => $item['Titulo'],
-            'body' => $item['Texto'],
-            'html' => $this->purify(isset($item['TextoHtml']) ? $item['TextoHtml'] : ''),
-            'link' => route('report', [$report_id]),
-            'published_at_string' => $item['DatPublicacao'],
-            'published_at' => $this->convertDate($item['DatPublicacao']),
-            'status' => $item['Status'] == 'S',
-            'url' => $item['Url'],
-            'schedule_start' => $item['AgendarEntrada'] == 'S',
-            'schedule_end' => $item['AgendarSaida'] == 'S',
-            'start_date' => $this->convertDate($item['DatAgendaEntrada']),
-            'end_date' => $this->convertDate($item['DatAgendaSaida']),
-            'redirect_file' => $item['RedirecionaArquivo'] == 'S',
+            'id' => $id = $item['idInformacao'],
+            'data_id' => $data_id = $item['categoria']['idCategoria'],
+            'title' => $item['titulo'],
+            'body' => $item['texto'],
+            'user_id' => $item['idUsuario'],
+            'html' => $this->purify(isset($item['texto_html']) ? $item['texto_html'] : ''),
+            'link' => route('report', [$id]),
+            'published_at_string' => $item['data_pub'],
+            'published_at' => $this->convertDate($item['data_pub']),
+            'status' => $item['status'] == 'S',
+            'url' => $item['url'],
+            'schedule_start' => $item['agendar_in'] == 'S',
+            'schedule_end' => $item['agendar_out'] == 'S',
+            'start_date' => $this->convertDate($item['data_agenda_in']),
+            'end_date' => $this->convertDate($item['data_agenda_out']),
+            'redirect_file' => $item['redireciona_arquivo'] == 'S',
             'data' => [
-                'id' => $item['Categoria']['IdCategoria'],
-                'title' => $item['Categoria']['Nome'],
-                'published_at_string' => $item['DatPublicacao'],
-                'published_at' => $this->convertDate($item['DatPublicacao']),
-                'status' => $item['Categoria']['status'] == 'S',
+                'id' => $item['categoria']['idCategoria'],
+                'title' => $item['categoria']['nome'],
+                'published_at_string' => $item['data_pub'],
+                'published_at' => $this->convertDate($item['data_pub']),
+                'status' => $item['categoria']['status'] == 'S',
             ],
-            'files' => $this->toFiles($item['ListaArquivos']),
         ];
+    }
+
+    private function makeFileUrl($id)
+    {
+        return $this->makeUrl(
+            config('app.webservice.urls.file'),
+            $id
+        );
     }
 
     private function makeUrl($url, $parameters)
@@ -95,20 +130,21 @@ class Webservice
     {
         $files = collect($ListaArquivos)->map(function($item) {
             return [
-                'id' => 'file-' . $item['IdArquivo'],
-                'title' => $item['Titulo'],
-                'name' => $item['NomArquivo'],
+                'id' => 'file-' . $id = $item['idArquivo'],
+                'title' => $item['titulo'],
+                'name' => $item['arquivo'],
                 'status' => $item['status'] == 'S',
-                'contents' => $item['ConteudoArquivo'],
-                'type' => $item['Tipo'],
-                'published_at_string' => $item['DatPublicacao'],
-                'published_at' => $this->convertDate($item['DatPublicacao']),
-                'year' => $item['AnoRef'],
-                'period' => $item['PeriodoRef'],
-                'period_type' => $item['TipoPeriodoRef'],
-                'url' => $item['Url'],
+                'contents_id' => $item['idConteudo'],
+                'user_id' => $item['idUsuario'],
+                'type' => $item['tipo'],
+                'published_at_string' => $item['data_pub'],
+                'published_at' => $this->convertDate($item['data_pub']),
+                'year' => $item['anoRef'],
+                'period' => $item['periodoRef'],
+                'period_type' => $item['tipoPeriodoRef'],
+                'url' => $this->makeFileUrl($id),
             ];
-        })->groupBy('year')->sortByDesc(function($item, $key) {
+        })->where('status', 'S')->groupBy('year')->sortByDesc(function($item, $key) {
             return $key;
         });
 
@@ -117,15 +153,24 @@ class Webservice
 
     private function toData($data)
     {
-        return collect($data)->map(function ($item) {
+        info('--------------------------------------------------');
+        return collect($data)->where('status', 'S')->map(function ($item) {
+            $slug = str_slug($name = $item['nome']);
+
+            info($slug);
+
+            if (! $this->dataIsNeeded($slug)) {
+                return null;
+            }
+
             return [
-                'id' => $data_id = $item['IdCategoria'],
-                'title' => $item['Nome'],
-                'slug' => $slug = str_slug($item['Nome']),
+                'id' => $data_id = $item['idCategoria'],
+                'title' => $name,
+                'slug' => $slug = str_slug($name),
                 'icon' => $this->getIcon($slug),
-                'links' => $this->getLinks($data_id),
-                'published_at_string' => $item['DatPublicacao'],
-                'published_at' => $this->convertDate($item['DatPublicacao']),
+                'links' => $this->getLinks($item['informacoes']),
+                'published_at_string' => $published_at = $item['data_pub'],
+                'published_at' => $this->convertDate($published_at),
                 'status' => $item['status'] == 'S',
             ];
         });
@@ -138,11 +183,11 @@ class Webservice
         });
     }
 
-    private function getLinks($id)
+    private function getLinks($links)
     {
-        return $this->toItem(
-            $this->requestJson(config('app.webservice.urls.section'), ['id' => $id])
-        )->toArray();
+        return collect($links)->where('status', 'S')->map(function ($item) {
+            return $this->makeData($item);
+        })->toArray();
     }
 
     public function getItem($item)
@@ -158,28 +203,23 @@ class Webservice
     {
         $url = $this->makeUrl($url, $parameters);
 
-        if ($data = $this->requestCache($url)) {
-            return $data;
-        }
+        return Cache::remember($url, config('app.data_cache_time'), function() use ($url, $method) {
+            $client = new Guzzle();
 
-        $client = new Guzzle();
+            $response = $client->request($method, $url);
 
-        $response = $client->request($method, $url);
+            if ($response->getStatusCode() !== 200) {
+                return null;
+            }
 
-        if ($response->getStatusCode() !== 200) {
-            return null;
-        }
-
-        $data = $this->xmlToJson($response->getBody());
-
-        $this->requestCache($url, $data);
-
-        return $data;
+            return $this->xmlToJson($response->getBody());
+            }
+        );
     }
 
-    public function getData()
+    public function loadAllData()
     {
-        return $this->toData(
+        $this->data = $this->toData(
             $this->requestJson(
                 config('app.webservice.urls.all_sections')
             )

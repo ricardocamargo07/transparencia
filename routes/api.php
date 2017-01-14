@@ -1,24 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
-
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
-
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
-
-Route::post('/request', function () {
-    $payLoad = json_decode(request()->getContent(), true);
-
-    dd($payLoad['name']);
-});
+Route::get('/alerj/all', ['as' => 'api.alerj.all', 'uses' => 'Api@all']);
+Route::get('/alerj/categoria/{id?}', ['as' => 'api.alerj.categoria', 'uses' => 'Api@categoria']);
+Route::get('/alerj/informacao/{id?}', ['as' => 'api.alerj.informacao', 'uses' => 'Api@informacao']);
+Route::get('/alerj/informacao/{id}/arquivos', ['as' => 'api.alerj.arquivos', 'uses' => 'Api@informacaoArquivos']);
+Route::get('/alerj/arquivo/{id?}', ['as' => 'api.alerj.arquivo', 'uses' => 'Api@arquivo']);

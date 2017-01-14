@@ -8,15 +8,12 @@ class Data extends BaseArrayModel
 {
     protected $webservice;
 
-    public function __construct()
-    {
-        $this->webservice = app(Webservice::class);
-
-        parent::__construct();
-    }
-
     protected function loadAllData()
     {
+        $this->webservice = app(Webservice::class, [$this->getRawData()]);
+
+        $this->webservice->loadAllData();
+
         $data = collect($this->getRawData())->map(function($item) {
             if (isset($item['webservice'])) {
                 return $this->loadFromWebService($item);
@@ -50,7 +47,7 @@ class Data extends BaseArrayModel
     {
         $id = 1000000001;
 
-        return [
+        return collect([
             [
                 'webservice' => 'perguntas-frequentes',
                 'slug' => 'perguntas-frequentes',
@@ -91,67 +88,7 @@ class Data extends BaseArrayModel
                 'slug' => 'diario-oficial',
             ],
 
-//            [
-//                'webservice' => 'deputados',
-//                'slug' => 'deputados',
-//            ],
-//
-//            [
-//                'webservice' => 'deputados',
-//                'slug' => 'deputados',
-//            ],
-//
-//            [
-//                'webservice' => 'deputados',
-//                'slug' => 'deputados',
-//            ],
-//
-//            [
-//                'webservice' => 'deputados',
-//                'slug' => 'deputados',
-//            ],
-//
-//            [
-//                'webservice' => 'deputados',
-//                'slug' => 'deputados',
-//            ],
-//
-//            [
-//                'webservice' => 'deputados',
-//                'slug' => 'deputados',
-//            ],
-//
-//            [
-//                'webservice' => 'deputados',
-//                'slug' => 'deputados',
-//            ],
-//
-//            [
-//                'webservice' => 'deputados',
-//                'slug' => 'deputados',
-//            ],
-//
-//            [
-//                'webservice' => 'deputados',
-//                'slug' => 'deputados',
-//            ],
-//
-//            [
-//                'webservice' => 'deputados',
-//                'slug' => 'deputados',
-//            ],
-//
-//            [
-//                'webservice' => 'deputados',
-//                'slug' => 'deputados',
-//            ],
-//
-//            [
-//                'webservice' => 'licitacoes',
-//                'slug' => 'licitacoes',
-//            ],
-//
-//
+
 //            1 => [
 //                'id' => 'section-'.$id++,
 //                'title' => 'PERGUNTAS FREQUENTES',
@@ -1565,7 +1502,7 @@ class Data extends BaseArrayModel
 //                    ],
 //                ],
 //            ],
-        ];
+        ]);
     }
 }
 
