@@ -18,23 +18,25 @@
                     <div class="item">
                         <h4>Digite o número do procotolo</h4>
 
-                        <div class="row">
-                            <form action="/protocolo" method="get">
+                        <form action="/protocolo" method="post">
+                            <input name="_token" type="hidden" value="{{ csrf_token() }}">
+
+                            <div class="row">
                                 <div class="coluna_04">
                                     <div style="padding-top: 20px">
-                                        <textarea rows="1" class="js-obrigatorio" id="campoMensagem" name="mensagem" style="font-size: 2em; ">28812/2016</textarea>
+                                        <textarea name="protocol" rows="1" class="js-obrigatorio" id="campoMensagem" style="font-size: 2em; ">6.518/2012</textarea>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-
-                        <div class="row form-botoes">
-                            <div class="col-md-12">
-                                <a href="/protocolo" class="btn btn-primary btn-block">
-                                    <i class="fa fa-desktop" aria-hidden="true"></i>Pesquisar
-                                </a>
                             </div>
-                        </div>
+
+                            <div class="row form-botoes">
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-primary btn-block">
+                                        <i class="fa fa-desktop" aria-hidden="true"></i>Pesquisar
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -12,8 +12,9 @@ return [
         'urls' => [
             'all_sections' => env('WEBSERVICE_ALL_SECTIONS_URL'),
             'section' => env('WEBSERVICE_SECTION_URL'),
-            'files' => env('WEBSERVICE_FILES'),
+            'files' => env('WEBSERVICE_FILES_URL'),
             'file' => env('WEBSERVICE_FILE_URL'),
+            'protocol' => env('WEBSERVICE_PROTOCOL_URL'),
         ],
     ],
 

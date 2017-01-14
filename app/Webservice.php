@@ -4,15 +4,15 @@ namespace App;
 
 use Cache;
 use HTMLPurifier;
-use Carbon\Carbon;
+use App\Support\Datable;
 use HTMLPurifier_Config;
-use GuzzleHttp\Client as Guzzle;
+use App\Support\RemotelyRequestable;
 
 class Webservice
 {
-    private $purifier;
+    use RemotelyRequestable, Datable;
 
-    private $requestCache;
+    private $purifier;
 
     private $rawData;
 
@@ -23,15 +23,6 @@ class Webservice
         $this->rawData = $rawData;
 
         $this->initializePurifier();
-    }
-
-    public function convertDate($date)
-    {
-        if (! $date) {
-            return null;
-        }
-
-        return Carbon::parse($date);
     }
 
     private function dataIsNeeded($slug)
@@ -101,29 +92,10 @@ class Webservice
         );
     }
 
-    private function makeUrl($url, $parameters)
-    {
-        return vsprintf($url, $parameters);
-    }
 
     private function purify($html)
     {
         return $this->purifier->purify($html);
-    }
-
-    private function requestCache($url, $data = null)
-    {
-        if ($data) {
-            $this->requestCache[$url] = $data;
-
-            return $data;
-        }
-
-        if ($data = array_get($this->requestCache, $url)) {
-            return $data;
-        }
-
-        return null;
     }
 
     private function toFiles($ListaArquivos)
@@ -199,24 +171,6 @@ class Webservice
         return $data;
     }
 
-    private function requestJson($url, $parameters = [], $method = 'GET')
-    {
-        $url = $this->makeUrl($url, $parameters);
-
-        return Cache::remember($url, config('app.data_cache_time'), function() use ($url, $method) {
-            $client = new Guzzle();
-
-            $response = $client->request($method, $url);
-
-            if ($response->getStatusCode() !== 200) {
-                return null;
-            }
-
-            return $this->xmlToJson($response->getBody());
-            }
-        );
-    }
-
     public function loadAllData()
     {
         $this->data = $this->toData(
@@ -224,22 +178,5 @@ class Webservice
                 config('app.webservice.urls.all_sections')
             )
         );
-    }
-
-    private function xmlToJson($xml)
-    {
-        if ($json = json_decode($xml, true)) {
-            return $json;
-        }
-
-        try {
-            $xml = simplexml_load_string($xml);
-        } catch (\Exception $exception) {
-            return null;
-        }
-
-        $json = json_encode($xml);
-
-        return json_decode($json, true);
     }
 }

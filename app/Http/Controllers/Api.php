@@ -4,10 +4,14 @@ namespace App\Http\Controllers;
 
 use App\AlerjArquivo;
 use App\AlerjCategoria;
+use App\AlerjConteudo;
 use App\AlerjInformacao;
+use App\Support\Encodable;
 
 class Api extends Controller
 {
+    use Encodable;
+
     public function all()
     {
         return $this->categoria();
@@ -35,16 +39,23 @@ class Api extends Controller
         return $this->find($id, AlerjArquivo::class);
     }
 
-    public function find($id, $class, $relations = null, $returnResponse = true)
+    public function conteudo($id)
+    {
+        return $this->find($id, AlerjConteudo::class, null, true, 'protocolo');
+    }
+
+    public function find($id, $class, $relations = null, $returnResponse = true, $keyName = null)
     {
         $query = ($object = new $class)->newQuery();
+
+        $keyName = $keyName ?: $object->getKeyName();
 
         if ($relations) {
             $query->with($relations);
         }
 
         if ($id) {
-            $query->where($object->getKeyName(), $id);
+            $query->where($keyName, $this->decode($id));
         }
 
         $result = $query->get();

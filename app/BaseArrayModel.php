@@ -3,9 +3,13 @@
 namespace App;
 
 use Cache;
+use App\Support\RemotelyRequestable;
+
 
 abstract class BaseArrayModel
 {
+    use RemotelyRequestable;
+
     const CACHE_KEY = 'transparency-data';
 
     protected $data;

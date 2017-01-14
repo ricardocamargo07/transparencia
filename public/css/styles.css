@@ -660,3 +660,12 @@ textarea {
     font-size: 2.5em !important;
     font-weight: normal;
 }
+
+.protocol-answer-row {
+    margin-top: 20px !important;
+    line-height: 1.4em !important;
+}
+
+.bold {
+    font-weight: 800;
+}
