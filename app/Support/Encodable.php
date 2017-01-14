@@ -6,7 +6,11 @@ trait Encodable
 {
     public function encode($data)
     {
-        return base64_encode($data);
+        if (! is_numeric($data)) {
+            return base64_encode($data);
+        }
+
+        return $data;
     }
 
     public function decode($data)
