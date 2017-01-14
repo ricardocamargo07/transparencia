@@ -652,3 +652,11 @@ p.form-intro {
     }
 
 }
+
+textarea {
+    width: 100%;
+    padding: 20px 0px 20px 14px !important;
+    margin: 10px 40px 19px 0px;
+    font-size: 2.5em !important;
+    font-weight: normal;
+}

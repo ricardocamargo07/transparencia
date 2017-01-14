@@ -97,3 +97,39 @@
         <script src="/js/app.js"></script>
     </body>
 </html>
+
+<div class="row faq">
+    <div class="col-xs-12">
+        <div class="item">
+            <h4>Tem um número de protocolo?</h4>
+
+            <p>Se já possui um número de protocolo, você pode acompanhar seu pedido pelo site da Alerj. Clique no botão abaixo para acessar o formulário:</p>
+
+            <div class="row form-botoes">
+                <div class="col-md-12">
+                    <a href="http://www2.alerj.rj.gov.br/leideacesso/formulario-2016.asp" class="btn btn-primary btn-block">
+                        <i class="fa fa-desktop" aria-hidden="true"></i>Formulário online
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row faq">
+    <div class="col-xs-12">
+        <div class="item">
+            <h4>Pedido Presencial</h4>
+            <p>Ligue grátis para o Alô Alerj no telefone 0800-0220008.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row faq">
+    <div class="col-xs-12">
+        <div class="item">
+            <h4>Pedido Eletrônico</h4>
+            <p>Entre na página do Web Chat da ALERJ e fale com nossos atendentes através do <a href="https://www.aloalerj.rj.gov.br">Alô Alerj</a></p>
+        </div>
+    </div>
+</div>
