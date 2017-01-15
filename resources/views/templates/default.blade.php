@@ -196,11 +196,11 @@
     <div class="fundo transparencia">
         <div class="container-full titulo-portal text-center">
             <div class="row">
-                <div class="col-xs-6 col-xs-offset-3">
+                <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3">
                     <h1>Portal da Transparência</h1>
                     @yield('h2-title')
                 </div>
-                <div class="col-xs-1 refresh-cache pull-right" >
+                <div class="col-xs-2 refresh-cache pull-right" >
                     <div class="">
                         <a href="{{ route('cache.clear') }}">
                             <i class="fa fa-refresh"></i>
