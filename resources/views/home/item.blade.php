@@ -34,11 +34,11 @@
                                 <div class="panel-body">
                                     @foreach ($files as $file)
                                         <div class="row linha-mes">
-                                            <div class="col-md-offset-3 col-md-3 mes-label">
+                                            <div class="col-xs-12 col-md-offset-3 col-md-3 mes-label">
                                                {{ $file['title'] }}
                                             </div>
 
-                                            <div class="col-md-3">
+                                            <div class="col-xs-12 col-md-3">
                                                 <a href="{{ $file['url'] }}" >
                                                     <i class="btn fa fa-file-pdf-o" aria-hidden="true">
                                                         <span class="label-dowload-tipo">pdf</span>
