@@ -732,6 +732,13 @@ p.form-intro {
         height: 60px;
     }
 
+    .graficos-desc {
+        margin: 5px 5px 0 5px;
+    }
+    .graficos-desc p {
+        margin-bottom: 0;
+    }
+
 
 }
 

@@ -162,6 +162,19 @@
 
 
 
+
+
+
+
+
+
+@media only screen and (max-width: 1016px) {
+
+}
+@media only screen and (max-width: 836px) {
+
+}
+
 @media (min-width: 768px) {
     .rates {
         font-size: 16px;
@@ -184,5 +197,37 @@
     .rates .row.head .form-btn a {
         padding: 0 10px;
     }
+}
+
+@media only screen and (max-width: 496px) {
+
+    .row.tabelas {
+        margin: 5px;
+    }
+
+    .rates .row.primeiralinha > div .item {
+        height: 40px;
+    }
+
+    .rates .row > div .item {
+        font-size: 12px;
+        height: 90px;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+    }
+    .rates .row > div:first-child {
+        min-width: 84px;
+    }
+
+    .rates.deputados-salarios .row > div .item {
+        height: 40px;
+    }
+
+
 }
 
