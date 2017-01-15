@@ -22,7 +22,7 @@
                             <input name="_token" type="hidden" value="{{ csrf_token() }}">
 
                             <div class="row">
-                                <div class="coluna_04">
+                                <div class="col-xs-12">
                                     <div style="padding-top: 20px">
                                         <textarea name="protocol" rows="1" class="js-obrigatorio" id="campoMensagem" style="font-size: 2em; ">6.518/2012</textarea>
                                     </div>

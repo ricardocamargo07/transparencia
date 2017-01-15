@@ -704,6 +704,7 @@ p.form-intro {
 
     .form-botoes a.btn.btn-primary {
         font-size: 14px;
+        margin-bottom: 10px;
     }
 
     .form-botoes i.fa {
@@ -755,6 +756,13 @@ p.form-intro {
         padding-bottom: 10px;
     }
 
+    a.btn.btn-block.btn-primary.voltar {
+        font-size: 16px;
+        padding: 13px 0 10px 0 !important;
+        line-height: inherit;
+        margin-top: 20px;
+        min-height: inherit !important;
+    }
 
 }
 
