@@ -637,6 +637,15 @@ p.form-intro {
 
 
 
+.protocolo button.btn.btn-primary.btn-block {
+    font-size: 20px;
+}
+.protocolo i.fa.fa-desktop {
+    font-size: 18px;
+}
+
+
+
 @media only screen and (max-width: 1016px) {
 
 }
@@ -762,6 +771,13 @@ p.form-intro {
         line-height: inherit;
         margin-top: 20px;
         min-height: inherit !important;
+    }
+
+    .protocolo button.btn.btn-primary.btn-block {
+        font-size: 16px;
+    }
+    .protocolo i.fa.fa-desktop {
+        font-size: 14px;
     }
 
 }
