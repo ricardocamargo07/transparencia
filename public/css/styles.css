@@ -492,18 +492,7 @@ span.label-dowload-tipo {
     color: #25427F !important;
 }
 
-.col-xs-1.refresh-cache.pull-right {
-    padding-top: 40px;
-}
 
-.col-xs-1.refresh-cache.pull-right i.fa.fa-refresh {
-    color: #1d2d52 ;
-    font-size: 40px;
-}
-
-.col-xs-1.refresh-cache.pull-right i.fa.fa-refresh:hover {
-    color: #535E7F;
-}
 
 .atodaalerj{
     text-align: left;
@@ -544,6 +533,26 @@ span.label-dowload-tipo {
 .transparencia .atodaalerj .deputados p {
     line-height: 5px;
 }
+
+
+
+
+
+
+
+.col-xs-2.refresh-cache.pull-right {
+    padding-top: 30px;
+}
+
+.col-xs-2.refresh-cache.pull-right i.fa.fa-refresh {
+    color: #1d2d52 ;
+    font-size: 40px;
+}
+
+.col-xs-2.refresh-cache.pull-right i.fa.fa-refresh:hover {
+    color: #535E7F;
+}
+
 
 
 
@@ -633,6 +642,15 @@ p.form-intro {
 
 .form-botoes .btn-primary:hover {
     background: #334263 !important;
+}
+
+
+
+.protocolo button.btn.btn-primary.btn-block {
+    font-size: 20px;
+}
+.protocolo i.fa.fa-desktop {
+    font-size: 18px;
 }
 
 
@@ -763,6 +781,26 @@ p.form-intro {
         margin-top: 20px;
         min-height: inherit !important;
     }
+
+    .protocolo button.btn.btn-primary.btn-block {
+        font-size: 16px;
+    }
+    .protocolo i.fa.fa-desktop {
+        font-size: 14px;
+    }
+
+    .col-xs-2.refresh-cache.pull-right {
+        padding-top: 10px;
+    }
+
+    .col-xs-2.refresh-cache.pull-right i.fa.fa-refresh {
+        color: #1d2d52 ;
+        font-size: 20px;
+    }
+
+
+
+
 
 }
 

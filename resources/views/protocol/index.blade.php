@@ -15,7 +15,7 @@
 
             <div class="row faq">
                 <div class="col-xs-12">
-                    <div class="item">
+                    <div class="item protocolo">
                         <h4>Digite o número do procotolo</h4>
 
                         <form action="/protocolo" method="post">
@@ -30,7 +30,7 @@
                             </div>
 
                             <div class="row form-botoes">
-                                <div class="col-md-12">
+                                <div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary btn-block">
                                         <i class="fa fa-desktop" aria-hidden="true"></i>Pesquisar
                                     </button>
