@@ -79,6 +79,11 @@ class Data extends BaseArrayModel
             ],
 
             [
+                'webservice' => 'licitacoes',
+                'slug' => 'licitacoes',
+            ],
+
+            [
                 'webservice' => 'transparencia-no-rio-de-janeiro',
                 'slug' => 'transparencia-no-rio-de-janeiro',
             ],
