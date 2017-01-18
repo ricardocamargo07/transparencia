@@ -64,7 +64,7 @@ class Webservice
             'body' => $item['texto'],
             'user_id' => $item['idUsuario'],
             'html' => $this->purify(isset($item['texto_html']) ? $item['texto_html'] : ''),
-            'link' => route('report', [$id]),
+            'link' => $this->makeDataLink($item, $id),
             'published_at_string' => $item['data_pub'],
             'published_at' => $this->convertDate($item['data_pub']),
             'status' => $item['status'] == 'S',
@@ -82,6 +82,15 @@ class Webservice
                 'status' => $item['categoria']['status'] == 'S',
             ],
         ];
+    }
+
+    private function makeDataLink($item, $id)
+    {
+        if (empty(trim($item['texto'].$item['texto_html'])) && !empty(trim($item['url']))) {
+            return $item['url'];
+        }
+
+        return route('report', [$id]);
     }
 
     private function makeFileUrl($id)
