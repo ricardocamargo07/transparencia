@@ -46,7 +46,7 @@
 .rates .row > div:first-child {
     border-left: 2px solid #b7ba8f;
     /*text-align: left;*/
-    min-width: 119px;
+    /*min-width: 119px;*/
 }
 
 .rates .row > div:last-child {
@@ -142,7 +142,7 @@
 
 .rates.quadroremuneratorio .row > div:first-child {
     text-align: center;
-    min-width: 138px;
+    /*min-width: 138px;*/
 }
 
 .rates.quadroremuneratorio .row > div {
@@ -176,6 +176,15 @@
 }
 
 @media (min-width: 768px) {
+
+
+
+
+    .row.tabelas {
+        margin: 5px 15px;
+    }
+
+
     .rates {
         font-size: 16px;
     }
@@ -184,6 +193,7 @@
     }
     .rates .row > div .item {
         height: 55px;
+        font-size: 14px;
     }
     .rates.tabelamaior .row > div .item {
         height: 80px;
@@ -231,3 +241,55 @@
 
 }
 
+
+
+
+
+
+
+
+
+
+
+.rTable {
+    display: table;
+    width: 100%;
+    border: 1px solid #b7ba8f !important;
+    color: #253255;
+}
+.rTableRow {
+    display: table-row;
+}
+.rTableHeading {
+    display: table-header-group;
+    background-color: #dcddbe !important;
+}
+.rTableCell, .rTableHead {
+    display: table-cell;
+    padding: 10px 10px;
+    border: 1px solid #b7ba8f;
+    text-align: right;
+}
+.rTableHeading {
+    display: table-header-group;
+    background-color: #ddd;
+    font-weight: bold;
+}
+.rTableFoot {
+    display: table-footer-group;
+    font-weight: bold;
+    background-color: #ddd;
+}
+.rTableBody {
+    display: table-row-group;
+}
+
+
+
+.rTableRow:nth-of-type(odd) {
+    background: #dcddbe;
+
+.rTableRow:nth-of-type(even) {
+    background: #f7f8f2;
+}
+}
