@@ -212,7 +212,7 @@
 @media only screen and (max-width: 496px) {
 
     .row.tabelas {
-        margin: 5px;
+        margin: 5px 15px;
     }
 
     .rates .row.primeiralinha > div .item {
@@ -231,7 +231,7 @@
         word-break: break-word;
     }
     .rates .row > div:first-child {
-        min-width: 84px;
+/*        min-width: 84px;*/
     }
 
     .rates.deputados-salarios .row > div .item {
