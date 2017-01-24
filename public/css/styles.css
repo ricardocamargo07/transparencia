@@ -659,6 +659,16 @@ p.form-intro {
 
 }
 @media only screen and (max-width: 836px) {
+    .row.faq {
+        margin: 10px 10px !important;
+        padding: 10px 0px !important;
+    }
+
+
+    .rates.quadroremuneratorio .row > div:first-child {
+        min-width: inherit  !important;;
+    }
+
 
 }
 @media only screen and (max-width: 496px) {
@@ -799,9 +809,6 @@ p.form-intro {
     }
 
 
-
-
-
 }
 
 textarea {
@@ -819,4 +826,24 @@ textarea {
 
 .bold {
     font-weight: 800;
+}
+
+
+
+.menu_select li {
+    list-style-type: none;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.menu_select li a{
+    color:#1d2d52 ;
+}
+
+
+
+@media only screen and (max-width: 496px){
+    .menu_movel .controle .menu_select .icone {
+        display: none;
+    }
 }

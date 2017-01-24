@@ -79,7 +79,7 @@
         <div class="menu_movel">
             <div class="controle">
                 <div class="menu_select">
-                    <div class="descricao">INÍCIO</div>
+                    <div class="descricao"><li><a href="/" id="lkbInicioMovel">Início</a></li></div>
                     <div class="icone Expandir">
                         <a href="javascript:;" title="Expandir Menu">
                             <img src="http://www.alerj.rj.gov.br/Content/imagens/icone_21.png" width="40" height="34" alt="Expandir Menu" title="Expandir Menu" border="0">
