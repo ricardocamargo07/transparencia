@@ -2,22 +2,20 @@
 
 namespace App;
 
+use App\Support\DataRequest;
 use Cache;
+use App\Support\Cacheable;
 use App\Support\RemotelyRequestable;
-
 
 abstract class BaseArrayModel
 {
-    use RemotelyRequestable;
+    use RemotelyRequestable, Cacheable;
 
     const CACHE_KEY = 'transparency-data';
 
     protected $data;
 
-    public function __construct()
-    {
-        $this->loadData();
-    }
+    private $loaded = false;
 
     public static function all()
     {
@@ -36,14 +34,20 @@ abstract class BaseArrayModel
 
     private function getData()
     {
-        return $this->data;
+        return $this->loadData();
     }
 
     protected function loadData()
     {
-        $this->data = Cache::remember(self::CACHE_KEY, $this->getCacheTime(), function () {
-            return $this->loadAllData();
-        });
+        if (! $this->loaded) {
+            $this->data = $this->fetchAndCache(
+                new DataRequest(get_class($this))
+            );
+
+            $this->loaded = true;
+        }
+
+        return $this->data;
     }
 
     public static function update() {
@@ -57,5 +61,11 @@ abstract class BaseArrayModel
     protected function getCacheTime()
     {
         return config('app.data_cache_time');
+    }
+
+    public function getRequester($data = null) {
+        return function () use ($data) {
+            return $this->loadAllData($data);
+        };
     }
 }

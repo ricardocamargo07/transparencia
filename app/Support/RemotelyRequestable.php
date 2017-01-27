@@ -9,22 +9,25 @@ trait RemotelyRequestable
 {
     use Encodable;
 
-    protected function requestJson($url, $parameters = [], $method = 'GET')
+    protected function requestJson($data)
     {
-        $url = $this->makeUrl($url, $parameters);
+        $data->url = $this->makeUrl($data->url, $data->parameters);
 
-        return Cache::remember($url, config('app.data_cache_time'), function () use ($url, $method) {
+        return $this->fetchAndCache($data);
+    }
+
+    public function getGuzzleXmlRequester(DataRequest $data) {
+        return function () use ($data) {
             $client = new Guzzle();
 
-            $response = $client->request($method, $url);
+            $response = $client->request($data->method, $data->url);
 
             if ($response->getStatusCode() !== 200) {
                 return null;
             }
 
             return $this->xmlToJson($response->getBody());
-        }
-        );
+        };
     }
 
     protected function xmlToJson($xml)

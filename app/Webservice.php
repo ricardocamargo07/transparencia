@@ -2,15 +2,17 @@
 
 namespace App;
 
+use App\Support\DataRequest;
 use Cache;
 use HTMLPurifier;
 use App\Support\Datable;
 use HTMLPurifier_Config;
+use App\Support\Cacheable;
 use App\Support\RemotelyRequestable;
 
 class Webservice
 {
-    use RemotelyRequestable, Datable;
+    use RemotelyRequestable, Datable, Cacheable;
 
     private $purifier;
 
@@ -37,7 +39,16 @@ class Webservice
 
     public function getFiles($id)
     {
-        return $this->toFiles($this->requestJson(config('app.webservice.urls.files'), $id));
+        $data = new DataRequest(
+            static::class,
+            config('app.webservice.urls.files'),
+            'GET',
+            [$id]
+        );
+
+        return $this->toFiles(
+            $this->requestJson($data)
+        );
     }
 
     private function getIcon($slug)
@@ -57,7 +68,12 @@ class Webservice
 
     private function makeData($item)
     {
+        if (isset($item['transformed']) && $item['transformed']) {
+            return $item;
+        }
+
         return [
+            'transformed' => true,
             'id' => $id = $item['idInformacao'],
             'data_id' => $data_id = $item['categoria']['idCategoria'],
             'title' => $item['titulo'],
@@ -110,7 +126,12 @@ class Webservice
     private function toFiles($ListaArquivos)
     {
         $files = collect($ListaArquivos)->map(function($item) {
+            if (isset($item['transformed']) && $item['transformed']) {
+                return $item;
+            }
+
             return [
+                'transformed' => true,
                 'id' => 'file-' . $id = $item['idArquivo'],
                 'title' => $item['titulo'],
                 'name' => $item['arquivo'],
@@ -134,17 +155,19 @@ class Webservice
 
     private function toData($data)
     {
-        info('--------------------------------------------------');
         return collect($data)->where('status', 'S')->map(function ($item) {
-            $slug = str_slug($name = $item['nome']);
+            if (isset($item['transformed']) && $item['transformed']) {
+                return $item;
+            }
 
-            info($slug);
+            $slug = str_slug($name = $item['nome']);
 
             if (! $this->dataIsNeeded($slug)) {
                 return null;
             }
 
             return [
+                'transformed' => true,
                 'id' => $data_id = $item['idCategoria'],
                 'title' => $name,
                 'slug' => $slug = str_slug($name),
@@ -180,12 +203,22 @@ class Webservice
         return $data;
     }
 
-    public function loadAllData()
+    public function loadAllData(DataRequest $data = null)
     {
+        if (is_null($data)) {
+            $data = new DataRequest(static::class);
+        }
+
+        if (is_null($data->url)) {
+            $data->url = config('app.webservice.urls.all_sections');
+        }
+
         $this->data = $this->toData(
-            $this->requestJson(
-                config('app.webservice.urls.all_sections')
-            )
+            $this->requestJson($data)
         );
+    }
+
+    public function getRequester(DataRequest $data) {
+        return $this->getGuzzleXmlRequester($data);
     }
 }

@@ -8,11 +8,11 @@ class Data extends BaseArrayModel
 {
     protected $webservice;
 
-    protected function loadAllData()
+    protected function loadAllData($data = null)
     {
         $this->webservice = app(Webservice::class, [$this->getRawData()]);
 
-        $this->webservice->loadAllData();
+        $this->webservice->loadAllData($data);
 
         $data = collect($this->getRawData())->map(function($item) {
             if (isset($item['webservice'])) {
@@ -49,7 +49,7 @@ class Data extends BaseArrayModel
 
         return collect([
             [
-                'webservice' => 'perguntas-frequentes',
+               'webservice' => 'perguntas-frequentes',
                 'slug' => 'perguntas-frequentes',
             ],
 

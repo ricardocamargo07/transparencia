@@ -64,7 +64,7 @@ class Api extends Controller
             return $this->response($result);
         }
 
-        return $query->get();
+        return $result;
     }
 
     public function response($data)
@@ -75,3 +75,7 @@ class Api extends Controller
                 );
     }
 }
+
+//http://transparencia.antoniocarlosribeiro.com/api/alerj/informacao/71/arquivos
+//#http://local.transparencia.com/api/alerj/informacao/71/arquivos
+//http://transparencia.dev/section/report/71
