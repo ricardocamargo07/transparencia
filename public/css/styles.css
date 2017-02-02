@@ -666,10 +666,10 @@ p.form-intro {
 
 }
 @media only screen and (max-width: 836px) {
-    .row.faq {
+/*    .row.faq {
         margin: 10px 10px !important;
         padding: 10px 0px !important;
-    }
+    }*/
 
 
     .rates.quadroremuneratorio .row > div:first-child {
@@ -724,10 +724,10 @@ p.form-intro {
         margin: 15px 0;
     }
 
-    .row.faq {
+/*    .row.faq {
         margin: 10px 10px !important;
         padding: 10px 0px !important;
-    }
+    }*/
     .row.faq h4 {
         font-size: 13px;
     }
@@ -883,44 +883,30 @@ textarea {
 /*********  AJUSTES RESPONSIVO CABEÇALHO ALERJ ***************************/
 
 
-
-
-
-/* ----------- iPhone 4 and 4S ----------- */
+/* ----------- iPhone 6+ ----------- */
 
 /* Portrait and Landscape */
 @media only screen
-and (min-device-width: 320px)
-and (max-device-width: 480px)
-and (-webkit-min-device-pixel-ratio: 2) {
-    .superior .conteudo .logotipo {
-        width: 130px;
-        height: 65px;
-        float: left;
-        overflow: hidden;
-        margin: 0px 0px 0px 0px;
-        /* padding: 16px 0px 0px 0px; */
-    }
-    .superior .conteudo .coluna .redes_sociais {
-        top: 40px;
-        right: -22px;
-        left: auto;
-    }
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+
 }
 
 /* Portrait */
 @media only screen
-and (min-device-width: 320px)
-and (max-device-width: 480px)
-and (-webkit-min-device-pixel-ratio: 2)
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: portrait) {
+
 }
 
 /* Landscape */
 @media only screen
-and (min-device-width: 320px)
-and (max-device-width: 480px)
-and (-webkit-min-device-pixel-ratio: 2)
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: landscape) {
     .col-xs-12{
         padding-right: 0px;
@@ -929,36 +915,7 @@ and (orientation: landscape) {
 
 }
 
-/* ----------- iPhone 5 and 5S ----------- */
 
-/* Portrait and Landscape */
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 568px)
-and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* Portrait */
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 568px)
-and (-webkit-min-device-pixel-ratio: 2)
-and (orientation: portrait) {
-}
-
-/* Landscape */
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 568px)
-and (-webkit-min-device-pixel-ratio: 2)
-and (orientation: landscape) {
-    .col-xs-12{
-        padding-right: 0px;
-        padding-left: 0px;
-    }
-
-}
 
 /* ----------- iPhone 6 ----------- */
 
@@ -1020,30 +977,31 @@ and (orientation: landscape) {
 
 }
 
-/* ----------- iPhone 6+ ----------- */
+
+
+/* ----------- iPhone 5 and 5S ----------- */
 
 /* Portrait and Landscape */
 @media only screen
-and (min-device-width: 414px)
-and (max-device-width: 736px)
-and (-webkit-min-device-pixel-ratio: 3) {
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
 /* Portrait */
 @media only screen
-and (min-device-width: 414px)
-and (max-device-width: 736px)
-and (-webkit-min-device-pixel-ratio: 3)
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
-
 }
 
 /* Landscape */
 @media only screen
-and (min-device-width: 414px)
-and (max-device-width: 736px)
-and (-webkit-min-device-pixel-ratio: 3)
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
     .col-xs-12{
         padding-right: 0px;
@@ -1054,5 +1012,45 @@ and (orientation: landscape) {
 
 
 
+/* ----------- iPhone 4 and 4S ----------- */
 
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .superior .conteudo .logotipo {
+        width: 130px;
+        height: 65px;
+        float: left;
+        overflow: hidden;
+        margin: 0px 0px 0px 0px;
+        /* padding: 16px 0px 0px 0px; */
+    }
+    .superior .conteudo .coluna .redes_sociais {
+        top: 40px;
+        right: -22px;
+        left: auto;
+    }
+}
 
+/* Portrait */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+    .col-xs-12{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+}

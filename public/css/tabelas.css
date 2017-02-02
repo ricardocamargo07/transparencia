@@ -346,17 +346,35 @@
     text-align: right;
 }
 
-
-
-
-
-.girar-celular {
-    display: none;
+.cifrao {
+    float: left;
 }
 
 
 
 /* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .col-xs-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .row.faq {
+        margin: 15px 0px;
+        padding: 20px 0px;
+    }
+    .row.tabelas {
+        margin: 0px;
+        padding: 0 10px;
+    }
+
+
+}
 
 
 /* Portrait */
@@ -366,16 +384,21 @@ and (max-device-width: 480px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
     .table-vencimentos {
-        display: none;
+        /*font-size: 7px;*/
     }
-    .girar-celular {
-        display: block;
-        margin: 5px 0 20px;
+    .col-md-offset-1.col-md-10.text-center {
+        /* margin-left: 0; */
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .table-demaiscargos th {
+        word-wrap: break-word;
+        max-width: 49px;
+    }
+    .cifrao {
+        float: none;
     }
 
-    img.girar-celular-icon {
-        max-width: 100px;
-    }
 }
 
 /* Landscape */
@@ -384,12 +407,6 @@ and (min-device-width: 320px)
 and (max-device-width: 480px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
-    .table-vencimentos {
-        display: table;
-    }
-    .girar-celular {
-        display: none;
-    }
 
     .row.faq {
         text-align: left;
@@ -416,12 +433,12 @@ and (min-device-width: 320px)
 and (max-device-width: 568px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
-    .table-vencimentos {
-        display: none;
+    .col-md-offset-1.col-md-10.text-center {
+        /* margin-left: 0; */
+        padding-left: 0;
+        padding-right: 0;
     }
-    .girar-celular {
-        display: inherit;
-    }
+
 }
 
 /* Landscape */
@@ -430,14 +447,25 @@ and (min-device-width: 320px)
 and (max-device-width: 568px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
-    .table-vencimentos {
-        display: table;
-    }
-    .girar-celular {
-        display: none;
+
+    .row.tabelas {
+        margin: 0px;
     }
 
-    .row.faq {
+}
+
+/* ----------- iPhone 6 ----------- */
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .col-xs-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+/*    .row.faq {
         text-align: left;
         padding-bottom: 20px;
         margin: 15px 0px;
@@ -447,14 +475,14 @@ and (orientation: landscape) {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
-    }
+        margin: 10px 0px;
+        padding: 10px 0px;
+    }*/
     .row.tabelas {
         margin: 0px;
     }
 
 }
-
-/* ----------- iPhone 6 ----------- */
 
 /* Portrait */
 @media only screen
@@ -462,11 +490,10 @@ and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
-    .table-vencimentos {
-        display: none;
-    }
-    .girar-celular {
-        display: inherit;
+    .col-md-offset-1.col-md-10.text-center {
+        /* margin-left: 0; */
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -476,29 +503,13 @@ and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
-    .table-vencimentos {
-        display: table;
-    }
-    .girar-celular {
-        display: none;
-    }
 
-    .row.faq {
-        text-align: left;
-        padding-bottom: 20px;
-        margin: 15px 0px;
-        border: none;
-        padding: 20px 0px;
-        background: none;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
-    }
-    .row.tabelas {
-        margin: 0px;
-    }
 
 }
+
+
+
+
 
 /* ----------- iPhone 6+ ----------- */
 /* Portrait */
@@ -507,12 +518,7 @@ and (min-device-width: 414px)
 and (max-device-width: 736px)
 and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: portrait) {
-    .table-vencimentos {
-        display: none;
-    }
-    .girar-celular {
-        display: inherit;
-    }
+
 }
 
 /* Landscape */
@@ -521,26 +527,24 @@ and (min-device-width: 414px)
 and (max-device-width: 736px)
 and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: landscape) {
-    .table-vencimentos {
-        display: table;
-    }
-    .girar-celular {
-        display: none;
+    .col-md-offset-1.col-md-10.text-center {
+        /* margin-left: 0; */
+        padding-left: 0;
+        padding-right: 0;
     }
 
-    .row.faq {
-        text-align: left;
-        padding-bottom: 20px;
-        margin: 15px 0px;
-        border: none;
-        padding: 20px 0px;
-        background: none;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
-    }
+
     .row.tabelas {
         margin: 0px;
     }
 
+}
+
+
+
+
+
+
+.girar-celular {
+    display: none;
 }
