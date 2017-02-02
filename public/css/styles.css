@@ -875,6 +875,7 @@ textarea {
     }
 }
 
+<<<<<<< HEAD
 
 
 
@@ -1053,4 +1054,9 @@ and (orientation: landscape) {
         padding-left: 0px;
     }
 
+}
+
+
+.grafico001 {
+    width: 100%;
 }

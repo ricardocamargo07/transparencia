@@ -4,7 +4,7 @@
     <div class="row ">
         <div class="col-md-12 text-center conteudo">
             <div class="introducao">
-                <h2 class="subtitle-home">INFORMAÇÃO É PODER</h2>
+                <h2 class="subtitle-home">Informação é poder</h2>
                 <h3 class="subtitle-home">Seja bem-vindo ao Portal da Transparência da Alerj!</h3>
 
                 <div class="intro01">
@@ -42,3 +42,9 @@
         </div>
     </div>
 @stop
+
+
+{{--http://transparencia.antoniocarlosribeiro.com/api/alerj/informacao/71/arquivos--}}
+{{--http://transparencia.dev/api/alerj/informacao/71/arquivos--}}
+{{--http://transparencia.dev/section/report/71--}}
+
