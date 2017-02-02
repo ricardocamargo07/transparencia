@@ -330,14 +330,30 @@
 
 /* NOVAS TABELAS */
 
+.table-vencimentos {
+    background:#e9ead7;
+    border-top: 1px solid #9ea74a;
+
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid #9ea74a;
+}
 
 .table-responsive th {
     text-align: right;
 }
-
 .table-responsive tr {
     text-align: right;
 }
+
+
+
+
+
+.girar-celular {
+    display: none;
+}
+
 
 
 /* ----------- iPhone 4 and 4S ----------- */
@@ -358,7 +374,7 @@ and (orientation: portrait) {
     }
 
     img.girar-celular-icon {
-        max-width: 120px;
+        max-width: 100px;
     }
 }
 
@@ -373,6 +389,21 @@ and (orientation: landscape) {
     }
     .girar-celular {
         display: none;
+    }
+
+    .row.faq {
+        text-align: left;
+        padding-bottom: 20px;
+        margin: 15px 0px;
+        border: none;
+        padding: 20px 0px;
+        background: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .row.tabelas {
+        margin: 0px;
     }
 
 }
@@ -465,4 +496,3 @@ and (orientation: landscape) {
         display: none;
     }
 }
-

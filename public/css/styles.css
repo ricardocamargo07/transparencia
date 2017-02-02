@@ -768,21 +768,41 @@ p.form-intro {
         margin-bottom: 0;
     }
 
-    .row.linha-mes {
-        margin: 0 15px 25px 15px;
-        line-height: 2.2;
-        font-weight: 600;
-    }
+
     .mes-label {
         margin-bottom: 10px;
+        padding: 4px 0 2px 0;
+        font-size: 14px;
     }
-    .row.linha-mes {
+/*    .row.linha-mes {
         margin: 0 15px 25px 15px;
         line-height: 2.2;
         font-weight: 600;
         border: solid rgba(255, 255, 255, 0.4) 2px;
         padding-bottom: 10px;
+    }*/
+
+    .row.linha-mes {
+        margin: 0px;
+        line-height: 2.2;
+        font-weight: 600;
+        border-bottom: solid rgba(255, 255, 255, 0.4) 0px;
+        padding-bottom: 0px;
     }
+
+    .tipos-downloads {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    span.label-dowload-tipo {
+        font-family: dinlight;
+        font-weight: 900;
+        margin-left: 5px;
+
+    }
+
+
 
     a.btn.btn-block.btn-primary.voltar {
         font-size: 16px;
