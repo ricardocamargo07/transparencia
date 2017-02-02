@@ -363,17 +363,17 @@ and (-webkit-min-device-pixel-ratio: 2) {
         padding-left: 0;
         padding-right: 0;
     }
-
     .row.faq {
         margin: 15px 0px;
         padding: 20px 0px;
+        border-radius: 0;
+        box-shadow: none;
+
     }
     .row.tabelas {
         margin: 0px;
         padding: 0 10px;
     }
-
-
 }
 
 
@@ -384,7 +384,7 @@ and (max-device-width: 480px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
     .table-vencimentos {
-        /*font-size: 7px;*/
+        font-size: 11px;
     }
     .col-md-offset-1.col-md-10.text-center {
         /* margin-left: 0; */
@@ -398,7 +398,6 @@ and (orientation: portrait) {
     .cifrao {
         float: none;
     }
-
 }
 
 /* Landscape */
@@ -408,24 +407,41 @@ and (max-device-width: 480px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
 
-    .row.faq {
-        text-align: left;
-        padding-bottom: 20px;
-        margin: 15px 0px;
-        border: none;
-        padding: 20px 0px;
-        background: none;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
+    h1 {
+        font-size: 24px;
     }
+
     .row.tabelas {
         margin: 0px;
     }
 
 }
 
+
+
+
 /* ----------- iPhone 5 and 5S ----------- */
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .col-xs-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .row.faq {
+        margin: 15px 0px;
+        padding: 20px 0px;
+        border-radius: 0;
+        box-shadow: none;
+
+    }
+    .row.tabelas {
+        margin: 0px;
+        padding: 0 10px;
+    }
+}
 
 /* Portrait */
 @media only screen
@@ -438,7 +454,6 @@ and (orientation: portrait) {
         padding-left: 0;
         padding-right: 0;
     }
-
 }
 
 /* Landscape */
@@ -447,12 +462,29 @@ and (min-device-width: 320px)
 and (max-device-width: 568px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
-
+    h1 {
+        font-size: 32px;
+    }
+    h3 {
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #ec6629;
+        font-family: 'univers_47';
+        font-size: 28px;
+    }
     .row.tabelas {
         margin: 0px;
     }
-
+    .col-md-offset-1.col-md-10.text-center {
+        padding-left: 0;
+        padding-right: 0;
+    }.row.faq {
+         padding: 20px 15px;
+     }
 }
+
+
+
 
 /* ----------- iPhone 6 ----------- */
 /* Portrait and Landscape */
