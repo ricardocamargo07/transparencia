@@ -340,7 +340,7 @@
 }
 
 .table-responsive th {
-    text-align: right;
+    text-align: center;
 }
 .table-responsive tr {
     text-align: right;
@@ -436,6 +436,22 @@ and (orientation: landscape) {
     .girar-celular {
         display: none;
     }
+
+    .row.faq {
+        text-align: left;
+        padding-bottom: 20px;
+        margin: 15px 0px;
+        border: none;
+        padding: 20px 0px;
+        background: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .row.tabelas {
+        margin: 0px;
+    }
+
 }
 
 /* ----------- iPhone 6 ----------- */
@@ -466,6 +482,22 @@ and (orientation: landscape) {
     .girar-celular {
         display: none;
     }
+
+    .row.faq {
+        text-align: left;
+        padding-bottom: 20px;
+        margin: 15px 0px;
+        border: none;
+        padding: 20px 0px;
+        background: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .row.tabelas {
+        margin: 0px;
+    }
+
 }
 
 /* ----------- iPhone 6+ ----------- */
@@ -495,4 +527,20 @@ and (orientation: landscape) {
     .girar-celular {
         display: none;
     }
+
+    .row.faq {
+        text-align: left;
+        padding-bottom: 20px;
+        margin: 15px 0px;
+        border: none;
+        padding: 20px 0px;
+        background: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .row.tabelas {
+        margin: 0px;
+    }
+
 }
