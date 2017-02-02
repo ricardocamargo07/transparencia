@@ -1049,6 +1049,12 @@ and (min-device-width: 320px)
 and (max-device-width: 480px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
+    h1 {
+        font-size: 26px;
+    }
+    h3 {
+        font-size: 22px;
+    }
     .col-xs-12{
         padding-right: 0px;
         padding-left: 0px;

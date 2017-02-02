@@ -406,15 +406,15 @@ and (min-device-width: 320px)
 and (max-device-width: 480px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
-
     h1 {
-        font-size: 24px;
+        font-size: 24px !important;
     }
-
+    h3 {
+        font-size: 20px !important;
+    }
     .row.tabelas {
         margin: 0px;
     }
-
 }
 
 
