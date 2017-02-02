@@ -204,10 +204,6 @@
         padding: 0 10px;
     }
 
-    .girar-celular {
-        display: none;
-    }
-
 }
 
 @media screen and (min-device-width: 497px) and (max-device-width: 768px) {
@@ -215,10 +211,10 @@
         display: inherit;
     }
 
-    .girar-celular {
+/*    .girar-celular {
         display: none !important;
         background: #f0f !important;
-    }
+    }*/
 
 }
 
@@ -226,15 +222,17 @@
 
 @media only screen and (max-width: 496px) {
 
+    /*
     .girar-celular {
         display: block;
-        /*background: #1b6d85;*/
+        !*background: #1b6d85;*!
         margin: 5px 0 20px;
     }
 
     img.girar-celular-icon {
         max-width: 120px;
     }
+    */
 
 
 
@@ -354,6 +352,14 @@ and (orientation: portrait) {
     .table-vencimentos {
         display: none;
     }
+    .girar-celular {
+        display: block;
+        margin: 5px 0 20px;
+    }
+
+    img.girar-celular-icon {
+        max-width: 120px;
+    }
 }
 
 /* Landscape */
@@ -363,7 +369,10 @@ and (max-device-width: 480px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
     .table-vencimentos {
-        display: inherit;
+        display: table;
+    }
+    .girar-celular {
+        display: none;
     }
 
 }
@@ -379,6 +388,9 @@ and (orientation: portrait) {
     .table-vencimentos {
         display: none;
     }
+    .girar-celular {
+        display: inherit;
+    }
 }
 
 /* Landscape */
@@ -388,7 +400,10 @@ and (max-device-width: 568px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
     .table-vencimentos {
-        display: inherit;
+        display: table;
+    }
+    .girar-celular {
+        display: none;
     }
 }
 
@@ -403,6 +418,9 @@ and (orientation: portrait) {
     .table-vencimentos {
         display: none;
     }
+    .girar-celular {
+        display: inherit;
+    }
 }
 
 /* Landscape */
@@ -412,7 +430,10 @@ and (max-device-width: 667px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
     .table-vencimentos {
-        display: inherit;
+        display: table;
+    }
+    .girar-celular {
+        display: none;
     }
 }
 
@@ -426,6 +447,9 @@ and (orientation: portrait) {
     .table-vencimentos {
         display: none;
     }
+    .girar-celular {
+        display: inherit;
+    }
 }
 
 /* Landscape */
@@ -435,7 +459,10 @@ and (max-device-width: 736px)
 and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: landscape) {
     .table-vencimentos {
-        display: inherit;
+        display: table;
+    }
+    .girar-celular {
+        display: none;
     }
 }
 
