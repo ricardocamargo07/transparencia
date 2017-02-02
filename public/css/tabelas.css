@@ -339,6 +339,21 @@
     border: 1px solid #9ea74a;
 }
 
+.table-conteudo>tbody>tr>td,.table-conteudo>thead>tr>th {
+    border: 1px solid #9ea74a;
+    vertical-align: middle;
+    text-align: center;
+}
+.table-conteudo thead {
+    border-top: solid 1px #9ea74a;
+    background: #DCDDBE;
+}
+
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #E9EAD7;
+}
+
 .table-responsive th {
     text-align: center;
 }
