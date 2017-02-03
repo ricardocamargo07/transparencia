@@ -877,26 +877,26 @@ textarea {
 
 
 
-@media screen and (max-width: 2560px){
+@media screen and (min-width: 1024px) and (max-width: 2560px){
     .superior .conteudo .coluna .redes_sociais {
         right: 711px !important;
     }
 }
 
-@media screen and (max-width: 1920px){
+@media screen and (min-width: 1024px) and (max-width: 1920px){
     .superior .conteudo .coluna .redes_sociais {
         right: 371px !important;
     }
 }
 
 
-@media screen and (max-width: 1680px){
+@media screen and (min-width: 1024px) and (max-width: 1680px){
     .superior .conteudo .coluna .redes_sociais {
         right: 267px !important;
     }
 }
 
-@media screen and (max-width: 1440px){
+@media screen and (min-width: 1024px) and (max-width: 1440px){
     .superior .conteudo .coluna .redes_sociais {
         right: 148px !important;
     }
