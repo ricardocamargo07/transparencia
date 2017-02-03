@@ -875,11 +875,32 @@ textarea {
     }
 }
 
-<<<<<<< HEAD
 
 
+@media screen and (max-width: 2560px){
+    .superior .conteudo .coluna .redes_sociais {
+        right: 711px !important;
+    }
+}
+
+@media screen and (max-width: 1920px){
+    .superior .conteudo .coluna .redes_sociais {
+        right: 371px !important;
+    }
+}
 
 
+@media screen and (max-width: 1680px){
+    .superior .conteudo .coluna .redes_sociais {
+        right: 267px !important;
+    }
+}
+
+@media screen and (max-width: 1440px){
+    .superior .conteudo .coluna .redes_sociais {
+        right: 148px !important;
+    }
+}
 
 /*********  AJUSTES RESPONSIVO CABEÇALHO ALERJ ***************************/
 
