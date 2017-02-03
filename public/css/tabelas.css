@@ -6,6 +6,12 @@
     margin: 30px;
 }
 
+.row.rowtables {
+    margin: 0 30px 30px;
+    padding-top: 0;
+}
+
+
 .rates {
     width: 100%;
     font-size: 12px;
@@ -339,6 +345,21 @@
     border: 1px solid #9ea74a;
 }
 
+.table-conteudo>tbody>tr>td,.table-conteudo>thead>tr>th {
+    border: 1px solid #9ea74a;
+    vertical-align: middle;
+    text-align: center;
+}
+.table-conteudo thead {
+    border-top: solid 1px #9ea74a;
+    background: #DCDDBE;
+}
+
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #E9EAD7;
+}
+
 .table-responsive th {
     text-align: center;
 }
@@ -368,12 +389,15 @@ and (-webkit-min-device-pixel-ratio: 2) {
         padding: 20px 0px;
         border-radius: 0;
         box-shadow: none;
-
     }
     .row.tabelas {
         margin: 0px;
         padding: 0 10px;
     }
+    .tables-desc {
+        margin: 0 15px;
+    }
+
 }
 
 
