@@ -17,10 +17,10 @@ class StripHeaders extends BaseVerifier
      */
     public function handle($request, Closure $next)
     {
-        $request->server->remove('X_FRAME_OPTIONS');
+        $response = $next($request);
 
-        $request->headers->remove('X-Frame-Options');
+        $response->headers->remove('X-Frame-Options');
 
-        return $next($request);
+        return $response;
     }
 }
