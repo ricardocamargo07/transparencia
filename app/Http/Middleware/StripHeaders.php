@@ -22,8 +22,6 @@ class StripHeaders extends BaseVerifier
 //        $response->headers->remove('X-Frame-Options');
 //        $response->header('X-Frame-Options','ALLOW-FROM *');
 
-
-        dd($response->headers);
         return $response;
     }
 }
