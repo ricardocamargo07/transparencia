@@ -23,6 +23,10 @@
     <link rel="stylesheet" type="text/css" href="/css/custom.css" />
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/tabelas.css">
+
+    @if (request()->get('client') == 'app')
+        <link rel="stylesheet" href="/css/client-app.css">
+    @endif
 </head>
 
 <body>
