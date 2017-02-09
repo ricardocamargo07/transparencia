@@ -53,6 +53,8 @@ $response = $kernel->handle(
     $request = Illuminate\Http\Request::capture()
 );
 
+$response->headers->remove('X-Frame-Options');
+
 $response->send();
 
 $kernel->terminate($request, $response);
