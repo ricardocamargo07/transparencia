@@ -20,6 +20,7 @@ class StripHeaders extends BaseVerifier
         $response = $next($request);
 
         $response->headers->remove('X-Frame-Options');
+        $response->header('X-Frame-Options-2','WHATEVER');
 
         return $response;
     }
