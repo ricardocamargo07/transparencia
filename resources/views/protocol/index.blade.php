@@ -24,7 +24,8 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div style="padding-top: 20px">
-                                        <textarea name="protocol" rows="1" class="js-obrigatorio" id="campoMensagem" style="font-size: 2em; ">6.518/2012</textarea>
+                                        <textarea name="protocol" rows="1" class="js-obrigatorio" id="campoMensagem" style="font-size: 2em; ">
+                                        </textarea>
                                     </div>
                                 </div>
                             </div>
