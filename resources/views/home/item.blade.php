@@ -32,24 +32,20 @@
                             </div>
                             <div id="collapse-{{ $year }}" class="panel-collapse collapse {{ ! isset($in) ? $in = 'in' : '' }}" role="tabpanel" aria-labelledby="heading-{{ $year }}">
                                 <div class="panel-body">
-                                    @foreach ($files as $file)
+                                    @foreach ($files as $group)
                                         <div class="row linha-mes">
                                             <div class="col-xs-5 col-md-offset-3 col-md-3 mes-label">
-                                               {{ $file['title'] }}
+                                               {{ $group[0]['title'] }}
                                             </div>
 
                                             <div class="col-xs-7 col-md-3 tipos-downloads">
-                                                <a href="{{ $file['url'] }}" >
-                                                    <i class="btn fa fa-file-pdf-o" aria-hidden="true">
-                                                        <span class="label-dowload-tipo">pdf</span>
-                                                    </i>
-                                                </a>
-
-                                                <a href="{{ $file['url'] }}" >
-                                                    <i class="btn fa fa-file-excel-o" aria-hidden="true">
-                                                        <span class="label-dowload-tipo">excel</span>
-                                                    </i>
-                                                </a>
+                                                @foreach($group as $file)
+                                                    <a href="{{ $file['url'] }}" >
+                                                        <i class="btn fa fa-file-{{ $file['file_type'] }}-o" aria-hidden="true">
+                                                            <span class="label-dowload-tipo">{{ $file['file_type'] }}</span>
+                                                        </i>
+                                                    </a>
+                                                @endforeach
                                             </div>
                                         </div>
                                     @endforeach

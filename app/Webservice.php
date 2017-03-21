@@ -117,7 +117,6 @@ class Webservice
         );
     }
 
-
     private function purify($html)
     {
         return $this->purifier->purify($html);
@@ -125,16 +124,20 @@ class Webservice
 
     private function toFiles($ListaArquivos)
     {
-        $files = collect($ListaArquivos)->map(function($item) {
+        return collect($ListaArquivos)->map(function($item) {
             if (isset($item['transformed']) && $item['transformed']) {
                 return $item;
             }
+
+            $type = $this->makeFileType($item);
 
             return [
                 'transformed' => true,
                 'id' => 'file-' . $id = $item['idArquivo'],
                 'title' => $item['titulo'],
                 'name' => $item['arquivo'],
+                'file_id' => strtolower(preg_replace('/\\.[^.\\s]{3,4}$/', '', $item['arquivo'])),
+                'file_type' => $type,
                 'status' => $item['status'] == 'S',
                 'contents_id' => $item['idConteudo'],
                 'user_id' => $item['idUsuario'],
@@ -148,9 +151,20 @@ class Webservice
             ];
         })->where('status', 'S')->groupBy('year')->sortByDesc(function($item, $key) {
             return $key;
+        })->map(function($files) {
+            return $files->groupBy('file_id');
         });
+    }
 
-        return $files;
+    private function makeFileType($item)
+    {
+        $extension = strtolower(pathinfo($item['arquivo'], PATHINFO_EXTENSION));
+
+        $type = $extension == 'xls' || $extension == 'xlsx'
+            ? 'excel'
+            : $extension;
+
+        return $type;
     }
 
     private function toData($data)
