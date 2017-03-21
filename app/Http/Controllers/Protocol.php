@@ -17,8 +17,18 @@ class Protocol extends Controller
 
     public function show(Request $request, ProtocolModel $protocol)
     {
-        if (! $result = $protocol->findByProtocol($request->get('protocol')))
-        {
+        $protocol = trim($request->get('protocol'));
+
+        if (empty($protocol)) {
+            return redirect()->back()->withInput()->withErrors('Por favor digite um número de protocolo.');
+        }
+
+        try {
+            if (! $result = $protocol->findByProtocol())
+            {
+                return redirect()->back()->withInput()->withErrors('Este número de protocolo não existe.');
+            }
+        } catch (\Exception $exception) {
             return redirect()->back()->withInput()->withErrors('Este número de protocolo não existe.');
         }
 
