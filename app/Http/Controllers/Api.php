@@ -46,7 +46,9 @@ class Api extends Controller
 
     public function find($id, $class, $relations = null, $returnResponse = true, $keyName = null)
     {
-        $query = ($object = new $class)->newQuery();
+        $object = new $class;
+
+        $query = $object->newQuery();
 
         $keyName = $keyName ?: $object->getKeyName();
 
