@@ -13,7 +13,7 @@ trait Cacheable
      */
     protected function fetchAndCache(DataRequest $data)
     {
-        if (! $data->cacheEnabled) {
+        if (! $data->cacheEnabled || ! $this->cacheEnabled) {
             return $this->getResult($data);
         }
 
@@ -38,7 +38,9 @@ trait Cacheable
 
         $result = $requester();
 
-        Cache::forever($data->getKey(), $result);
+        if ($this->cacheEnabled) {
+            Cache::forever($data->getKey(), $result);
+        }
 
         return $result;
     }

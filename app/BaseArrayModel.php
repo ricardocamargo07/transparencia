@@ -15,6 +15,8 @@ abstract class BaseArrayModel
 
     protected $data;
 
+    protected $cacheEnabled = true;
+
     private $loaded = false;
 
     public static function all()

@@ -2,14 +2,17 @@
 
 namespace App;
 
+use App\Support\Cacheable;
 use DateTime;
 use App\Support\Datable;
 use App\Support\DataRequest;
 use App\Support\RemotelyRequestable;
 
-class Protocol extends Data
+class Protocol
 {
-    use RemotelyRequestable, Datable;
+    use RemotelyRequestable, Datable, Cacheable;
+
+    protected $cacheEnabled = false;
 
     private function createAllAlternatives($id)
     {
@@ -126,6 +129,12 @@ class Protocol extends Data
     {
         $dt = DateTime::createFromFormat($type == 'Y' ? 'y' : 'Y', $year);
 
-        return $dt->format($type);
+        if ($dt) {
+            return $dt->format($type);
+        }
+    }
+
+    public function getRequester($data = null) {
+        return $this->getGuzzleXmlRequester($data);
     }
 }

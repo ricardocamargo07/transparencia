@@ -19,7 +19,7 @@ class Protocol extends Controller
     {
         if (! $result = $protocol->findByProtocol($request->get('protocol')))
         {
-            return redirect()->back()->withErrors('Este número de protocolo não existe.');
+            return redirect()->back()->withInput()->withErrors('Este número de protocolo não existe.');
         }
 
         $result['created_at'] = $result['created_at']->format('d/m/Y');

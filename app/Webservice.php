@@ -20,6 +20,8 @@ class Webservice
 
     protected $data;
 
+    protected $cacheEnabled = true;
+
     public function __construct($rawData = null)
     {
         $this->rawData = $rawData;
@@ -210,7 +212,11 @@ class Webservice
 
     public function getItem($item)
     {
-        $data = $this->getData()->where('slug', $item['slug'])->values()[0];
+        $data = $this->getData()->where('slug', $item['slug'])->values();
+
+        if ($data->count() > 0) {
+            $data = $data[0];
+        }
 
         $data['webservice'] = $item;
 

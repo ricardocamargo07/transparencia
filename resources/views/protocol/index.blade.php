@@ -24,11 +24,16 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div style="padding-top: 20px">
-                                        <textarea name="protocol" rows="1" class="js-obrigatorio" id="campoMensagem" style="font-size: 2em; ">
-                                        </textarea>
+                                        <textarea name="protocol" rows="1" class="js-obrigatorio" id="campoMensagem" style="font-size: 2em;" placeholder="Exemplo: 3110/1970">{{ old('protocol') }}</textarea>
                                     </div>
                                 </div>
                             </div>
+
+                            @if(isset($errors))
+                                @foreach ($errors->all() as $error)
+                                    <h4>{{ $error }}</h4>
+                                @endforeach
+                            @endif
 
                             <div class="row form-botoes">
                                 <div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4">
