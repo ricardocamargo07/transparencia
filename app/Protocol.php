@@ -4,9 +4,10 @@ namespace App;
 
 use DateTime;
 use App\Support\Datable;
+use App\Support\DataRequest;
 use App\Support\RemotelyRequestable;
 
-class Protocol
+class Protocol extends Data
 {
     use RemotelyRequestable, Datable;
 
@@ -61,10 +62,14 @@ class Protocol
 
     private function findRequest($id)
     {
-        return $this->requestJson(
+        $data = new DataRequest(
+            static::class,
             config('app.webservice.urls.protocol'),
-            $id
+            'GET',
+            [$id]
         );
+
+        return $this->requestJson($data);
     }
 
     private function getNumbers($number)
