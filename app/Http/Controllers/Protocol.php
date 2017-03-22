@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Throwable;
+use Exception;
 use App\Support\Encodable;
 use Illuminate\Http\Request;
 use App\Protocol as ProtocolModel;
+use Symfony\Component\Debug\Exception\FatalErrorException;
+use Symfony\Component\Debug\Exception\FatalThrowableError;
 
 class Protocol extends Controller
 {
@@ -15,21 +19,56 @@ class Protocol extends Controller
         return view('protocol.index');
     }
 
-    public function show(Request $request, ProtocolModel $protocol)
+    /**
+     * @return $this
+     */
+    private function redirectWrongProtocol()
+    {
+        return redirect()->back()->withInput()->withErrors('Este número de protocolo não existe.');
+    }
+
+    /**
+     * @param Request $request
+     * @return mixed
+     */
+    private function sanitizeProtocolNumber(Request $request)
     {
         $protocol = trim($request->get('protocol'));
 
         if (empty($protocol)) {
-            return redirect()->back()->withInput()->withErrors('Por favor digite um número de protocolo.');
+            return [null, 'Por favor digite um número de protocolo.'];
+        }
+
+        $protocol = preg_replace("/[^0-9\/.]/", "", $protocol);
+
+        if (empty($protocol)) {
+            return [null, 'Número de protocolo inválido, por favor digite o número, seguido de uma barra ( / ) e do ano.'];
+        }
+
+        if (! str_contains($protocol, '/')) {
+            return [null, 'Número de protocolo incorreto, por favor digite o número, seguido de uma barra (/) e do ano.'];
+        }
+
+        return [$protocol, ''];
+    }
+
+    public function show(Request $request, ProtocolModel $protocol)
+    {
+        list($number, $message) = $this->sanitizeProtocolNumber($request);
+
+        if (is_null($number)) {
+            return redirect()->back()->withInput()->withErrors($message);
         }
 
         try {
-            if (! $result = $protocol->findByProtocol())
+            if (! $result = $protocol->findByProtocol($number))
             {
-                return redirect()->back()->withInput()->withErrors('Este número de protocolo não existe.');
+                return $this->redirectWrongProtocol();
             }
-        } catch (\Exception $exception) {
-            return redirect()->back()->withInput()->withErrors('Este número de protocolo não existe.');
+        } catch (Exception $exception) {
+            return $this->redirectWrongProtocol();
+        } catch (Throwable $e) {
+            return $this->redirectWrongProtocol();
         }
 
         $result['created_at'] = $result['created_at']->format('d/m/Y');

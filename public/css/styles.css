@@ -848,6 +848,23 @@ textarea {
     white-space: nowrap;
 }
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #000000;
+    opacity: 0.15;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #000000;
+    opacity: 0.15;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #000000;
+    opacity: 0.15;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #000000;
+    opacity: 0.15;
+}
+
 .protocol-answer-row {
     margin-top: 20px !important;
     line-height: 1.4em !important;
