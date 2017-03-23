@@ -28,5 +28,14 @@ class AppServiceProvider extends ServiceProvider
         BugsnagHandler::register(
             $bugsnag = BugsnagClient::make(config('services.bugsnag.key'))
         );
+
+        $this->registerWarningHandler();
+    }
+
+    private function registerWarningHandler()
+    {
+        set_error_handler(function($warning) {
+
+        }, E_WARNING);
     }
 }

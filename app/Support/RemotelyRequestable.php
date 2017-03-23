@@ -53,6 +53,10 @@ trait RemotelyRequestable
             return $this->encode($item);
         })->toArray();
 
+        if (count($parameters) == 0) {
+            $parameters = ['','','','',''];
+        }
+
         return vsprintf($url, $parameters);
     }
 }
