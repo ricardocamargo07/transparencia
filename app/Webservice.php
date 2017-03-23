@@ -68,6 +68,24 @@ class Webservice
         $this->purifier = new HTMLPurifier($config);
     }
 
+    private function isDataLinkExternal($item, $id)
+    {
+        if ($this->dataIsUrl($item, $id)) {
+            $url = $this->makeDataLink($item, $id);
+
+            return ! starts_with('/', $url) &&
+                    strpos($url, 'alerj.rj.gov.br/') == false;
+        }
+
+        return false;
+    }
+
+    private function dataIsUrl($item)
+    {
+        return empty(trim($item['texto'].$item['texto_html'])) &&
+                !empty(trim($item['url']));
+    }
+
     private function makeData($item)
     {
         if (isset($item['transformed']) && $item['transformed']) {
@@ -83,6 +101,7 @@ class Webservice
             'user_id' => $item['idUsuario'],
             'html' => $this->purify(isset($item['texto_html']) ? $item['texto_html'] : ''),
             'link' => $this->makeDataLink($item, $id),
+            'is_external' => $this->isDataLinkExternal($item, $id),
             'published_at_string' => $item['data_pub'],
             'published_at' => $this->convertDate($item['data_pub']),
             'status' => $item['status'] == 'S',
@@ -104,7 +123,7 @@ class Webservice
 
     private function makeDataLink($item, $id)
     {
-        if (empty(trim($item['texto'].$item['texto_html'])) && !empty(trim($item['url']))) {
+        if ($this->dataIsUrl($item, $id)) {
             return $item['url'];
         }
 

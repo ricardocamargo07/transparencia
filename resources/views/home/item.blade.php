@@ -40,7 +40,7 @@
 
                                             <div class="col-xs-7 col-md-3 tipos-downloads">
                                                 @foreach($group as $file)
-                                                    <a href="{{ $file['url'] }}" >
+                                                    <a href="{{ $file['url'] }}" download>
                                                         <i class="btn fa fa-file-{{ $file['file_type'] }}-o" aria-hidden="true">
                                                             <span class="label-dowload-tipo">{{ $file['file_type'] }}</span>
                                                         </i>
