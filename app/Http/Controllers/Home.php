@@ -9,8 +9,6 @@ class Home extends Controller
 {
     public function index()
     {
-        throw new \Exception();
-
         return view('home.index')->with('data', DataModel::all());
     }
 
