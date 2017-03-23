@@ -39,6 +39,7 @@ class Data extends BaseArrayModel
 
             if ($command == 'route') {
                 $item['links'][$key]['link'] = route($name, [$item['links'][$key]['id']]);
+                $item['links'][$key]['is_external'] = false;
             }
         }
 
