@@ -34,6 +34,17 @@ class Webservice
         return $this->rawData->where('slug', $slug)->count();
     }
 
+    private function extractOrderFromTitle($title)
+    {
+        preg_match("/\[(\d)\](.*)/", $title, $matches);
+
+        if (count($matches) !== 3) {
+            return [$title, 0];
+        }
+
+        return [$matches[2], $matches[1]];
+    }
+
     private function getData()
     {
         return $this->data;
@@ -92,11 +103,14 @@ class Webservice
             return $item;
         }
 
+        list($title, $order) = $this->extractOrderFromTitle($item['titulo']);
+
         return [
             'transformed' => true,
             'id' => $id = $item['idInformacao'],
             'data_id' => $data_id = $item['categoria']['idCategoria'],
-            'title' => $item['titulo'],
+            'title' => $title,
+            'order' => $order,
             'body' => $item['texto'],
             'user_id' => $item['idUsuario'],
             'html' => $this->purify(isset($item['texto_html']) ? $item['texto_html'] : ''),
@@ -226,6 +240,8 @@ class Webservice
     {
         return collect($links)->where('status', 'S')->map(function ($item) {
             return $this->makeData($item);
+        })->sortBy(function ($item) {
+            return isset($item['order']) ? $item['order'] : 0;
         })->toArray();
     }
 
