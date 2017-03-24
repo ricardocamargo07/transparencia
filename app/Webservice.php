@@ -187,7 +187,7 @@ class Webservice
         })->where('status', 'S')->groupBy('year')->sortByDesc(function($item, $key) {
             return $key;
         })->map(function($files) {
-            return $files->groupBy('file_id');
+            return $files->sortByDesc('period')->groupBy('file_id');
         });
     }
 
