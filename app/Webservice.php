@@ -84,7 +84,7 @@ class Webservice
         if ($this->dataIsUrl($item, $id)) {
             $url = $this->makeDataLink($item, $id);
 
-            return ! starts_with('/', $url) &&
+            return ! starts_with($url, '/') &&
                     strpos($url, 'alerj.rj.gov.br/') == false;
         }
 
