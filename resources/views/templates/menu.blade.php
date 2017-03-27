@@ -82,7 +82,7 @@
             <li><a class="ativo" href="/" id="lkbInicio">INÍCIO</a></li>
 
             <li class="pai">
-                <a href="/about" target="" class="titulo">Contato</a>
+                <a href="//www.aloalerj.rj.gov.br" target="" class="titulo">Contato</a>
             </li>
 
         {{--  <li class="pai">
