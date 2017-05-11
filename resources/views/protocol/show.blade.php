@@ -17,7 +17,7 @@
                 <div class="row faq">
                     <div class="col-xs-12">
                         <div class="item">
-                            <h3 class="text-center">1/2017</h3>
+                            <h3 class="text-center">{{ $protocol['numero'] }}/{{ $protocol['ano'] }}</h3>
                             <h4 class="text-center">Obrigado por nos procurar. Seu processo está em andamento.</h4>
                         </div>
                     </div>
