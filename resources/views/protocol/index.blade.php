@@ -35,15 +35,15 @@
                                 @endforeach
                             @endif
 
+                            <div class="g-recaptcha" data-sitekey="6LfiAiEUAAAAADcMGXqc13vAJ53XkOwslJseW3Le" data-callback="enableBtn"></div>
+
                             <div class="row form-botoes">
                                 <div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4">
-                                    <button type="submit" class="btn btn-primary btn-block">
+                                    <button id="submitButton" type="submit" class="btn btn-primary btn-block">
                                         <i class="fa fa-desktop" aria-hidden="true"></i>Pesquisar
                                     </button>
                                 </div>
                             </div>
-
-                            <div class="g-recaptcha" data-sitekey="6LfiAiEUAAAAADcMGXqc13vAJ53XkOwslJseW3Le"></div>
                         </form>
                     </div>
                 </div>
@@ -56,4 +56,14 @@
             </div>
         </div>
     </div>
+@stop
+
+@section('javascript')
+    <script>
+        jQuery("#submitButton").addClass('hidden');
+
+        var enableBtn = function enableBtn() {
+            jQuery("#submitButton").removeClass('hidden');
+        };
+    </script>
 @stop
