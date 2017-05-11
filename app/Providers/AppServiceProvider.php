@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use DB;
 use Bugsnag\Client as BugsnagClient;
 use Bugsnag\Handler as BugsnagHandler;
 use Illuminate\Support\ServiceProvider;
@@ -15,7 +16,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        DB::connection('alerj')
+          ->statement('SET ANSI_NULLS, ANSI_PADDING ON');
     }
 
     /**

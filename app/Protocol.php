@@ -2,9 +2,10 @@
 
 namespace App;
 
-use App\Support\Cacheable;
+use DB;
 use DateTime;
 use App\Support\Datable;
+use App\Support\Cacheable;
 use App\Support\DataRequest;
 use App\Support\RemotelyRequestable;
 
@@ -26,6 +27,20 @@ class Protocol
         ];
     }
 
+    private function extractNumberYear($number)
+    {
+        $number = str_replace(' ', '/', $number);
+        $number = str_replace('\\', '/', $number);
+        $number = str_replace('-', '/', $number);
+
+        list($number, $year) = explode('/', $number);
+
+        $number = preg_replace('/\D/', '', $number);
+        $year = preg_replace('/\D/', '', $year);
+
+        return [$number, $year];
+    }
+
     /**
      * @param $id
      * @return null
@@ -45,11 +60,31 @@ class Protocol
         return null;
     }
 
+    public function findByGeneralProtocol($number)
+    {
+        return $this->findGeneralProtocol($number);
+    }
+
     public function findByProtocol($id)
     {
         return $this->toProtocol(
             $this->findProtocol($id)
         );
+    }
+
+    private function findGeneralProtocol($number)
+    {
+        list($number, $year) = $this->extractNumberYear($number);
+
+        $connection = DB::connection('alerj');
+
+        $connection->statement('SET ANSI_NULLS ON; SET ANSI_WARNINGS ON;');
+
+        $protocol = $connection->select(DB::raw("select * from sy_vw_autor_processo where ano = {$year} and numero = {$number}"));
+
+        return $protocol
+                ? json_decode(json_encode($protocol), true)[0]
+                : false;
     }
 
     private function findProtocol($id)
@@ -110,19 +145,23 @@ class Protocol
 
         $data = $data[0];
 
-        return [
-            'id' => $data['idConteudo'],
-            'protocol' => $data['protocolo'],
-            'name' => $data['nome'],
-            'created_at' => $this->convertDate($data['data_pergunta']),
-            'published_at' => $this->convertDate($data['data_pub']),
-            'question' => $data['pergunta'],
-            'answer' => $data['resposta'],
-            'status' => $data['status'] == 'S',
-            'person_id' => $data['identidade'],
-            'user_id' => $data['idUsuario'],
-            'featured' => $data['destaque'] == 'S',
-        ];
+        if (isset($data['idConteudo'])) {
+            return [
+                'id' => $data['idConteudo'],
+                'protocol' => $data['protocolo'],
+                'name' => $data['nome'],
+                'created_at' => $this->convertDate($data['data_pergunta']),
+                'published_at' => $this->convertDate($data['data_pub']),
+                'question' => $data['pergunta'],
+                'answer' => $data['resposta'],
+                'status' => $data['status'] == 'S',
+                'person_id' => $data['identidade'],
+                'user_id' => $data['idUsuario'],
+                'featured' => $data['destaque'] == 'S',
+            ];
+        }
+
+        return $data;
     }
 
     private function toYear($year, $type)

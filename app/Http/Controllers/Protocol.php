@@ -61,9 +61,10 @@ class Protocol extends Controller
         }
 
         try {
-            if (! $result = $protocol->findByProtocol($number))
-            {
-                return $this->redirectWrongProtocol();
+            if (! $result = $protocol->findByProtocol($number)) {
+                if (! $result = $protocol->findByGeneralProtocol($number)) {
+                    return $this->redirectWrongProtocol();
+                }
             }
         } catch (Exception $exception) {
             return $this->redirectWrongProtocol();
@@ -71,7 +72,9 @@ class Protocol extends Controller
             return $this->redirectWrongProtocol();
         }
 
-        $result['created_at'] = $result['created_at']->format('d/m/Y');
+        if (isset($result['created_at'])) {
+            $result['created_at'] = $result['created_at']->format('d/m/Y');
+        }
 
         return view('protocol.show', ['protocol' => $result]);
     }

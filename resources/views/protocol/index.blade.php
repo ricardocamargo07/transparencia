@@ -42,6 +42,8 @@
                                     </button>
                                 </div>
                             </div>
+
+                            <div class="g-recaptcha" data-sitekey="6LfiAiEUAAAAADcMGXqc13vAJ53XkOwslJseW3Le"></div>
                         </form>
                     </div>
                 </div>

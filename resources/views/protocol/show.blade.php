@@ -13,57 +13,68 @@
                 </div>
             </div>
 
-            <div class="row faq">
-                <div class="col-xs-12">
-                    <div class="item">
-                        <h4>Situação atual do pedido</h4>
-                            <div class="row protocol-answer-row">
-                                <div class="col-md-2 bold">
-                                    Nome
-                                </div>
-
-                                <div class="col-md-10">
-                                    {{ $protocol['name'] }}
-                                </div>
-                            </div>
-
-                            <div class="row protocol-answer-row">
-                                <div class="col-md-2 bold">
-                                    Data
-                                </div>
-
-                                <div class="col-md-10">
-                                    {{ $protocol['created_at'] }}
-                                </div>
-                            </div>
-
-                            <div class="row protocol-answer-row">
-                                <div class="col-md-2 bold">
-                                    Pergunta
-                                </div>
-
-                                <div class="col-md-10">
-                                    {{ $protocol['question'] }}
-                                </div>
-                            </div>
-
-                            <div class="row protocol-answer-row">
-                                <div class="col-md-2 bold">
-                                    Resposta
-                                </div>
-
-                                <div class="col-md-10">
-                                    @if ($protocol['answer'])
-                                        {{ $protocol['answer'] }}
-                                    @else
-                                        Ainda não há resposta para este pedido.
-                                    @endif
-                                </div>
-                            </div>
-
+            @if (isset($protocol['autor']))
+                <div class="row faq">
+                    <div class="col-xs-12">
+                        <div class="item">
+                            <h3 class="text-center">1/2017</h3>
+                            <h4 class="text-center">Obrigado por nos procurar. Seu processo está em andamento.</h4>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @else
+                <div class="row faq">
+                    <div class="col-xs-12">
+                        <div class="item">
+                            <h4>Situação atual do pedido</h4>
+                                <div class="row protocol-answer-row">
+                                    <div class="col-md-2 bold">
+                                        Nome
+                                    </div>
+
+                                    <div class="col-md-10">
+                                        {{ $protocol['name'] }}
+                                    </div>
+                                </div>
+
+                                <div class="row protocol-answer-row">
+                                    <div class="col-md-2 bold">
+                                        Data
+                                    </div>
+
+                                    <div class="col-md-10">
+                                        {{ $protocol['created_at'] }}
+                                    </div>
+                                </div>
+
+                                <div class="row protocol-answer-row">
+                                    <div class="col-md-2 bold">
+                                        Pergunta
+                                    </div>
+
+                                    <div class="col-md-10">
+                                        {{ $protocol['question'] }}
+                                    </div>
+                                </div>
+
+                                <div class="row protocol-answer-row">
+                                    <div class="col-md-2 bold">
+                                        Resposta
+                                    </div>
+
+                                    <div class="col-md-10">
+                                        @if ($protocol['answer'])
+                                            {{ $protocol['answer'] }}
+                                        @else
+                                            Ainda não há resposta para este pedido.
+                                        @endif
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            @endif
         </div>
 
         <div class="row">

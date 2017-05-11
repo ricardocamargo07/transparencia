@@ -6,6 +6,7 @@ use App\AlerjArquivo;
 use App\AlerjCategoria;
 use App\AlerjConteudo;
 use App\AlerjInformacao;
+use App\AlerjProtocolo;
 use App\Support\Encodable;
 
 class Api extends Controller
@@ -20,6 +21,11 @@ class Api extends Controller
     public function categoria($id = null)
     {
         return $this->find($id, AlerjCategoria::class, ['informacoes.categoria']);
+    }
+
+    private function findProtocolo($year, $number)
+    {
+        return AlerjProtocolo::where('ano', $year)->where('numero', $number)->first();
     }
 
     public function informacao($id = null)
@@ -42,6 +48,11 @@ class Api extends Controller
     public function conteudo($id)
     {
         return $this->find($id, AlerjConteudo::class, null, true, 'protocolo');
+    }
+
+    public function protocolo($year, $number)
+    {
+        return $this->findProtocolo($year, $number);
     }
 
     public function find($id, $class, $relations = null, $returnResponse = true, $keyName = null)
