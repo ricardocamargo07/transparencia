@@ -18,14 +18,18 @@ class CacheRequest implements ShouldQueue
      */
     public $data;
 
+    public $result;
+
     /**
      * Create a new job instance.
      *
      * @param $data
      */
-    public function __construct(DataRequest $data)
+    public function __construct(DataRequest $data, $result)
     {
         $this->data = $data;
+
+        $this->result = $data;
     }
 
     /**
@@ -41,6 +45,8 @@ class CacheRequest implements ShouldQueue
 
         $requester = $object->getRequester($this->data);
 
-        Cache::forever($this->data->getKey(), $requester(false));
+        $this->result = $this->result ?: $requester(false);
+
+        Cache::forever($this->data->getKey(), $this->result);
     }
 }

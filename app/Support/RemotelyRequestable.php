@@ -36,6 +36,12 @@ trait RemotelyRequestable
             return $json;
         }
 
+        $xml = (string) $xml;
+
+        if ($xml == '[]') {
+            return [];
+        }
+
         try {
             $xml = simplexml_load_string($xml);
         } catch (\Exception $exception) {

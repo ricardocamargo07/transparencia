@@ -17,16 +17,12 @@ trait Cacheable
             return $this->getResult($data);
         }
 
-        $requested = false;
+        $result = Cache::get($key = $data->getKey());
 
-        if (! $result = Cache::get($data->getKey())) {
+        if ($result === false || is_null($result)) {
             $result = $this->getResult($data);
 
-            $requested = true;
-        }
-
-        if (! $requested) {
-            dispatch(new CacheRequest($data));
+            Cache::forever($key, $result);
         }
 
         return $result;
