@@ -17,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         DB::connection('alerj')
-          ->statement('SET ANSI_NULLS, ANSI_PADDING ON');
+          ->statement('SET ANSI_NULLS, QUOTED_IDENTIFIER, CONCAT_NULL_YIELDS_NULL, ANSI_WARNINGS, ANSI_PADDING ON');
     }
 
     /**
