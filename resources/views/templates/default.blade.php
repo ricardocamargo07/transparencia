@@ -63,14 +63,16 @@
             </div>
         </div>
 
-            <script src="/js/app.js"></script>
+        <script src="/js/app.js"></script>
 
-            <script>
-                function goBack() {
-                    window.history.back();
-                }
-            </script>
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
 
-            @yield('javascript')
+        @yield('javascript')
+
+        @include('partials.google-analytics')
     </body>
 </html>
