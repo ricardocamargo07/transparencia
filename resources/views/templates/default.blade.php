@@ -7,14 +7,14 @@
         <![endif]-->
         <meta charset="utf-8" />
         <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
-        <link rel="stylesheet" type="text/css" href="http://legislaqui.antoniocarlosribeiro.com/www.alerj.rj.gov.br/jquery-ui.css" />
-        <link rel="stylesheet" type="text/css" href="http://legislaqui.antoniocarlosribeiro.com/www.alerj.rj.gov.br/colorpicker.css" />
-        <link rel="stylesheet" type="text/css" href="http://legislaqui.antoniocarlosribeiro.com/www.alerj.rj.gov.br/datepicker.css" />
-        <link rel="stylesheet" type="text/css" href="http://legislaqui.antoniocarlosribeiro.com/www.alerj.rj.gov.br/lightbox.css" />
-        <link rel="stylesheet" type="text/css" href="http://legislaqui.antoniocarlosribeiro.com/www.alerj.rj.gov.br/jquery.jscrollpane.css" />
-        <link rel="stylesheet" type="text/css" href="http://legislaqui.antoniocarlosribeiro.com/www.alerj.rj.gov.br/jquery-ui.theme.css">
-        <link rel="stylesheet" type="text/css" href="http://legislaqui.antoniocarlosribeiro.com/www.alerj.rj.gov.br/jquery-ui.structure.css">
-        <link rel="stylesheet" type="text/css" href="http://legislaqui.antoniocarlosribeiro.com/www.alerj.rj.gov.br/estilos.css" />
+        <link rel="stylesheet" type="text/css" href="/legislaqui/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="/legislaqui/colorpicker.css" />
+        <link rel="stylesheet" type="text/css" href="/legislaqui/datepicker.css" />
+        <link rel="stylesheet" type="text/css" href="/legislaqui/lightbox.css" />
+        <link rel="stylesheet" type="text/css" href="/legislaqui/jquery.jscrollpane.css" />
+        <link rel="stylesheet" type="text/css" href="/legislaqui/jquery-ui.theme.css">
+        <link rel="stylesheet" type="text/css" href="/legislaqui/jquery-ui.structure.css">
+        <link rel="stylesheet" type="text/css" href="/legislaqui/estilos.css" />
 
         <!-- Styles -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">

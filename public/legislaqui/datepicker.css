@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+.calendario_customizado
+{
+	width:280px;
+}
+.calendario_customizado #calendario .ui-widget-content
+{
+	width:280px !important;
+}
+.calendario_customizado #calendario .ui-datepicker table
+{
+	font-size:1.0em;
+	width:280px !important;
+}
+.calendario_customizado #calendario .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default
+{
+	height:20px !important;
+}
+.calendario_customizado #calendario .ui-datepicker .ui-datepicker-header
+{
+	padding:5px 0px 5px 0px;
+}
+.calendario_customizado #calendario .ui-datepicker-title
+{
+	text-transform:uppercase;
+}
+.calendario_customizado #calendario thead
+{
+	text-transform:uppercase;
+}
+
+.calendario_customizado #calendario .ui-datepicker-title select
+{
+	width:100px;
+	height:20px;
+	background:#ffffff;
+	margin-top:-2px;
+}
+.calendario_customizado #calendario .ui-datepicker-title select.ui-datepicker-month
+{
+
+	margin-right:20px;
+}
+.dias_pendente a
+{
+	background-color: #9ea745 !important;
+	background-image: none !important;
+	color: White !important;
+}
