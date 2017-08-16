@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Cache;
 use App\Data as DataModel;
 use App\Item as ItemModel;
 
@@ -9,7 +10,11 @@ class Home extends Controller
 {
     public function index()
     {
-        return view('home.index')->with('data', DataModel::all());
+        $data = Cache::remember('transparencia-home', 10000, function () {
+            return DataModel::all();
+        });
+
+        return view('home.index')->with('data', $data);
     }
 
     public function data($id)
