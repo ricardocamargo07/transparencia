@@ -451,8 +451,8 @@ and (min-device-width: 320px)
 and (max-device-width: 568px)
 and (-webkit-min-device-pixel-ratio: 2) {
     .col-xs-12 {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 5px;
+        padding-right: 5px;
     }
     .row.faq {
         margin: 15px 0px;
@@ -475,8 +475,8 @@ and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
     .col-md-offset-1.col-md-10.text-center {
         /* margin-left: 0; */
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
 
@@ -548,8 +548,8 @@ and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
     .col-md-offset-1.col-md-10.text-center {
         /* margin-left: 0; */
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -575,6 +575,11 @@ and (max-device-width: 736px)
 and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: portrait) {
 
+    .col-md-offset-1.col-md-10.text-center{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
 }
 
 /* Landscape */
@@ -595,12 +600,6 @@ and (orientation: landscape) {
     }
 
 }
-
-
-
-
-
-
 .girar-celular {
     display: none;
 }
