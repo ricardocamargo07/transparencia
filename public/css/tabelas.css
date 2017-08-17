@@ -412,8 +412,8 @@ and (orientation: portrait) {
     }
     .col-md-offset-1.col-md-10.text-center {
         /* margin-left: 0; */
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 3px;
+        padding-right: 3px;
     }
     .table-demaiscargos th {
         word-wrap: break-word;
@@ -504,8 +504,8 @@ and (orientation: landscape) {
         margin: 0px;
     }
     .col-md-offset-1.col-md-10.text-center {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 5px;
+        padding-right: 5px;
     }.row.faq {
          padding: 20px 15px;
      }
@@ -552,8 +552,8 @@ and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
     .col-md-offset-1.col-md-10.text-center {
         /* margin-left: 0; */
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 10px !important;
+        padding-right: 10px  !important;
     }
 }
 
@@ -594,8 +594,8 @@ and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: landscape) {
     .col-md-offset-1.col-md-10.text-center {
         /* margin-left: 0; */
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
 
