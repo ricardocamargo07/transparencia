@@ -7,11 +7,11 @@
 @section('content')
     <div class="row">
         <div class="col-md-offset-1 col-md-10 text-center">
-            <div class="">
-                <div class="box-content-item">
-                    <h3 class="">Acompanhe seu pedido de informação na Alerj</h3>
-                </div>
+
+            <div class="box-content-item">
+                <h3 class="">Acompanhe seu pedido de informação na Alerj</h3>
             </div>
+
 
             <div class="row faq">
                 <div class="col-xs-12">
