@@ -24,7 +24,7 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div style="padding-top: 20px">
-                                        <textarea name="protocol" rows="1" class="js-obrigatorio" id="campoMensagem" style="font-size: 2em;" placeholder="Exemplo: 3110/1970">{{ old('protocol') }}</textarea>
+                                        <textarea name="protocol" rows="1" class="js-obrigatorio" id="campoMensagem" style="font-size: 2em;" placeholder="Número / Ano">{{ old('protocol') }}</textarea>
                                     </div>
                                 </div>
                             </div>
