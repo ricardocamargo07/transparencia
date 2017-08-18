@@ -1,0 +1,5416 @@
+
+@charset "utf-8";
+/* CSS Document */
+body,
+body.ui-mobile-viewport.ui-overlay-a {
+    height: 100%;
+    font-family: 'maven_proregular';
+    font-size: 12px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    background: #e8eaed;
+    overflow-x: hidden;
+}
+
+*{
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+input{
+-webkit-user-select: auto !important;
+-khtml-user-select: auto !important;
+-moz-user-select: auto !important;
+-ms-user-select: auto !important;
+user-select: auto !important;
+}
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+    background-color: #e8eaed !important;
+}
+
+body.bg_saudacao {
+    background: url(../imagens/bg.jpg) repeat;
+}
+
+.ui-loader .ui-icon-loading {
+    background-color: rgba(255, 255, 255, .15) !important;
+}
+
+.ui-icon-loading {
+    background-size: 100% !important;
+}
+/*.version {
+    height: 22px;
+    }*/
+    .display-none {
+        display: none;
+    }
+    /*--------------------------- FONT */
+    @font-face {
+        font-family: 'maven_proregular';
+        src: url('../fonts/mavenpro-regular-webfont.eot');
+        src: url('../fonts/mavenpro-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/mavenpro-regular-webfont.woff2') format('woff2'), url('../fonts/mavenpro-regular-webfont.woff') format('woff'), url('../fonts/mavenpro-regular-webfont.svg#maven_proregular') format('svg'), url('../fonts/mavenpro-regular-webfont.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'maven_probold';
+        src: url('../fonts/mavenpro-bold-webfont.eot');
+        src: url('../fonts/mavenpro-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/mavenpro-bold-webfont.woff2') format('woff2'), url('../fonts/mavenpro-bold-webfont.woff') format('woff'), url('../fonts/mavenpro-bold-webfont.svg#maven_probold') format('svg'), url('../fonts/mavenpro-bold-webfont.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'oswaldlight';
+        src: url('../fonts/oswald-light-webfont.eot');
+        src: url('../fonts/oswald-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/oswald-light-webfont.woff2') format('woff2'), url('../fonts/oswald-light-webfont.woff') format('woff'), url('../fonts/oswald-light-webfont.svg#oswaldlight') format('svg'), url('../fonts/oswald-light-webfont.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'oswald_regularregular';
+        src: url('../fonts/oswald-regular-webfont.eot');
+        src: url('../fonts/oswald-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/oswald-regular-webfont.woff2') format('woff2'), url('../fonts/oswald-regular-webfont.woff') format('woff'), url('../fonts/oswald-regular-webfont.svg#oswald_regularregular') format('svg'), url('../fonts/oswald-regular-webfont.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    p {
+        text-shadow: none;
+    }
+    /*--------------------------- PADDING */
+    .padding-0 {
+        padding: 0px 0px 0px 0px;
+    }
+    /*--------------------------- SAUDACAO */
+    .controle-saudacao {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .saudacao {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        position: absolute;
+        bottom: 0px;
+        background: url(../imagens/bg-inferior.png) bottom repeat-x;
+    }
+
+    .saudacao .barra_superior {
+        z-index: 1;
+        position: absolute;
+    }
+    /*--------------------------- GERAL */
+    .geral {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        
+    }
+
+  
+    .geral .barra_superior {
+        width: 100%;
+        height: 21px;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        background: #182b53;
+        border-bottom: 2px solid #90a145;
+    }
+
+    a,
+    a.ui-link {
+        word-wrap: break-word;
+        font-weight: 400;
+        color: #337AB7;
+    }
+
+    a:hover,
+    a.ui-link:hover {
+        text-decoration: none;
+        color: #337AB7;
+    }
+
+    a:focus,
+    a.ui-link:focus {
+        text-decoration: none;
+    }
+    /*--------------------------- FIXED */
+    .geral.fixed {
+        overflow: inherit;
+    }
+
+    /*.geral.fixed .superior {
+        position: absolute;
+        top: 0px;
+        z-index: 1;
+    }*/
+
+
+    .geral.fixed .barra {
+        width: 100%;
+        height: 21px;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        background: #182b53;
+        border-bottom: 2px solid #90a145;
+        position: fixed;
+        top: 0px;
+        z-index: 2;
+
+        
+    }
+
+    .geral.fixed .principal {
+        margin-top: 90px;
+    }
+
+    .principal.regimento {
+        padding: 0px 0px 90px 0px;
+    }
+
+    .geral.fixed .principal.agenda {
+        margin-top: 110px;
+    }
+
+    .geral.fixed .detalhe_superior {
+        position: relative;
+        z-index: 2;
+        top: 7px;
+    }
+
+    /*--------------------------- SUPERIOR Menu */
+    .superior {
+        width: 100%;
+        height: auto;
+        float: left;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        background: url(../imagens/bg.jpg) repeat;
+    }
+
+    .superior .logotipo {
+        padding: 15px 70px 15px 70px;
+    }
+
+    .superior .logotipo a {
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        z-index: 10;
+        position: relative;
+        display: block;
+    }
+
+    .superior .superior_interna {
+        height: auto;
+        position: relative;
+        z-index: 3;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .superior .superior_interna.busca_ativa {
+        padding: 15px 20px 6px 20px;
+    }
+
+    .superior .superior_interna h1 {
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        text-align: center;
+        font-size: 1.8em;
+        font-weight: 400;
+        margin: 20px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .superior .superior_interna a.icone {
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .superior .superior_interna .voltar a.icone {
+        width: 25px;
+        height: 20px;
+        box-sizing: content-box;
+        padding: 25px 20px 5px 20px;
+        background: url(../imagens/icone_01.png) 20px 20px no-repeat;
+    }
+
+    .superior .superior_interna .busca a.icone {
+        width: 22px;
+        height: 23px;
+        padding: 25px 20px 5px 20px;
+        box-sizing: content-box;
+        float: right;
+        background: url(../imagens/icone_02.png) 20px 20px no-repeat;
+    }
+    /*--------------------------- BUSCA */
+    .superior .campo_busca {
+        width: 100%;
+        height: 37px;
+        overflow: hidden;
+        float: left;
+        border: 1px solid #afb6c2;
+        border-radius: 6px;
+        display: none;
+        box-shadow: 1px 1px 5px #888888;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 10px 0px 0px;
+        background: #ffffff;
+       
+
+    }
+
+
+    .superior .campo_busca input,
+    .superior .campo_busca .ui-input-text input {
+        width: 85%;
+        min-height: 25px !important;
+        overflow: hidden;
+        float: left;
+        font-size: 16px !important;
+        color: #aeaeb1 !important;
+        position: relative;
+        z-index: 1;
+        border-radius: 6px;
+        padding: 0px 0px 0px 0px;
+        background: #FFF!important;
+    }
+
+
+    .superior .campo_busca .ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
+        border-width: 0px !important;
+        border: none !important;
+        border-color: #ffffff !important;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    .superior .campo_busca .icone {
+        width: 27px;
+        height: 21px;
+        overflow: hidden;
+        right: 20px;
+        position: absolute;
+        z-index: 2;
+        cursor: pointer;
+        margin: 0px 0px 0px 0px;
+        box-sizing: content-box;
+        padding: 13px 0 10px 30px;
+        margin: -8px 0 0;
+        background: url(../imagens/icone_pesquisar.png) 18px 7px no-repeat;
+        border-radius: 6px;
+    }
+
+    .superior .campo_busca .botaoFechar {
+        width:37px;
+        height:37px;
+        float:left;
+        background: #ffffff url(../imagens/icone_09.png) 10px 6px no-repeat;
+    }
+
+
+/*--------------------------- SUPERIOR para outras telas*/
+
+   
+    .superior-telas{
+       width: 100%;
+        height: auto;
+        float: left;
+        margin: 21px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        background: url(../imagens/bg.jpg) repeat;
+        position: fixed;
+        z-index: 1
+
+        
+    }
+    
+
+    .superior-telas .logotipo {
+        padding: 15px 70px 15px 70px;
+    }
+
+    .superior-telas .logotipo a {
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        z-index: 10;
+        position: relative;
+        display: block;
+    }
+
+    .superior-telas .superior_interna {
+        height: auto;
+        position: relative;
+        z-index: 3;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .superior-telas .superior_interna.busca_ativa {
+        padding: 15px 20px 6px 20px;
+    }
+
+    .superior-telas .superior_interna h1 {
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        text-align: center;
+        font-size: 1.8em;
+        font-weight: 400;
+        margin: 20px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .superior-telas .superior_interna a.icone {
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .superior-telas .superior_interna .voltar a.icone {
+        width: 25px;
+        height: 20px;
+        box-sizing: content-box;
+        padding: 25px 20px 5px 20px;
+        background: url(../imagens/icone_01.png) 20px 20px no-repeat;
+    }
+
+    .superior-telas .superior_interna .busca a.icone {
+        width: 22px;
+        height: 23px;
+        padding: 25px 20px 5px 20px;
+        box-sizing: content-box;
+        float: right;
+        background: url(../imagens/icone_02.png) 20px 20px no-repeat;
+    }
+    /*--------------------------- BUSCA */
+    .superior-telas .campo_busca {
+        width: 100%;
+        height: 37px;
+        overflow: hidden;
+        float: left;
+        border: 1px solid #afb6c2;
+        border-radius: 6px;
+        display: none;
+        box-shadow: 1px 1px 5px #888888;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 10px 0px 0px;
+        /*Criado este tributo*/
+        background: #ffffff;
+        /*Removido para desacoplar o botão fechar da div campo_busca*/
+        /*background: #ffffff url(../imagens/icone_09.png) 10px 6px no-repeat;*/
+
+    }
+
+
+    .superior-telas .campo_busca input,
+    .superior-telas .campo_busca .ui-input-text input {
+        width: 85%;
+        /*Removido para não determinar um tamanho especifico de altura e ele preencher toda a altura do input*/
+        /*height: 25px !important;*/
+        min-height: 25px !important;
+        overflow: hidden;
+        float: left;
+        font-size: 16px !important;
+        color: #aeaeb1 !important;
+        position: relative;
+        z-index: 1;
+        border-radius: 6px;
+        /*Removido para não desalinhar o conteúdo do input*/
+        /*margin: 5px 0px 0px 0px;*/
+        padding: 0px 0px 0px 0px;
+        background: #FFF!important;
+    }
+
+
+    .superior-telas .campo_busca .ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
+        border-width: 0px !important;
+        border: none !important;
+        border-color: #ffffff !important;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    .superior-telas .campo_busca .icone {
+        width: 27px;
+        height: 21px;
+        overflow: hidden;
+        right: 20px;
+        position: absolute;
+        z-index: 2;
+        cursor: pointer;
+        margin: 0px 0px 0px 0px;
+        box-sizing: content-box;
+        padding: 13px 0 10px 30px;
+        margin: -8px 0 0;
+        background: url(../imagens/icone_pesquisar.png) 18px 7px no-repeat;
+        border-radius: 6px;
+    }
+
+    .superior-telas .campo_busca .botaoFechar {
+        width:37px;
+        height:37px;
+        float:left;
+        background: #ffffff url(../imagens/icone_09.png) 10px 6px no-repeat;
+    }
+
+
+
+
+
+    /*--------------------------- DETALHE SUPERIOR */
+    .detalhe_superior {
+        padding: 0px 0px 0px 0px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .detalhe_superior .esquerda {
+        height: 20px;
+        padding: 0px 0px 0px 0px;
+        background: url(../imagens/detalhe_esquerda.png) left no-repeat;
+    }
+
+    .detalhe_superior .direita {
+        height: 20px;
+        padding: 0px 0px 0px 0px;
+        background: url(../imagens/detalhe_direita.png) right no-repeat;
+    }
+    /*--------------------------- PRINCIPAL */
+    .principal {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        margin: -6px 0px 0px 0px;
+        padding: 0px 0px 89px 0px;
+        background-color: #E8EAED;
+    }
+
+    .principal.inicio {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.sem-fundo {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.regimento.interna {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .calendario {
+        min-height: 310px !important;
+    }
+    /*--------------------------- MENU----------------------------------*/
+    .menu {
+        /*width: 100%;*/
+        height: auto;
+        overflow: scroll;
+        float: left;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .menu ul {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 6px 0px 8px;
+    }
+
+    .menu ul li {
+        list-style: none;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        position: relative;
+        background: #f5f6ec;
+        border-top: 1px solid #8fa143;
+        border-bottom: 1px solid #8fa143;
+    }
+
+    .menu ul li:first-child {
+        border-top: 2px solid #8fa143;
+    }
+
+    .menu ul li:last-child {
+        border-top: 1px solid #8fa143;
+        border-bottom: 2px solid #8fa143;
+    }
+
+    .menu ul li span.fio_01 {
+        width: 100%;
+        height: 6px;
+        position: absolute;
+        top: 0px;
+        z-index: 1;
+        background: url(../imagens/fio-01.png) repeat-x;
+    }
+
+    .menu ul li span.fio_02 {
+        width: 100%;
+        height: 4px;
+        bottom: 0px;
+        position: absolute;
+        z-index: 1;
+        background: url(../imagens/fio-02.png) repeat-x;
+    }
+
+    .menu ul li a,
+    .menu ul li a:visited {
+        width: auto;
+        height: auto;
+        display: block;
+        font-family: 'maven_probold';
+        font-size: 1.5em;
+        color: #2d3e5c;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 18px 0px 17px 0px;
+        background: url(../imagens/menu-esquerda.png) left repeat-y, url(../imagens/menu-direita.png) right repeat-y;
+    }
+
+    .menu ul li a:hover {
+        color: #2d3e5c;
+        text-decoration: none;
+    }
+
+
+
+    /*--------------------------- CONTEÚDO */
+    .principal .container {
+        position: relative;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .principal h1.titulo-busca {
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        text-align: center;
+        font-size: 1.6em;
+        font-weight: 400;
+        margin: 25px 0px 20px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.regimento h1.titulo-busca {
+        margin: 30px 0px 15px 0px;
+    }
+
+    .principal.agenda h1.titulo-busca {
+        margin: 10px 0px 20px 0px;
+    }
+
+    .principal .container .controle-conteudo {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        background: #ffffff;
+    }
+
+    .principal .container .controle-conteudo .conteudo {
+        width: 100%;
+        min-height: 333px;
+        overflow: hidden;
+        float: left;
+        margin: 0px 0px 0px 0px;
+        padding: 25px 0px 124px 0px;
+    }
+
+    .principal .container .controle-conteudo .conteudo h1 {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        font-size: 2.833em;
+        color: #172b53;
+        margin: 0px 0px 20px 0px;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .principal .container .controle-conteudo .conteudo h2 {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        font-family: 'oswald_regularregular';
+        font-size: 2.000em;
+        color: #172b53;
+        margin: 0px 0px 5px 0px;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .principal .container .controle-conteudo .conteudo h1 span {
+        font-family: 'oswald_regularregular';
+        font-size: 12px;
+        color: #8FA143;
+        margin: 0px 0px 0px 30px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal .container .controle-conteudo .conteudo span.data {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        font-family: 'oswald_regularregular';
+        font-size: 15px;
+        color: #8FA143;
+        margin: 0px 5px 20px 0px;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .principal .container .controle-conteudo .conteudo span.por {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        font-family: 'oswald_regularregular';
+        font-size: 12px;
+        text-align: right;
+        color: #8FA143;
+        box-sizing: border-box;
+        margin: 0px 0px 20px 0px;
+        padding: 5px 10px 0px 15px;
+    }
+
+    .principal .container .controle-conteudo .conteudo .controle-imagem {
+        width: 100%;
+        height: auto;
+        float: left;
+        position: relative;
+        margin: 0px 0px 10px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal .container .controle-conteudo .conteudo .controle-imagem img {
+        width: 100%;
+    }
+
+    .principal .container .controle-conteudo .conteudo .controle-imagem.lider span {
+        width: 215px;
+        height: 65px;
+        position: absolute;
+        bottom: -10px;
+        right: 10px;
+        display: block;
+        background: url(../imagens/lider.png) no-repeat;
+    }
+
+    .principal .container .controle-conteudo .conteudo .controle-imagem span {
+        display: none;
+    }
+
+    .principal .container .controle-conteudo .conteudo p {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        font-family: 'maven_proregular';
+        font-size: 20px;
+        color: #162b52;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 15px 0px 15px;
+        text-align: justify;
+    }
+
+    .principal .container .controle-conteudo .conteudo strong {
+        font-family: 'maven_probold';
+        font-weight: normal;
+    }
+
+    .principal .container span.top-esquerda {
+        width: 25px;
+        height: 30px;
+        position: absolute;
+        left: 0;
+        background: url(../imagens/conteudo-top-esquerda.jpg) -3px 0px no-repeat;
+    }
+
+    .principal .container span.top-direita {
+        width: 33px;
+        height: 100px;
+        position: absolute;
+        right: 0;
+        background: url(../imagens/conteudo-top-direita.jpg) no-repeat;
+    }
+
+    .principal .container span.bottom-esquerda {
+        width: 18px;
+        height: 65px;
+        position: absolute;
+        bottom: 0;
+        left: 8px;
+        background: url(../imagens/conteudo-bottom-esquerda.jpg) no-repeat;
+    }
+
+    .principal .container span.bottom-direita {
+        width: 15px;
+        height: 65px;
+        position: absolute;
+        bottom: 0;
+        right: 6px;
+        background: url(../imagens/conteudo-bottom-direita.jpg) no-repeat;
+    }
+
+    /*--------------------------- PRINCIPAL SEM FUNDO */
+    .principal.sem-fundo .container {
+        padding: 20px 0px 0px 0px;
+    }
+
+    .principal.sem-fundo .container h1 {
+        line-height: 22px;
+        font-family: 'maven_probold';
+        color: #132850;
+        font-size: 19px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0px 0px 5px 0px;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .principal.sem-fundo .container span.data {
+        width: 100%;
+        display: block;
+        font-size: 16px;
+        font-family: 'maven_proregular';
+        color: #98001b;
+        text-align: center;
+        margin: 0px 0px 15px 0px;
+    }
+
+    .principal.sem-fundo .container .controle-conteudo {
+        padding: 0px 0px 0px 0px;
+        background: #e8eaed;
+    }
+
+    .principal.sem-fundo .container .controle-conteudo .conteudo {
+        border-top: 5px solid #717277;
+        padding: 0px 0px 40px 0px;
+        background: #ffffff;
+    }
+
+    .principal.sem-fundo .container .controle-conteudo .conteudo h2 {
+        font-family: 'maven_probold';
+        font-size: 20px;
+        margin: 30px 0px 25px 0px;
+        color: #132850;
+    }
+    /*--------------------------- RESULTADO BUSCA */
+    .label_resultado {
+        color: #666666;
+        font-weight: bold;
+        font-size: 12px;
+        text-align: center;
+        margin: 5px 0px 20px 0px;
+    }
+
+    .principal.busca_resultado h1.titulo-busca {
+        padding: 0px 0px 0px 0px;
+        margin: 15px 0px 0px 0px;
+    }
+
+    .principal.busca_resultado .container {
+        padding: 15px 0px 0px 0px;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        margin: 0px 0px 40px 0px;
+        padding: 0px 15px 20px 15px;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2,
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2 a {
+        font-family: 'maven_probold';
+        font-size: 20px;
+        color: #132850;
+        text-align: center;
+        margin: 15px 0px 15px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado p {
+        font-size: 16px;
+        color: #777b80;
+        text-align: center;
+        border-top: 1px solid #babbbe;
+        border-bottom: 1px solid #babbbe;
+        padding: 10px 10px 10px 10px;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado p a {
+        font-weight: bold;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo {
+        padding: 0px 0px 0px 0px;
+        background: #e8eaed;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo {
+        border-top: 1px solid #bbbdbf;
+        padding: 0px 0px 40px 0px;
+        background: transparent;
+    }
+    /*--------------------------- NOTÍCIAS */
+    .noticia {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal .container .controle-conteudo .conteudo .noticia h2 {
+        font-family: 'oswald_regularregular';
+        font-size: 2.5em;
+        line-height: 1.5em;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 10px 0px 10px;
+    }
+
+    .principal .container .controle-conteudo .conteudo .noticia span.data {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: right;
+        text-align: center;
+        font-size: 15px;
+        color: #8FA143;
+        margin: 0px 0px 10px 0px;
+        padding: 0px 10px 0px 10px;
+    }
+
+    .noticia img.imagem {
+        width: 100%;
+    }
+
+    .noticia .controle-botao {
+        width: 98%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        margin-left: 1%;
+        margin-right: 1%;
+        padding: 0px 0px 30px 0px;
+        cursor: pointer;
+        background: url(../imagens/fio-01.png) bottom repeat-x;
+    }
+
+    .principal .container .controle-conteudo .conteudo .noticia p {
+        font-size: 1.8em;
+    }
+
+    .noticia .controle-botao img {
+        width: 22px;
+        display: block;
+        margin: 0px auto 0px auto;
+    }
+
+    .carregando_noticias {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        color: #8FA143;
+        margin: 0px 0px 0px 0px;
+        padding: 20px 20px 80px 20px;
+    }
+
+    .carregando_noticias img {
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        display: block;
+        margin: 0px auto 0px auto;
+    }
+    /*--------------------------- FORMULÁRIO */
+    .form-control:focus {
+        border-color: #a9b66d !important;
+        -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.2);
+        -moz-box-shadow: inset 0 0px 0px rgba(0,0,0,.2);
+        box-shadow: none !important;
+    }
+
+    .conteudo.formulario .form-control,
+    .ui-input-text input, .ui-input-search input {
+        height: 35px !important;
+        border-color: #a9b66d;
+        color: #17294a !important;
+        font-size: 16px !important;
+        background: #f5f6ec !important;
+    }
+
+    .conteudo.formulario textarea.form-control,
+    textarea.ui-input-text.ui-textinput-autogrow {
+        height: 130px !important;
+        background: #f5f6ec !important;
+        color: #17294a !important;
+        font-size: 20px !important;
+    }
+
+    .conteudo.formulario .form-group {
+        margin-bottom: 20px;
+    }
+
+    .conteudo.formulario .form-group label,
+    .ui-mobile label, .ui-controlgroup-label {
+        color: #17294a;
+        font-weight: 400;
+        font-size: 16px;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .conteudo.formulario input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+        background-color: #000000;
+        background-image: none;
+        color: rgb(0, 0, 0);
+    }
+
+    .conteudo.formulario .btn-primary,
+    .btn.btn-primary.ui-btn.ui-shadow.ui-corner-all {
+        width: 100px;
+        font-size: 16px;
+        color: #FFF;
+        display: block;
+        background-color: #17294a;
+        border-color: #2E6DA4;
+        font-weight: 400;
+        border: 0px;
+        margin: 0px auto 0px auto;
+        padding: 10px 20px 10px 20px;
+        text-shadow: initial;
+    }
+
+    .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+        text-shadow: initial;
+    }
+
+    .principal .container .controle-conteudo .conteudo.formulario p.endereco {
+        font-size: 12px;
+        text-align: center;
+        margin: 25px 0px 10px 0px;
+        padding: 0px 10px 0px 10px;
+    }
+
+    .ui-input-text, .ui-input-search {
+        margin: 0px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #a9b66d;
+    }
+
+    button.ui-btn, .ui-controlgroup-controls button.ui-btn-icon-notext {
+        width: auto;
+    }
+
+    .ui-page-theme-a .ui-body-inherit {
+        border-color: #a9b66d;
+        -webkit-box-shadow: 0 0 0px #38C;
+        -moz-box-shadow: 0 0 0px #38c;
+        box-shadow: 0 0 0px #38C;
+        text-shadow: 0 0px 0 #F3F3F3;
+    }
+    /*--------------------------- REGIMENTO */
+    .principal.regimento .container {
+        margin-top: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-family: 'maven_probold';
+    }
+
+    .principal.regimento .container .conteudo {
+        min-height: auto;
+        padding: 0px 0px 0px 0px;
+        background: #e8eaed;
+    }
+
+    .principal.regimento .container .controle-conteudo .conteudo .titulo {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        background: #172B53;
+        border-top: 5px solid #84868a;
+    }
+
+    .principal.regimento .container .controle-conteudo .conteudo .area {
+        width: 130px;
+        height: 19px;
+        font-size: 13px;
+        text-align: center;
+        color: #ffffff;
+        margin: 0px auto;
+        padding: 1px 17px 3px 22px;
+        background: url(../imagens/base_titulo.png) right no-repeat;
+    }
+
+      .principal.regimento .container .controle-conteudo .conteudo .sem_area {
+        width: 130px;
+        height: 19px;
+        font-size: 13px;
+        text-align: center;
+        color: #ffffff;
+        margin: 0px auto;
+        padding: 1px 17px 3px 22px;
+        
+    }
+
+    .principal.regimento .container .controle-conteudo .conteudo h1 {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        color: #ffffff;
+        text-align: center;
+        font-size: 20px;
+        margin: 0px 0px 0px 0px;
+        padding: 20px 10px 20px 10px;
+    }
+
+    .principal.regimento .container .controle-conteudo a.capitulo {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        background: #ffffff;
+        border-top: 5px solid #84868a;
+    }
+
+    .principal.regimento .container .controle-conteudo a.capitulo.sem-link {
+        cursor: default;
+        background: #e6e6e7;
+    }
+
+    .principal.regimento .container .controle-conteudo a.capitulo.sem-link span.descricao {
+        background-image: none;
+    }
+
+    .principal.regimento .container .controle-conteudo .capitulo span.area {
+        width: 100px;
+        height: 15px;
+        display: block;
+        font-size: 12px;
+        line-height: 13px;
+        font-family: 'maven_proregular';
+        text-align: center;
+        color: #ffffff;
+        margin: 0px 0px 0px 10px;
+        padding: 0px 10px 0px 10px;
+        background: url(../imagens/base_capitulo.png) right no-repeat;
+    }
+
+    .principal.regimento .container .controle-conteudo .sem_capitulo span.area {
+        width: 100px;
+        height: 15px;
+        display: block;
+        
+        
+    }
+
+    .principal.regimento .container .controle-conteudo .capitulo span.descricao {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        color: #172B53;
+        font-weight: 400;
+        font-size: 17px;
+        text-align: left;
+        margin: 0px 0px 0px 0px;
+        padding: 10px 40px 25px 25px;
+        background: url(../imagens/icone_07.png) 98% 30% no-repeat;
+    }
+
+    .principal.regimento .container .controle-conteudo a.capitulo.ativo span.descricao {
+        background: none;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao {
+        width: 100%;
+        height: auto;
+        float: left;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 15px 0px 0px 0px;
+        background: #ffffff;
+        border-top: 2px solid #84868a;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao.sem-link {
+        cursor: default;
+        background: #e6e6e7;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.area {
+        width: 50px;
+        height: 30px;
+        display: block;
+        font-size: 12px;
+        font-family: 'maven_proregular';
+        text-align: center;
+        color: #ffffff;
+        position: absolute;
+        top: -24px;
+        left: 20px;
+        padding: 13px 0px 0px 0px;
+        background: url(../imagens/base_secao.png) right no-repeat;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.descricao {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        color: #172B53;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left;
+        margin: 0px 0px 0px 0px;
+        padding: 24px 40px 30px 25px;
+        background: url(../imagens/icone_07.png) 98% 10% no-repeat;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao.sem-link span.descricao {
+        background: none;
+    }
+
+    .principal.regimento .container .controle-conteudo a.subsecao {
+        width: 100%;
+        height: auto;
+        float: left;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 15px 0px 0px 0px;
+        background: #ffffff;
+        border-top: 2px solid #84868a;
+    }
+
+    .principal.regimento .container .controle-conteudo a.subsecao.sem-link {
+        cursor: default;
+        background: #e6e6e7;
+    }
+
+
+    .principal.regimento .container .controle-conteudo .conteudo a.subsecao span.area {
+      width: 100px;
+      height: 15px;
+      display: block;
+      font-size: 12px;
+      line-height: 13px;
+      font-family: 'maven_proregular';
+      text-align: center;
+      color: #ffffff;
+      margin: -15px 0px 0px 10px;
+      padding: 0px 10px 0px 10px;
+      background: url(../imagens/base_capitulo.png) right no-repeat;
+  }
+
+  .principal.regimento .container .controle-conteudo a.subsecao span.descricao {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    color: #172B53;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: left;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 21px 20px;
+    background: url(../imagens/icone_07.png) 98% 10% no-repeat;
+    }
+
+
+
+
+    .principal.regimento .container .controle-conteudo a.secao span.area {
+    width: 50px;
+    height: 51px;
+    display: block;
+    font-size: 12px;
+    font-family: 'maven_proregular';
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    top: -24px;
+    left: 20px;
+    padding: 23px 0px 0px 0px;
+    background: url(../imagens/base_secao.png) right no-repeat;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.descricao {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    color: #172B53;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: left;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 40px 10px 25px;
+    background: url(../imagens/icone_07.png) 98% 10% no-repeat;
+
+    }
+
+    .principal.regimento .container .controle-conteudo a.subsecao.sem-link span.descricao {
+    background: none;
+    }
+
+    .principal.regimento .container .controle-conteudo .conteudo-regimento {
+    width: 100%;
+    min-height: 800px;
+    overflow: hidden;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 20px 0px 50px 0px;
+    background: #ffffff;
+    }
+
+    .principal.regimento .container .controle-conteudo .conteudo-regimento h2 {
+    font-family: 'maven_probold';
+    font-size: 22px;
+    line-height: 35px;
+    color: #162B52;
+    padding: 0px 20px 0px 20px;
+    margin: 0px 0px 20px 0px;
+    text-align: center;
+    }
+
+    .principal.regimento .container .controle-conteudo .conteudo-regimento p {
+    font-size: 18px;
+    font-family: 'maven_proregular';
+    color: #162B52;
+    font-weight: 200;
+    }
+/*--------------------------- DEPUTADO */
+    .principal.deputado .container .controle-conteudo .conteudo .fio {
+    width: 96%;
+    height: 1px;
+    float: left;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: 2%;
+    margin-bottom: 10px;
+    margin-right: 2%;
+    padding: 0px 0px 0px 0px;
+    background: #e9ebed;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado {
+    padding: 0px 20px 0px 20px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado {
+    display: block;
+    overflow: hidden;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .imagem-deputado {
+    padding: 0px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    padding: 0px 0px 0px 50px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido a {
+    position: relative;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido span {
+    display: none;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido span {
+    width: 35px;
+    height: 52px;
+    position: absolute;
+    top: 32%;
+    left: 0px;
+    display: block;
+    background: url(../imagens/lista-lider-03.png) no-repeat;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado img {
+    border-radius: 10%;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .partido {
+    font-family: 'oswald_regularregular';
+    color: #8FA143;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome {
+    font-family: 'oswald_regularregular';
+    font-size: 12px;
+    color: #162B52;
+    display: block;
+    text-transform: uppercase;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    }
+
+    /*--------------------------- DEPUTADO INTERNA */
+    .principal.deputado .container .controle-conteudo {
+    overflow: inherit;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna {
+    overflow: inherit;
+    padding: 40px 10px 40px 10px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna p {
+    font-size: 17px;
+    color: #495871;
+    padding: 0px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna img {
+    border-radius: 0%;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna p.partido_interna {
+    font-family: 'oswald_regularregular';
+    color: #8FA143;
+    font-size: 14px;
+    padding: 0px 0px 5px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna p.partido_interna span {
+    font-weight: 600;
+    text-transform: uppercase;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna p.telefone {
+    width: 100%;
+    font-size: 18px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna a.email {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    font-size: 18px;
+    color: #FB651D;
+    margin: 25px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna h1 {
+    font-family: 'oswald_regularregular';
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .cabecalho_deputado {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    border-bottom: 1px solid #b7b7b8;
+    border-top: 1px solid #b7b7b8;
+    margin: 15px 0px 15px 0px;
+    padding: 20px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .cabecalho_deputado .nome {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    margin: 0px 0px 20px 0px;
+    padding: 0px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .cabecalho_deputado .label {
+    color: #7B8698;
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: normal;
+    padding: 0px 0px 0px 0px;
+    }   
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .cabecalho_deputado .texto {
+    font-size: 16px;
+    color: #495871;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .cabecalho_deputado .data {
+    width: 100px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    margin: 0px 15px 0px 0px;
+    padding: 0px 0px 20px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .cabecalho_deputado .local {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .descricoes {
+    width: 100%;
+    min-height: 50px;
+    position: relative;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .titulo_separador {
+    width: auto;
+    height: 34px;
+    overflow: hidden;
+    font-family: 'oswald_regularregular';
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: normal;
+    text-transform: uppercase;
+    position: absolute;
+    left: -20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 10px;
+    margin: 0px 0px 0px 0px;
+    padding: 8px 20px 0px 25px;
+    background: url(../imagens/base_titulo_separador.png) no-repeat;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .participacoes {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    border-bottom: 1px solid #b7b7b8;
+    margin: 0px 0px 25px 0px;
+    padding: 0px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .participacoes .nome {
+    font-family: 'oswald_regularregular';
+    font-size: 17px;
+    color: #162b52;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .participacoes .funcao {
+    font-family: 'oswald_regularregular';
+    font-size: 16px;
+    color: #8FA143;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    background: url(../imagens/icone_08.png) 0px 4px no-repeat;
+    }
+    /*--------------------------- AGENDA */
+    .principal.agenda .container {
+    margin-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    }
+
+    .principal.agenda .container .conteudo {
+    padding: 0px 0px 20px 0px;
+    background: #e8eaed;
+    }
+
+    .principal.agenda .container .conteudo .ui-widget-content {
+    border: 0px;
+    }
+
+    .principal.agenda .container .conteudo .ui-widget-header {
+    background: none;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker {
+    width: 100%;
+    border-top: 2px solid #a30039;
+    border-bottom: 2px solid #717277;
+    padding: 20px 20px 20px 20px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker .ui-datepicker-header {
+    width: 280px;
+    font-family: 'maven_proregular';
+    color: #a30039;
+    font-size: 20px;
+    border: 0px;
+    font-weight: normal;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker .ui-datepicker-prev span,
+    .principal.agenda .container .conteudo .ui-datepicker .ui-datepicker-next span {
+    display: none;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-next.ui-corner-all {
+    width: 24px;
+    height: 23px;
+    top: 7px;
+    right: 40px;
+    cursor: pointer;
+    border: 0px;
+    background: url(../imagens/icone_06.png) no-repeat;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-prev.ui-corner-all {
+    width: 24px;
+    height: 23px;
+    top: 7px;
+    left: 40px;
+    cursor: pointer;
+    border: 0px;
+    background: url(../imagens/icone_05.png) no-repeat;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-title {
+    width: 280px;
+    margin: 0px auto 0px auto;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker table {
+    width: 280px;
+    margin: 0px auto 0px auto;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker th {
+    font-family: 'oswaldlight';
+    color: #172B53;
+    font-size: 17px;
+    text-align: center;
+    font-weight: normal;
+    }
+
+    .principal.agenda .container .conteudo .ui-state-default {
+    width: 35px;
+    height: 35px;
+    font-family: 'oswaldlight';
+    color: #B6B9BC;
+    font-size: 20px;
+    line-height: 24px;
+    border: 0px;
+    border-radius: 20px;
+    text-align: center;
+    background: #ffffff;
+    padding: 7px 0px 10px 0px;
+    margin: 0px auto 5px auto;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-calendar tr td.ui-datepicker-week-end:first-child .ui-state-default {
+    color: #172B53;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-calendar tr td.ui-datepicker-week-end:first-child .ui-state-default.ui-state-active {
+    color: #ffffff;
+    }
+
+    .principal.agenda .container .conteudo .ui-state-default.evento,
+    .principal.agenda .container .conteudo .ui-state-default.evento:hover {
+    color: #B6B9BC;
+    border: 1px solid #B6B9BC;
+    }
+
+    .principal.agenda .container .conteudo .ui-state-default.ui-state-highlight {
+    color: #a60041;
+    }
+
+    .principal.agenda .container .conteudo .ui-state-default.ui-state-highlight.ui-state-active {
+    color: #a60041;
+    border: 0px solid #B6B9BC;
+    background: #ffffff;
+    }
+
+    .principal.agenda .container .conteudo .ui-state-default.ui-state-active {
+    color: #ffffff;
+    }
+
+    .principal.agenda .container .conteudo .ui-state-default.ui-state-active {
+    color: #ffffff;
+    border: 0px solid #B6B9BC;
+    background: #A60041;
+    }
+
+    .principal.agenda .container .conteudo .ui-state-default.ui-state-active.evento.futuro:after,
+    .principal.agenda .container .conteudo .ui-datepicker-week-end .ui-state-default.ui-state-active.evento.futuro:after {
+    display: none;
+    }
+
+    .principal.agenda .container .conteudo .ui-state-default.ui-state-active.evento.futuro,
+    .principal.agenda .container .conteudo .ui-datepicker-week-end .ui-state-default.ui-state-active.evento.futuro {
+    color: #ffffff;
+    border: 0px solid #ffffff;
+    background: #A60041;
+    }
+
+    .principal.agenda .container .conteudo .ui-state-default.evento.futuro,
+    .principal.agenda .container .conteudo .ui-datepicker-week-end .ui-state-default.evento.futuro {
+    color: #B6B9BC;
+    position: relative;
+    border: 1px solid #B6B9BC;
+    }
+
+    .principal.agenda .container .conteudo .ui-state-default.evento.futuro:after,
+    .principal.agenda .container .conteudo .ui-datepicker-week-end .ui-state-default.evento.futuro:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 1px solid #B6B9BC;
+    border-radius: 5px;
+    background-color: #A60040;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos {
+    width: 100%;
+    height: auto;
+    float: left;
+    overflow: hidden;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    font-size: 24px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 40px 0px 40px;
+    list-style: none;
+    position: relative;
+    border-bottom: 2px solid #84868A;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li a {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    font-size: 18px;
+    color: #172b53;
+    margin: 0px auto 0px auto;
+    padding: 20px 0px 20px 0px;
+    background: url(../imagens/icone_07.png) right no-repeat;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li span.texto {
+    margin-left: 15px;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li a span.ponto {
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: 27px;
+    border: 1px solid #B6B9BC;
+    border-radius: 5px;
+    background-color: #A60040;
+    }
+    /*--------------------------- INFERIOR */
+    .inferior {
+    width: 100%;
+    min-height: 80px;
+    overflow: hidden;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    position: absolute;
+    bottom:0px;
+    z-index: 2;
+    
+    }
+
+    
+
+    .inferior .conteudo {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 17px 0px 20px 0px;
+    background: url(../imagens/inferior-esquerda.jpg) top left no-repeat, url(../imagens/inferior-direita.jpg) top right no-repeat;
+    background-color: #334062;
+    }
+
+    .inferior .conteudo.inicio {
+    }
+
+    .inferior .conteudo p {
+    font-size: 10px;
+    line-height: 14px;
+    color: #767E95;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 30px 0px 30px;
+    }
+
+    .inferior .conteudo p.bold {
+    width: auto !important;
+    font-weight: 800;
+    font-size: 12px;
+    margin: 0px 0px 10px 0px;
+    padding: 0px 40px 0px 40px;
+    background: #FFFFFF;
+    background: url(../imagens/inferior_bg_paragrafo.jpg) center no-repeat;
+    }
+
+   
+
+
+
+    /*--------------------------- INFERIOR - REGIMENTO */
+    .inferior-regimento {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background: url(../imagens/brilho-inferior-regimento.png) repeat-x, url(../imagens/bg.jpg) top repeat;
+    }
+
+    .inferior-regimento .logotipo {
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    background: url(../imagens/fio-regimento.jpg) bottom repeat-x;
+    }
+
+    .inferior-regimento .logotipo img {
+    width: 120px;
+    display: block;
+    margin: 0px auto;
+    }
+
+    .inferior-regimento .fio {
+    width: 100%;
+    height: 30px;
+    background: #8FA143;
+    display: none;
+    }
+
+
+
+    /*----footer menu---*/
+
+ .footer-menu{
+    width: 100%;
+    min-height: 80px;
+    overflow: hidden;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px; 
+    z-index: 2;
+
+
+    }
+
+    
+
+    .footer-menu .conteudo {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 17px 0px 20px 0px;
+    background: url(../imagens/inferior-esquerda.jpg) top left no-repeat, url(../imagens/inferior-direita.jpg) top right no-repeat;
+    background-color: #334062;
+    }
+
+    .footer-menu .conteudo.inicio {
+    }
+
+    .footer-menu .conteudo p {
+    font-size: 10px;
+    line-height: 1.4rem;
+    color: #767E95;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 30px 0px 30px;
+    }
+
+    .footer-menu .conteudo p.bold {
+    width: auto !important;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin: 0px 0px 10px 0px;
+    padding: 0px 40px 0px 40px;
+    background: #FFFFFF;
+    background: url(../imagens/inferior_bg_paragrafo.jpg) center no-repeat;
+    }
+
+
+
+    .img_share{
+        position: absolute;
+        width: 71px;
+        height: 21px;
+        background: url(../imagens/botao-compartilhar.png) no-repeat;
+        margin-left: -49px;
+        border-radius:4px;
+    }
+
+
+
+
+
+
+
+/************************ RADIO ************************/
+
+.radio-fundo{
+    background: #021f4d;
+    border-radius: 13px;
+    margin: 0 10px;
+}
+
+.radio-miolo {
+    background: #021f4d;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    border: #1d3c64 solid 6px;
+    z-index: 9000;
+}
+
+/*
+.radio-miolo2{
+    background: #292929;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: #1d3c64 solid 6px;
+    box-shadow:
+        inset 0 0 0 3px #247db9;
+}
+*/
+
+
+
+.radio-microfone {
+    background-image: url(../imagens/radio-microfone.png) ;
+    background-position: top left ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    margin-left: 12px;
+
+    width: 100%;
+    height: 150px;
+}
+
+
+.radio-rodape {
+    background-image: url(../imagens/radio-rodape.png) ;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    margin-left: 0px;
+
+    width: 355px;
+    height: 100%;
+}
+
+
+
+.Aligner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Aligner-item {
+    /*max-width: 50%;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Aligner-item--top {
+    align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+    align-self: flex-end;
+}
+
+
+/************************** PLAYER ****************/
+
+
+
+/* box model*/
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* rotation */
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@-moz-keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@-ms-keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+/* pulse */
+@keyframes pulse {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-moz-keyframes pulse {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-ms-keyframes pulse {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes pulse {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* scale */
+@keyframes scale {
+    0%   { transform: scale(1.0); }
+    100% { transform: scale(1.2); }
+}
+@-moz-keyframes scale {
+    0%   { transform: scale(1.0); }
+    100% { transform: scale(1.2); }
+}
+@-ms-keyframes scale {
+    0%   { transform: scale(1.0); }
+    100% { transform: scale(1.2); }
+}
+@keyframes scale {
+    0%   { transform: scale(1.0); }
+    100% { transform: scale(1.2); }
+}
+
+/* globals */
+
+.circle {
+    /* Draw circles */
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.animated {
+    /* Smoother animations */
+    transform: translateZ(0);
+}
+
+/* tower */
+.tower {
+    position: absolute;
+    top: 12.5%;
+    width: 100%;
+    margin: -20px 0 0 0;
+}
+
+
+/* player */
+.player {
+    position: absolute;
+    /*
+    top: 50%;
+    left: 50%;
+    margin: -120px 0 0 -120px;
+    */
+    margin: 0;
+    height: 140px;
+    width: 140px;
+    background-color: #292929;
+    cursor: pointer;
+}
+.player .triangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin: -15px 0 0 -10px;
+    border-top: 20px solid transparent;
+    border-left: 30px solid #ffffff;
+    border-bottom: 20px solid transparent;
+}
+.player:hover .triangle {
+    border-top: 20px solid transparent;
+    border-left: 30px solid #247db9;
+    border-bottom: 20px solid transparent;
+}
+.player .buffering {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 130px;
+    height: 130px;
+    border-right: 2px solid #247db9;
+    border-bottom: 2px solid #247db9;
+    border-left: 2px solid #474747;
+    border-top: 2px solid #474747;
+    animation: rotate 3s infinite linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- Tablete  Kindle Fire HD 8.9" ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 1200px) and (max-device-height: 1600px) and (-webkit-min-device-pixel-ratio: 1.5) {
+
+        .superior .logotipo a {
+            width: auto;
+            height: auto;
+            overflow: hidden;
+            margin: 0px 0px 0px 0px;
+            padding: 68px 0px 65px 0px;
+            z-index: 10;
+            position: relative;
+            display: block;
+        }
+
+        .menu ul li a, .menu ul li a:visited {
+            width: auto;
+            height: auto;
+            display: block;
+            font-family: 'maven_probold';
+            font-size: 20px;
+            color: #2d3e5c;
+            text-align: center;
+            text-decoration: none;
+            position: relative;
+            margin: 0px 0px 0px 0px;
+            padding: 82px 0px 83px 0px;
+            background: url(../imagens/menu-esquerda.png) left repeat-y, url(../imagens/menu-direita.png) right repeat-y;
+        }
+        /*--------------------------- DEPUTADO - 1600px */
+        .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido {
+            right: 5px;
+        }
+        /*--------------------------- RESULTADO BUSCA - 1600px */
+        .label_resultado {
+            text-align: center;
+        }
+
+        .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2,
+        .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2 a {
+            text-align: left;
+        }
+
+        .principal.busca_resultado .container .controle-conteudo .conteudo .resultado p {
+            text-align: left;
+        }
+
+        .principal.busca_resultado .container .controle-conteudo {
+            text-align: left;
+        }
+
+        .principal.deputado .container .controle-conteudo .conteudo .lista-deputado {
+            padding: 75px 20px 140px 20px;
+        }        
+}
+
+
+/* ----------- Google Nexus 10 ----------- */
+/* Portrait and Landscape */
+@media (min-device-width: 800px) and (max-device-height: 1280px) {
+        .superior .logotipo a {
+            width: auto;
+            height: auto;
+            overflow: hidden;
+            margin: 0px 0px 0px 0px;
+            padding: 45px 0 25px;
+            z-index: 10;
+            position: relative;
+            display: block;
+        }
+
+        .menu ul li a, .menu ul li a:visited {
+            width: auto;
+            height: auto;
+            display: block;
+            font-family: 'maven_probold';
+            font-size: 20px;
+            color: #2d3e5c;
+            text-align: center;
+            text-decoration: none;
+            position: relative;
+            margin: 0px 0px 0px 0px;
+            padding: 64px 0 56px;
+            background: url(../imagens/menu-esquerda.png) left repeat-y, url(../imagens/menu-direita.png) right repeat-y;
+        }
+
+        .principal .container .controle-conteudo .conteudo {
+           min-height: 926px;
+
+       }
+
+       /*--------------------------- DEPUTADO - 1232px */
+       .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido {
+        right: 5px;
+        }
+        /*--------------------------- RESULTADO BUSCA - 1232px */
+        .label_resultado {
+        text-align: center;
+        }
+
+        .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2,
+     .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2 a {
+        text-align: left;
+        }
+
+        .principal.busca_resultado .container .controle-conteudo .conteudo .resultado p {
+        text-align: left;
+
+        }
+
+        .principal.busca_resultado .container .controle-conteudo {
+        text-align: left;
+        }
+
+        .principal.deputado .container .controle-conteudo .conteudo .lista-deputado {
+        padding: 9px 20px 23px 20px;
+        }
+
+        .principal .container .controle-conteudo .conteudo.formulario p.endereco{
+        height: 392px;
+        }
+        .tamanho{
+        height: 1028px !important;
+        }
+
+       .img_share {
+         position: absolute;
+         width: 119px;
+         height: 26px;
+         background: url(../imagens/botao-compartilhar.png) no-repeat;
+         margin-left: -60px;
+         border-radius: 4px;
+       }
+
+
+        .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome {
+        font-family: 'oswald_regularregular';
+        font-size: 30px;
+        line-height: 22px;
+        color: #162B52;
+        text-transform: uppercase;
+        margin: 0px 0px 0px 0px;
+        padding: 10px 0px 0px 0px;
+        }
+
+        .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .partido {
+        font-family: 'oswald_regularregular';
+        color: #8FA143;
+        font-size: 25px;
+        line-height: 28px;
+        text-transform: uppercase;
+        }
+
+
+        /*Agenda / ordem do dia */
+
+     .principal.agenda .container .conteudo ul.eventos li a {
+        width: 700px;
+        }
+
+        .principal.regimento .container .controle-conteudo a.secao span.area {
+        width: 50px;
+        height: 51px;
+        display: block;
+        font-size: 12px;
+        font-family: 'maven_proregular';
+        text-align: center;
+        color: #ffffff;
+        position: absolute;
+        top: -24px;
+        left: 20px;
+        padding: 23px 0px 0px 0px;
+        background: url(../imagens/base_secao.png) right no-repeat;
+        }
+
+     .principal.regimento .container .controle-conteudo a.secao span.descricao {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        color: #172B53;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left;
+        margin: 0px 0px 0px 0px;
+        padding: 10px 40px 10px 25px;
+        background: url(../imagens/icone_07.png) 98% 10% no-repeat;
+
+        }
+
+        .principal.regimento .container .controle-conteudo a.subsecao span.descricao {
+
+        font-size: 15px;       
+        padding: 0px 0px 21px 20px;
+
+        }
+
+}
+
+
+
+/* -----------Tablete  Galaxy Tab 10.1 Teste ok----------- */
+/* Portrait and Landscape */
+@media (min-device-width: 800px) and (max-device-height: 1232px) {
+    .superior .logotipo a {
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        margin: 0px 0px 0px 0px;
+        padding: 50px 0 25px;
+        z-index: 10;
+        position: relative;
+        display: block;
+    }
+
+    .menu ul li a, .menu ul li a:visited {
+        width: auto;
+        height: auto;
+        display: block;
+        font-family: 'maven_probold';
+        font-size: 20px;
+        color: #2d3e5c;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 53px 0 54px;
+        background: url(../imagens/menu-esquerda.png) left repeat-y, url(../imagens/menu-direita.png) right repeat-y;
+    }
+
+    .principal .container .controle-conteudo .conteudo {
+       min-height: 926px;
+
+   }
+
+   /*--------------------------- DEPUTADO - 1232px */
+   .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido {
+    right: 5px;
+    }
+    /*--------------------------- RESULTADO BUSCA - 1232px */
+    .label_resultado {
+    text-align: center;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2,
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2 a {
+    text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado p {
+    text-align: left;
+
+    }
+
+    .principal.busca_resultado .container .controle-conteudo {
+    text-align: left;
+
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado {
+    padding: 9px 20px 23px 20px;
+    }
+
+    .principal .container .controle-conteudo .conteudo.formulario p.endereco{
+    height: 392px;
+    }
+    .tamanho{
+    height: 1028px !important;
+    }
+
+     .img_share {
+         position: absolute;
+         width: 119px;
+         height: 26px;
+         background: url(../imagens/botao-compartilhar.png) no-repeat;
+         margin-left: -60px;
+         border-radius: 4px;
+       }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome {
+    font-family: 'oswald_regularregular';
+    font-size: 30px;
+    line-height: 22px;
+    color: #162B52;
+    text-transform: uppercase;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .partido {
+    font-family: 'oswald_regularregular';
+    color: #8FA143;
+    font-size: 25px;
+    line-height: 28px;
+    text-transform: uppercase;
+    }
+
+
+    /*Agenda / ordem do dia */
+
+    .principal.agenda .container .conteudo ul.eventos li a {
+    width: 700px;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.area {
+    width: 50px;
+    height: 51px;
+    display: block;
+    font-size: 12px;
+    font-family: 'maven_proregular';
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    top: -24px;
+    left: 20px;
+    padding: 23px 0px 0px 0px;
+    background: url(../imagens/base_secao.png) right no-repeat;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.descricao {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    color: #172B53;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: left;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 40px 10px 25px;
+    background: url(../imagens/icone_07.png) 98% 10% no-repeat;
+
+    }
+    .principal.regimento .container .controle-conteudo a.subsecao span.descricao {
+
+    font-size: 15px;       
+    padding: 0px 0px 21px 20px;
+    }
+}
+
+
+/* ----------- iPad mini / iPad 1 and 2 / iPad 3 and 4/  teste 0k ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+    .superior .logotipo a {
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        margin: 0px 0px 0px 0px;
+        padding: 25px 0px 23px 0px;
+        z-index: 10;
+        position: relative;
+        display: block;
+    }
+
+    .menu ul li a, .menu ul li a:visited {
+        width: auto;
+        height: auto;
+        display: block;
+        font-family: 'maven_probold';
+        font-size: 20px;
+        color: #2d3e5c;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 40px 0px 41px 0px;
+        background: url(../imagens/menu-esquerda.png) left repeat-y, url(../imagens/menu-direita.png) right repeat-y;
+    }
+
+    .principal .container .controle-conteudo .conteudo {
+     min-height: 743px;
+
+    }
+
+    /*--------------------------- DEPUTADO - 1024px */
+     .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .partido {
+    font-size: 18px;
+    line-height: 14px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido {
+    right: 7px;
+    }
+
+    /*--------------------------- SUPERIOR - 1024px */
+
+    .superior .superior_interna h1 {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: 400;
+    margin: 20px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    }
+
+    /*--------------------------- RESULTADO BUSCA - 1024px */
+    .label_resultado {
+    text-align: center;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2,
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2 a {
+    text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado p {
+    text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo {
+    text-align: left;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado {
+    padding: 0px 48px 0px 45px;
+
+    }
+
+    /*--------------------------- CONTEÚDO - 1024px */
+    .principal .container .controle-conteudo .conteudo .controle-imagem.lider span {
+    width: 200px;
+    height: 65px;
+    position: absolute;
+    bottom: -5px;
+    right: 10px;
+    display: block;
+    background: url(../imagens/lider.png) no-repeat;
+    }
+
+
+    /*Agenda / ordem do dia */
+
+    .principal.agenda .container .conteudo ul.eventos li a {
+    width: 700px;
+    }
+
+
+    .principal.regimento .container .controle-conteudo a.secao span.area {
+    width: 50px;
+    height: 51px;
+    display: block;
+    font-size: 12px;
+    font-family: 'maven_proregular';
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    top: -24px;
+    left: 20px;
+    padding: 23px 0px 0px 0px;
+    background: url(../imagens/base_secao.png) right no-repeat;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.descricao {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    color: #172B53;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: left;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 40px 10px 25px;
+    background: url(../imagens/icone_07.png) 98% 10% no-repeat;
+
+    }
+
+    .principal.regimento .container .controle-conteudo a.subsecao span.descricao {
+
+    font-size: 15px;       
+    padding: 0px 0px 21px 20px;
+
+    }
+
+    .principal.regimento .container .controle-conteudo .conteudo-regimento {
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 30px 0px 50px 0px;
+    background: #ffffff;
+    }
+
+    .principal .container .controle-conteudo .conteudo.formulario p.endereco{
+    height: 208px;
+    }
+
+    
+
+     .img_share {
+         position: absolute;
+         width: 119px;
+         height: 26px;
+         background: url(../imagens/botao-compartilhar.png) no-repeat;
+         margin-left: -60px;
+         border-radius: 4px;
+       }
+
+    .compartinhar-sem-foto{
+    float:right;
+    margin-right: 7%;
+    padding-bottom: 4%;
+    cursor: pointer;
+
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome {
+    font-family: 'oswald_regularregular';
+    font-size: 25px;
+    line-height: 22px;
+    color: #162B52;
+    text-transform: uppercase;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .partido {
+    font-family: 'oswald_regularregular';
+    color: #8FA143;
+    font-size: 25px;
+    line-height: 28px;
+    text-transform: uppercase;
+    }
+
+}
+
+
+
+/* -----------Tablete  Asus Nexus 7  ----------- */
+/* Portrait and Landscape */
+@media screen and (device-width: 600px) and (device-height: 1024px) {
+
+    .superior .logotipo {
+        padding: 36px 70px 30px 70px;
+    }
+    
+    .principal.agenda .container .conteudo ul.eventos li a {
+    width: 500px;
+    }
+
+    .menu ul li a, .menu ul li a:visited {
+        width: auto;
+        height: auto;
+        display: block;
+        font-family: 'maven_probold';
+        font-size: 20px;
+        color: #2d3e5c;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 42px 0px 41px 0px;
+        background: url(../imagens/menu-esquerda.png) left repeat-y, url(../imagens/menu-direita.png) right repeat-y;
+    }
+
+    .label_resultado {
+        text-align: center;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2,
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2 a {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado p {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo {
+        text-align: left;
+    }
+
+    /*--------------------------- CONTEÚDO - 906px */
+    .principal .container .controle-conteudo .conteudo {
+        width: 100%;
+        min-height: 700px;
+        overflow: hidden;
+        float: left;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .controle-conteudo .conteudo {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal .container .controle-conteudo .conteudo .controle-imagem.lider span {
+        width: 120px;
+        height: 37px;
+        position: absolute;
+        bottom: -5px;
+        right: 10px;
+        display: block;
+        background: url(../imagens/lider_menor.png) no-repeat;
+    }
+    /*--------------------------- NOTÍCIAS - 906px */
+    .noticia {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        margin: 0px 0px 0px 0px;
+        padding: 10px 0px 0px 0px;
+    }
+
+    .principal .container .controle-conteudo .conteudo .noticia h2 {
+        font-size: 1.5em;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .principal .container .controle-conteudo .conteudo .noticia span.data {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        text-align: center;
+        font-size: 11px;
+        color: #8FA143;
+        margin: 0px 0px 10px 0px;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .principal .container .controle-conteudo .conteudo .noticia p {
+        font-size: 1.5em;
+    }
+
+    .noticia .controle-botao img {
+        width: 22px;
+        display: block;
+        margin: 0px auto 0px auto;
+    }
+    /*--------------------------- DEPUTADO - 906px */
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado {
+        padding: 23px 20px 10px 20px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado {
+        display: block;
+        overflow: hidden;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .imagem-deputado {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido {
+        position: absolute;
+        top: 30%;
+        right: 0px;
+        padding: 0px 0px 0px 35px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido a {
+        position: relative;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido span {
+        display: none;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido span {
+        width: 28px;
+        height: 42px;
+        position: absolute;
+        top: 32%;
+        left: -5px;
+        display: block;
+        background: url(../imagens/lista-lider-02.png) no-repeat;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado img {
+        border-radius: 10%;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .partido {
+        font-size: 13px;
+        line-height: 13px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome {
+        font-size: 28px;
+        line-height: 45px;
+    }
+
+    .principal.regimento .container .controle-conteudo .conteudo {
+        padding: 10px 0px 0px 0px;
+    }
+
+    .principal .container .controle-conteudo .conteudo {
+        width: 100%;
+        min-height: auto;
+        padding: 19px 0px 155px 0px;
+    }
+    /*--------------------------- DEPUTADO INTERNA */
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna p {
+        font-size: 17px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna p.partido_interna {
+        font-size: 12px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna p.partido_interna span {
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna p.telefone {
+        font-size: 18px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna a.email {
+        font-size: 18px;
+        color: #FB651D;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna h1 {
+        font-size: 22px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .cabecalho_deputado {
+        width: 100%;
+        border-bottom: 1px solid #b7b7b8;
+        border-top: 1px solid #b7b7b8;
+        margin: 15px 0px 15px 0px;
+        padding: 20px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .cabecalho_deputado .label {
+        font-size: 9px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .cabecalho_deputado .texto {
+        font-size: 16px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .cabecalho_deputado .data {
+        width: 100px;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        margin: 0px 15px 0px 0px;
+        padding: 0px 0px 20px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .descricoes {
+        min-height: 50px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .titulo_separador {
+        font-size: 13px;
+        color: #ffffff;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .participacoes .nome {
+        font-size: 17px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .participacoes .funcao {
+        font-size: 16px;
+        background: url(../imagens/icone_08.png) 0px 4px no-repeat;
+    }
+
+}
+
+
+/* -----------Google Nexus 7  ----------- */
+/* Portrait and Landscape */
+@media screen and (device-width: 600px) and (device-height: 960px) {
+
+    .superior .logotipo {
+        padding: 32px 70px 30px 70px;
+    }
+    
+    .principal.agenda .container .conteudo ul.eventos li a {
+    width: 450px;
+    }
+
+    .menu ul li a, .menu ul li a:visited {
+        width: auto;
+        height: auto;
+        display: block;
+        font-family: 'maven_probold';
+        font-size: 20px;
+        color: #2d3e5c;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 37px 0px 36px 0px;
+        background: url(../imagens/menu-esquerda.png) left repeat-y, url(../imagens/menu-direita.png) right repeat-y;
+    }
+
+    .label_resultado {
+        text-align: center;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2,
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2 a {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado p {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo {
+        text-align: left;
+    }
+
+    /*--------------------------- CONTEÚDO - 906px */
+    .principal .container .controle-conteudo .conteudo {
+        width: 100%;
+        min-height: 700px;
+        overflow: hidden;
+        float: left;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .controle-conteudo .conteudo {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal .container .controle-conteudo .conteudo .controle-imagem.lider span {
+        width: 120px;
+        height: 37px;
+        position: absolute;
+        bottom: -5px;
+        right: 10px;
+        display: block;
+        background: url(../imagens/lider_menor.png) no-repeat;
+    }
+    /*--------------------------- NOTÍCIAS - 906px */
+    .noticia {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        margin: 0px 0px 0px 0px;
+        padding: 10px 0px 0px 0px;
+    }
+
+    .principal .container .controle-conteudo .conteudo .noticia h2 {
+        font-size: 1.5em;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .principal .container .controle-conteudo .conteudo .noticia span.data {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        text-align: center;
+        font-size: 11px;
+        color: #8FA143;
+        margin: 0px 0px 10px 0px;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .principal .container .controle-conteudo .conteudo .noticia p {
+        font-size: 1.5em;
+    }
+
+    .noticia .controle-botao img {
+        width: 22px;
+        display: block;
+        margin: 0px auto 0px auto;
+    }
+    /*--------------------------- DEPUTADO - 906px */
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado {
+        padding: 23px 20px 10px 20px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado {
+        display: block;
+        overflow: hidden;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .imagem-deputado {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido {
+        position: absolute;
+        top: 30%;
+        right: 0px;
+        padding: 0px 0px 0px 35px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido a {
+        position: relative;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido span {
+        display: none;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido span {
+        width: 28px;
+        height: 42px;
+        position: absolute;
+        top: 32%;
+        left: -5px;
+        display: block;
+        background: url(../imagens/lista-lider-02.png) no-repeat;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado img {
+        border-radius: 10%;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .partido {
+        font-size: 13px;
+        line-height: 13px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome {
+        font-size: 28px;
+        line-height: 45px;
+    }
+
+    .principal.regimento .container .controle-conteudo .conteudo {
+        padding: 10px 0px 0px 0px;
+    }
+
+    .principal .container .controle-conteudo .conteudo {
+        width: 100%;
+        min-height: auto;
+        padding: 19px 0px 155px 0px;
+    }
+    /*--------------------------- DEPUTADO INTERNA */
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna p {
+        font-size: 17px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna p.partido_interna {
+        font-size: 12px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna p.partido_interna span {
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna p.telefone {
+        font-size: 18px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna a.email {
+        font-size: 18px;
+        color: #FB651D;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna h1 {
+        font-size: 22px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .cabecalho_deputado {
+        width: 100%;
+        border-bottom: 1px solid #b7b7b8;
+        border-top: 1px solid #b7b7b8;
+        margin: 15px 0px 15px 0px;
+        padding: 20px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .cabecalho_deputado .label {
+        font-size: 9px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .cabecalho_deputado .texto {
+        font-size: 16px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .cabecalho_deputado .data {
+        width: 100px;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        margin: 0px 15px 0px 0px;
+        padding: 0px 0px 20px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .descricoes {
+        min-height: 50px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .titulo_separador {
+        font-size: 13px;
+        color: #ffffff;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .participacoes .nome {
+        font-size: 17px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo.interna .participacoes .funcao {
+        font-size: 16px;
+        background: url(../imagens/icone_08.png) 0px 4px no-repeat;
+    }
+
+}
+
+
+/* ----------- iPhone 6+  Teste ok----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+    .superior .logotipo {
+        padding: 13px 70px 7px 70px;
+    }
+
+    .radio-fundo{
+        height: 520px;
+    }
+    .radio-rodape {
+        width: 394px;
+    }
+    .radio-miolo {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .principal.agenda .container .conteudo ul.eventos li a {
+    width:350px;
+    }
+
+    .menu ul li a, .menu ul li a:visited {
+        width: auto;
+        height: auto;
+        display: block;
+        font-family: 'maven_probold';
+        font-size: 20px;
+        color: #2d3e5c;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 24px 0px 26px 0px;
+        background: url(../imagens/menu-esquerda.png) left repeat-y, url(../imagens/menu-direita.png) right repeat-y;
+    }
+
+    /*--------------------------- PRINCIPAL - 736px */
+    .principal .container .controle-conteudo {
+        min-height: auto;
+    }
+
+    .principal .container .controle-conteudo .conteudo {
+        min-height: 458px;
+    }
+    /*--------------------------- SUPERIOR - MAX 736px */
+    .superior .superior_interna .titulo {
+        padding: 0px 20px 0px 20px;
+        z-index: 0;
+        position: relative;
+    }
+
+    .superior .superior_interna h1 {
+        font-size: 1.6em;
+        margin: 22px 0px 0px 0px;
+    }
+
+    .superior .superior_interna .voltar a.icone {
+        width: 30px;
+        height: 24px;
+        box-sizing: content-box;
+        padding: 20px 20px 5px 10px;
+        z-index: 1;
+        position: relative;
+        background: url(../imagens/icone_01.png) 15px 20px no-repeat;
+    }
+
+    .superior .superior_interna .busca a.icone {
+        width: 25px;
+        height: 26px;
+        float: right;
+        box-sizing: content-box;
+        padding: 20px 20px 5px 20px;
+        z-index: 1;
+        position: relative;
+        background: url(../imagens/icone_02.png) 25px 20px no-repeat;
+    }
+
+    .principal .container .controle-conteudo .conteudo .controle-imagem span {
+        display: none;
+    }
+
+    /*--------------------------- SUPERIOR - MAX 736px */
+    .principal.agenda .container .conteudo .ui-datepicker table {
+        width: 100%;
+        margin: 0px auto 0px auto;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-title {
+        width: 280px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker .ui-datepicker-header {
+        width: 280px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-next.ui-corner-all {
+        top: 6px;
+        right: 30px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-prev.ui-corner-all {
+        top: 6px;
+        left: 30px;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos {
+        width: 100%;
+        height: auto;
+        float: left;
+        overflow: hidden;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        font-size: 24px;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        list-style: none;
+        border-bottom: 2px solid #84868A;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li a {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        font-size: 18px;
+        color: #172b53;
+        box-sizing: border-box;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 20px 45px 20px 20px;
+        background: url(../imagens/icone_07.png) 93% no-repeat;
+    }
+    /*--------------------------- RESULTADO BUSCA - 736px */
+    .label_resultado {
+        text-align: center;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2,
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2 a {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado p {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo {
+        text-align: left;
+    }
+
+    /*--------------------------- CONTEÚDO - 736px */
+    .principal .container .controle-conteudo .conteudo .controle-imagem.lider span {
+        width: 120px;
+        height: 37px;
+        position: absolute;
+        bottom: -5px;
+        right: 10px;
+        display: block;
+        background: url(../imagens/lider_menor.png) no-repeat;
+    }
+    /*--------------------------- DEPUTADO - 736px */
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado {
+        padding: 12px 20px 20px 25px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado {
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .imagem-deputado {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido {
+        position: absolute;
+        top: 25%;
+        right: 0px;
+        padding: 0px 0px 0px 20px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido a {
+        position: relative;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido span {
+        display: none;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido span {
+        width: 20px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        left: -1em;
+        display: block;
+        background: url(../imagens/lista-lider.png) no-repeat;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado img {
+        border-radius: 10%;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .partido {
+        font-family: 'oswald_regularregular';
+        color: #8FA143;
+        font-size: 13px;
+        line-height: 13px;
+        text-transform: uppercase;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome {
+        font-family: 'oswald_regularregular';
+        font-size: 12px;
+        line-height: 22px;
+        color: #162B52;
+        text-transform: uppercase;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .img_share{
+        position: absolute;
+        width: 71px;
+        height: 21px;
+        background: url(../imagens/botao-compartilhar.png) no-repeat;
+        margin-left: -49px;
+        border-radius:4px;
+
+    }
+}
+
+
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+
+
+    .superior .logotipo {
+        padding: 22px 70px 15px 70px;
+    }
+    
+    .principal.agenda .container .conteudo ul.eventos li a {
+    width: 250px;
+    }
+
+    .menu ul li a, .menu ul li a:visited {
+        width: auto;
+        height: auto;
+        display: block;
+        font-family: 'maven_probold';
+        font-size: 20px;
+        color: #2d3e5c;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 15px 0px 14px 0px;
+        background: url(../imagens/menu-esquerda.png) left repeat-y, url(../imagens/menu-direita.png) right repeat-y;
+    }
+
+    
+
+
+    /*--------------------------- PRINCIPAL - 667px */
+    .principal .container .controle-conteudo {
+        min-height: auto;
+    }
+
+    .principal .container .controle-conteudo .conteudo {
+        min-height: 385px;
+
+    }
+    /*--------------------------- SUPERIOR - MAX 667px */
+    .superior .superior_interna .titulo {
+        padding: 0px 20px 0px 20px;
+        z-index: 0;
+        position: relative;
+    }
+
+    .superior .superior_interna h1 {
+        font-size: 1.6em;
+        margin: 22px 0px 0px 0px;
+    }
+
+    .superior .superior_interna .voltar a.icone {
+        width: 30px;
+        height: 24px;
+        box-sizing: content-box;
+        padding: 20px 20px 5px 10px;
+        z-index: 1;
+        position: relative;
+        background: url(../imagens/icone_01.png) 15px 20px no-repeat;
+    }
+
+    .superior .superior_interna .busca a.icone {
+        width: 25px;
+        height: 26px;
+        float: right;
+        box-sizing: content-box;
+        padding: 20px 20px 5px 20px;
+        z-index: 1;
+        position: relative;
+        background: url(../imagens/icone_02.png) 25px 20px no-repeat;
+    }
+
+    .principal .container .controle-conteudo .conteudo .controle-imagem span {
+        display: none;
+    }
+
+    /*--------------------------- SUPERIOR - MAX 667px */
+    .principal.agenda .container .conteudo .ui-datepicker table {
+        width: 100%;
+        margin: 0px auto 0px auto;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-title {
+        width: 280px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker .ui-datepicker-header {
+        width: 280px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-next.ui-corner-all {
+        top: 6px;
+        right: 30px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-prev.ui-corner-all {
+        top: 6px;
+        left: 30px;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos {
+        width: 100%;
+        height: auto;
+        float: left;
+        overflow: hidden;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        font-size: 24px;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        list-style: none;
+        border-bottom: 2px solid #84868A;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li a {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        font-size: 18px;
+        color: #172b53;
+        box-sizing: border-box;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 20px 45px 20px 20px;
+        background: url(../imagens/icone_07.png) 93% no-repeat;
+    }
+    /*--------------------------- RESULTADO BUSCA - 667px */
+    .label_resultado {
+        text-align: center;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2,
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2 a {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado p {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo {
+        text-align: left;
+    }
+
+    /*--------------------------- CONTEÚDO - 667px */
+    .principal .container .controle-conteudo .conteudo .controle-imagem.lider span {
+        width: 120px;
+        height: 37px;
+        position: absolute;
+        bottom: -5px;
+        right: 10px;
+        display: block;
+        background: url(../imagens/lider_menor.png) no-repeat;
+    }
+    /*--------------------------- DEPUTADO - 667px */
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado {
+        padding: 0px 20px 5px 25px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado {
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .imagem-deputado {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido {
+        position: absolute;
+        top: 25%;
+        right: 0px;
+        padding: 0px 0px 0px 20px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido a {
+        position: relative;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido span {
+        display: none;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido span {
+        width: 20px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        left: -1em;
+        display: block;
+        background: url(../imagens/lista-lider.png) no-repeat;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado img {
+        border-radius: 10%;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .partido {
+        font-family: 'oswald_regularregular';
+        color: #8FA143;
+        font-size: 13px;
+        line-height: 13px;
+        text-transform: uppercase;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome {
+        font-family: 'oswald_regularregular';
+        font-size: 12px;
+        line-height: 22px;
+        color: #162B52;
+        text-transform: uppercase;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+
+    .img_share{
+        position: absolute;
+        width: 71px;
+        height: 21px;
+        background: url(../imagens/botao-compartilhar.png) no-repeat;
+        margin-left: -49px;
+        border-radius:4px;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.area {
+        width: 50px;
+        height: 51px;
+        display: block;
+        font-size: 12px;
+        font-family: 'maven_proregular';
+        text-align: center;
+        color: #ffffff;
+        position: absolute;
+        top: -24px;
+        left: 20px;
+        padding: 23px 0px 0px 0px;
+        background: url(../imagens/base_secao.png) right no-repeat;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.descricao {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        color: #172B53;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left;
+        margin: 0px 0px 0px 0px;
+        padding: 10px 40px 10px 25px;
+        background: url(../imagens/icone_07.png) 98% 10% no-repeat;
+
+    }
+
+    .principal.regimento .container .controle-conteudo a.subsecao span.descricao {
+
+        font-size: 15px;       
+        padding: 0px 0px 21px 20px;
+
+    }
+
+    .principal .container .controle-conteudo .conteudo.formulario p.endereco {
+        font-size: 12px;
+        text-align: center;
+        margin: 30px 0px -66px 0px;
+        padding: 0px 0px 0px 10px;
+    }
+
+
+    .fale-conosco{
+        height:700px;
+    }
+
+    .radio-fundo{
+        height: 460px;
+    }
+
+}
+
+
+/* ----------- galaxy s4----------- */
+
+
+/* Portrait and Landscape */
+@media screen and (min-device-width: 360px) and (min-device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+
+    .superior .logotipo {
+        padding: 23px 70px 15px 70px;
+    }
+
+
+.principal.agenda .container .conteudo ul.eventos li a {
+    width: 200px;
+    }
+
+    .menu ul li a, .menu ul li a:visited {
+        width: auto;
+        height: auto;
+        display: block;
+        font-family: 'maven_probold';
+        font-size: 15px;
+        color: #2d3e5c;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 17px 0px 20px 0px;
+        background: url(../imagens/menu-esquerda.png) left repeat-y, url(../imagens/menu-direita.png) right repeat-y;
+    }
+
+
+
+    /*--------------------------- PRINCIPAL - 640px */
+    .principal .container .controle-conteudo {
+        min-height: auto;
+    }
+
+    .principal .container .controle-conteudo .conteudo {
+        min-height: 334px;
+    }
+    /*--------------------------- SUPERIOR - MAX 640px */
+    .superior .superior_interna .titulo {
+        padding: 0px 20px 0px 20px;
+        z-index: 0;
+        position: relative;
+    }
+
+    .superior .superior_interna h1 {
+        font-size: 1.6em;
+        margin: 22px 0px 0px 0px;
+    }
+
+    .superior .superior_interna .voltar a.icone {
+        width: 30px;
+        height: 24px;
+        box-sizing: content-box;
+        padding: 20px 20px 5px 10px;
+        z-index: 1;
+        position: relative;
+        background: url(../imagens/icone_01.png) 15px 20px no-repeat;
+    }
+
+    .superior .superior_interna .busca a.icone {
+        width: 25px;
+        height: 26px;
+        float: right;
+        box-sizing: content-box;
+        padding: 20px 20px 5px 20px;
+        z-index: 1;
+        position: relative;
+        background: url(../imagens/icone_02.png) 25px 20px no-repeat;
+    }
+
+    .principal .container .controle-conteudo .conteudo .controle-imagem span {
+        display: none;
+    }
+
+    /*--------------------------- SUPERIOR - MAX 640px */
+    .principal.agenda .container .conteudo .ui-datepicker table {
+        width: 100%;
+        margin: 0px auto 0px auto;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-title {
+        width: 280px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker .ui-datepicker-header {
+        width: 280px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-next.ui-corner-all {
+        top: 6px;
+        right: 30px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-prev.ui-corner-all {
+        top: 6px;
+        left: 30px;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos {
+        width: 100%;
+        height: auto;
+        float: left;
+        overflow: hidden;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        font-size: 24px;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        list-style: none;
+        border-bottom: 2px solid #84868A;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li a {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        font-size: 18px;
+        color: #172b53;
+        box-sizing: border-box;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 20px 45px 20px 20px;
+        background: url(../imagens/icone_07.png) 93% no-repeat;
+    }
+    /*--------------------------- RESULTADO BUSCA - 640px */
+    .label_resultado {
+        text-align: center;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2,
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2 a {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado p {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo {
+        text-align: left;
+    }
+
+    /*--------------------------- CONTEÚDO - 640px */
+    .principal .container .controle-conteudo .conteudo .controle-imagem.lider span {
+        width: 120px;
+        height: 37px;
+        position: absolute;
+        bottom: -5px;
+        right: 10px;
+        display: block;
+        background: url(../imagens/lider_menor.png) no-repeat;
+    }
+    /*--------------------------- DEPUTADO - 640px */
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado {
+        padding: 11px 20px 8px 25px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado {
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .imagem-deputado {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido {
+        position: absolute;
+        top: 25%;
+        right: 0px;
+        padding: 0px 0px 0px 20px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido a {
+        position: relative;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido span {
+        display: none;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido span {
+        width: 20px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        left: -1em;
+        display: block;
+        background: url(../imagens/lista-lider.png) no-repeat;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado img {
+        border-radius: 10%;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .partido {
+        font-family: 'oswald_regularregular';
+        color: #8FA143;
+        font-size: 13px;
+        line-height: 13px;
+        text-transform: uppercase;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome {
+        font-family: 'oswald_regularregular';
+        font-size: 1.1rem;
+        line-height: 22px;
+        color: #162B52;
+        text-transform: uppercase;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+
+    .principal.regimento .container .controle-conteudo a.secao span.area {
+        width: 50px;
+        height: 51px;
+        display: block;
+        font-size: 12px;
+        font-family: 'maven_proregular';
+        text-align: center;
+        color: #ffffff;
+        position: absolute;
+        top: -24px;
+        left: 20px;
+        padding: 23px 0px 0px 0px;
+        background: url(../imagens/base_secao.png) right no-repeat;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.descricao {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        color: #172B53;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left;
+        margin: 0px 0px 0px 0px;
+        padding: 10px 40px 10px 25px;
+        background: url(../imagens/icone_07.png) 98% 10% no-repeat;
+
+    }
+
+    .principal.regimento .container .controle-conteudo a.subsecao span.descricao {
+
+        font-size: 15px;       
+        padding: 0px 0px 21px 20px;
+
+    }
+
+     .img_share{
+        position: absolute;
+        width: 71px;
+        height: 21px;
+        background: url(../imagens/botao-compartilhar.png) no-repeat;
+        margin-left: -49px;
+        border-radius:4px;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.area {
+        width: 50px;
+        height: 51px;
+        display: block;
+        font-size: 12px;
+        font-family: 'maven_proregular';
+        text-align: center;
+        color: #ffffff;
+        position: absolute;
+        top: -24px;
+        left: 20px;
+        padding: 23px 0px 0px 0px;
+        background: url(../imagens/base_secao.png) right no-repeat;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.descricao {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        color: #172B53;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left;
+        margin: 0px 0px 0px 0px;
+        padding: 10px 40px 10px 25px;
+        background: url(../imagens/icone_07.png) 98% 10% no-repeat;
+
+    }
+
+    .principal.regimento .container .controle-conteudo a.subsecao span.descricao {
+
+        font-size: 15px;       
+        padding: 0px 0px 21px 20px;
+
+    }
+
+    .tamanho{
+        height: 1000px;
+    }
+    
+
+}
+
+
+/* Portrait and Landscape  teste J5*/
+@media screen and (min-device-width: 360px) and (max-device-height: 640px) and (-webkit-device-pixel-ratio: 2) {
+
+    .superior .logotipo {
+        padding: 18px 70px 15px 70px;
+    }
+
+
+.principal.agenda .container .conteudo ul.eventos li a {
+    width: 200px;
+    }
+
+    .menu ul li a, .menu ul li a:visited {
+        width: auto;
+        height: auto;
+        display: block;
+        font-family: 'maven_probold';
+        font-size: 20px;
+        color: #2d3e5c;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 14px 0px 17px 0px;
+        background: url(../imagens/menu-esquerda.png) left repeat-y, url(../imagens/menu-direita.png) right repeat-y;
+    }
+
+
+
+    /*--------------------------- PRINCIPAL - 640px */
+    .principal .container .controle-conteudo {
+        min-height: auto;
+    }
+
+    .principal .container .controle-conteudo .conteudo {
+        min-height: 334px;
+    }
+    /*--------------------------- SUPERIOR - MAX 640px */
+    .superior .superior_interna .titulo {
+        padding: 0px 20px 0px 20px;
+        z-index: 0;
+        position: relative;
+    }
+
+    .superior .superior_interna h1 {
+        font-size: 1.6em;
+        margin: 22px 0px 0px 0px;
+    }
+
+    .superior .superior_interna .voltar a.icone {
+        width: 30px;
+        height: 24px;
+        box-sizing: content-box;
+        padding: 20px 20px 5px 10px;
+        z-index: 1;
+        position: relative;
+        background: url(../imagens/icone_01.png) 15px 20px no-repeat;
+    }
+
+    .superior .superior_interna .busca a.icone {
+        width: 25px;
+        height: 26px;
+        float: right;
+        box-sizing: content-box;
+        padding: 20px 20px 5px 20px;
+        z-index: 1;
+        position: relative;
+        background: url(../imagens/icone_02.png) 25px 20px no-repeat;
+    }
+
+    .principal .container .controle-conteudo .conteudo .controle-imagem span {
+        display: none;
+    }
+
+    /*--------------------------- SUPERIOR - MAX 640px */
+    .principal.agenda .container .conteudo .ui-datepicker table {
+        width: 100%;
+        margin: 0px auto 0px auto;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-title {
+        width: 280px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker .ui-datepicker-header {
+        width: 280px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-next.ui-corner-all {
+        top: 6px;
+        right: 30px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-prev.ui-corner-all {
+        top: 6px;
+        left: 30px;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos {
+        width: 100%;
+        height: auto;
+        float: left;
+        overflow: hidden;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        font-size: 24px;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        list-style: none;
+        border-bottom: 2px solid #84868A;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li a {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        font-size: 18px;
+        color: #172b53;
+        box-sizing: border-box;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 20px 45px 20px 20px;
+        background: url(../imagens/icone_07.png) 93% no-repeat;
+    }
+    /*--------------------------- RESULTADO BUSCA - 640px */
+    .label_resultado {
+        text-align: center;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2,
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2 a {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado p {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo {
+        text-align: left;
+    }
+
+    /*--------------------------- CONTEÚDO - 640px */
+    .principal .container .controle-conteudo .conteudo .controle-imagem.lider span {
+        width: 120px;
+        height: 37px;
+        position: absolute;
+        bottom: -5px;
+        right: 10px;
+        display: block;
+        background: url(../imagens/lider_menor.png) no-repeat;
+    }
+    /*--------------------------- DEPUTADO - 640px */
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado {
+        padding: 0px 20px 5px 25px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado {
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .imagem-deputado {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido {
+        position: absolute;
+        top: 25%;
+        right: 0px;
+        padding: 0px 0px 0px 20px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido a {
+        position: relative;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido span {
+        display: none;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido span {
+        width: 20px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        left: -1em;
+        display: block;
+        background: url(../imagens/lista-lider.png) no-repeat;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado img {
+        border-radius: 10%;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .partido {
+        font-family: 'oswald_regularregular';
+        color: #8FA143;
+        font-size: 13px;
+        line-height: 13px;
+        text-transform: uppercase;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome {
+        font-family: 'oswald_regularregular';
+        font-size: 12px;
+        line-height: 22px;
+        color: #162B52;
+        text-transform: uppercase;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .img_share{
+        position: absolute;
+        width: 71px;
+        height: 21px;
+        background: url(../imagens/botao-compartilhar.png) no-repeat;
+        margin-left: -49px;
+        border-radius:4px;
+    
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.area {
+        width: 50px;
+        height: 51px;
+        display: block;
+        font-size: 12px;
+        font-family: 'maven_proregular';
+        text-align: center;
+        color: #ffffff;
+        position: absolute;
+        top: -24px;
+        left: 20px;
+        padding: 23px 0px 0px 0px;
+        background: url(../imagens/base_secao.png) right no-repeat;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.descricao {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        color: #172B53;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left;
+        margin: 0px 0px 0px 0px;
+        padding: 10px 40px 10px 25px;
+        background: url(../imagens/icone_07.png) 98% 10% no-repeat;
+
+    }
+
+    .principal.regimento .container .controle-conteudo a.subsecao span.descricao {
+
+        font-size: 15px;       
+        padding: 0px 0px 21px 20px;
+
+    }
+
+    .principal .container .controle-conteudo .conteudo.formulario p.endereco {
+        font-size: 12px;
+        text-align: center;
+        margin: 30px 0px -66px 0px;
+        padding: 0px 0px 0px 10px;
+    }
+
+
+}
+
+
+/* NOKIA N9*/
+@media screen and (min-device-width: 360px) and (max-device-height: 640px) and (-webkit-device-pixel-ratio: 1) {
+
+    .superior .logotipo {
+        padding: 18px 70px 15px 70px;
+    }
+    
+    .principal.agenda .container .conteudo ul.eventos li a {
+    width: 200px;
+    }
+
+
+    .menu ul li a, .menu ul li a:visited {
+        width: auto;
+        height: auto;
+        display: block;
+        font-family: 'maven_probold';
+        font-size: 20px;
+        color: #2d3e5c;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 18px 0px 17px 0px;
+        background: url(../imagens/menu-esquerda.png) left repeat-y, url(../imagens/menu-direita.png) right repeat-y;
+    }
+
+
+
+    /*--------------------------- PRINCIPAL - 640px */
+    .principal .container .controle-conteudo {
+        min-height: auto;
+    }
+
+    .principal .container .controle-conteudo .conteudo {
+        min-height: 334px;
+    }
+    /*--------------------------- SUPERIOR - MAX 640px */
+    .superior .superior_interna .titulo {
+        padding: 0px 20px 0px 20px;
+        z-index: 0;
+        position: relative;
+    }
+
+    .superior .superior_interna h1 {
+        font-size: 1.6em;
+        margin: 22px 0px 0px 0px;
+    }
+
+    .superior .superior_interna .voltar a.icone {
+        width: 30px;
+        height: 24px;
+        box-sizing: content-box;
+        padding: 20px 20px 5px 10px;
+        z-index: 1;
+        position: relative;
+        background: url(../imagens/icone_01.png) 15px 20px no-repeat;
+    }
+
+    .superior .superior_interna .busca a.icone {
+        width: 25px;
+        height: 26px;
+        float: right;
+        box-sizing: content-box;
+        padding: 20px 20px 5px 20px;
+        z-index: 1;
+        position: relative;
+        background: url(../imagens/icone_02.png) 25px 20px no-repeat;
+    }
+
+    .principal .container .controle-conteudo .conteudo .controle-imagem span {
+        display: none;
+    }
+
+    /*--------------------------- SUPERIOR - MAX 640px */
+    .principal.agenda .container .conteudo .ui-datepicker table {
+        width: 100%;
+        margin: 0px auto 0px auto;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-title {
+        width: 280px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker .ui-datepicker-header {
+        width: 280px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-next.ui-corner-all {
+        top: 6px;
+        right: 30px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-prev.ui-corner-all {
+        top: 6px;
+        left: 30px;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos {
+        width: 100%;
+        height: auto;
+        float: left;
+        overflow: hidden;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        font-size: 24px;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        list-style: none;
+        border-bottom: 2px solid #84868A;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li a {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        font-size: 18px;
+        color: #172b53;
+        box-sizing: border-box;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 20px 45px 20px 20px;
+        background: url(../imagens/icone_07.png) 93% no-repeat;
+    }
+    /*--------------------------- RESULTADO BUSCA - 640px */
+    .label_resultado {
+        text-align: center;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2,
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2 a {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado p {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo {
+        text-align: left;
+    }
+
+    /*--------------------------- CONTEÚDO - 640px */
+    .principal .container .controle-conteudo .conteudo .controle-imagem.lider span {
+        width: 120px;
+        height: 37px;
+        position: absolute;
+        bottom: -5px;
+        right: 10px;
+        display: block;
+        background: url(../imagens/lider_menor.png) no-repeat;
+    }
+    /*--------------------------- DEPUTADO - 640px */
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado {
+        padding: 0px 20px 5px 25px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado {
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .imagem-deputado {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido {
+        position: absolute;
+        top: 25%;
+        right: 0px;
+        padding: 0px 0px 0px 20px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido a {
+        position: relative;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido span {
+        display: none;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido span {
+        width: 20px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        left: -1em;
+        display: block;
+        background: url(../imagens/lista-lider.png) no-repeat;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado img {
+        border-radius: 10%;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .partido {
+        font-family: 'oswald_regularregular';
+        color: #8FA143;
+        font-size: 13px;
+        line-height: 13px;
+        text-transform: uppercase;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome {
+        font-family: 'oswald_regularregular';
+        font-size: 12px;
+        line-height: 22px;
+        color: #162B52;
+        text-transform: uppercase;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .img_share{
+        position: absolute;
+        width: 71px;
+        height: 21px;
+        background: url(../imagens/botao-compartilhar.png) no-repeat;
+        margin-left: -49px;
+        border-radius:4px;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.area {
+        width: 50px;
+        height: 51px;
+        display: block;
+        font-size: 12px;
+        font-family: 'maven_proregular';
+        text-align: center;
+        color: #ffffff;
+        position: absolute;
+        top: -24px;
+        left: 20px;
+        padding: 23px 0px 0px 0px;
+        background: url(../imagens/base_secao.png) right no-repeat;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.descricao {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        color: #172B53;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left;
+        margin: 0px 0px 0px 0px;
+        padding: 10px 40px 10px 25px;
+        background: url(../imagens/icone_07.png) 98% 10% no-repeat;
+
+    }
+    .principal.regimento .container .controle-conteudo a.subsecao span.descricao {
+
+        font-size: 15px;       
+        padding: 0px 0px 21px 20px;
+
+    }
+
+    .principal .container .controle-conteudo .conteudo.formulario p.endereco {
+        font-size: 12px;
+        text-align: center;
+        margin: 30px 0px -66px 0px;
+        padding: 0px 0px 0px 10px;
+    }
+
+
+}
+
+
+
+/* ----------- iPhone 5 and 5S teste ok----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .superior .logotipo {
+        padding: 20px 70px 15px 70px !important;
+    }
+    
+    .principal.agenda .container .conteudo ul.eventos li a {
+    width: 200px;
+    }
+
+    .menu ul li a, .menu ul li a:visited {
+        width: auto;
+        height: auto;
+        display: block;
+        font-family: 'maven_probold';
+        font-size: 20px;
+        color: #2d3e5c;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 8px 0px 9px 0px !important;
+        background: url(../imagens/menu-esquerda.png) left repeat-y, url(../imagens/menu-direita.png) right repeat-y;
+    }
+
+    
+    /*--------------------------- PRINCIPAL - 568px */
+    .principal .container .controle-conteudo {
+        min-height: auto;
+    }
+    .principal .container .controle-conteudo .conteudo {
+        min-height:320px;
+    }
+    /*--------------------------- SUPERIOR - MAX 568px */
+    .superior .superior_interna .titulo {
+        padding: 0px 20px 0px 20px;
+        z-index: 0;
+        position: relative;
+    }
+
+    .superior .superior_interna h1 {
+        font-size: 1.6em;
+        margin: 22px 0px 0px 0px;
+    }
+
+    .superior .superior_interna .voltar a.icone {
+        width: 30px;
+        height: 24px;
+        box-sizing: content-box;
+        padding: 20px 20px 5px 10px;
+        z-index: 1;
+        position: relative;
+        background: url(../imagens/icone_01.png) 15px 20px no-repeat;
+    }
+
+    .superior .superior_interna .busca a.icone {
+        width: 25px;
+        height: 26px;
+        float: right;
+        box-sizing: content-box;
+        padding: 20px 20px 5px 20px;
+        z-index: 1;
+        position: relative;
+        background: url(../imagens/icone_02.png) 25px 20px no-repeat;
+    }
+
+    .principal {
+        padding: 0px 0px 55px 0px;
+    }
+
+    .principal .container .controle-conteudo .conteudo .controle-imagem span {
+        display: none;
+    }
+
+    /*--------------------------- SUPERIOR - MAX 568px */
+    .principal.agenda .container .conteudo .ui-datepicker table {
+        width: 100%;
+        margin: 0px auto 0px auto;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-title {
+        width: 280px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker .ui-datepicker-header {
+        width: 280px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-next.ui-corner-all {
+        top: 6px;
+        right: 30px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-prev.ui-corner-all {
+        top: 6px;
+        left: 30px;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos {
+        width: 100%;
+        height: auto;
+        float: left;
+        overflow: hidden;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        font-size: 24px;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        list-style: none;
+        border-bottom: 2px solid #84868A;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li a {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        font-size: 18px;
+        color: #172b53;
+        box-sizing: border-box;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 20px 45px 20px 20px;
+        background: url(../imagens/icone_07.png) 93% no-repeat;
+    }
+    /*--------------------------- RESULTADO BUSCA - 568px */
+    .label_resultado {
+        text-align: center;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2,
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2 a {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado p {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo {
+        text-align: left;
+    }
+
+    /*--------------------------- CONTEÚDO - 568px */
+    .principal .container .controle-conteudo .conteudo .controle-imagem.lider span {
+        width: 120px;
+        height: 37px;
+        position: absolute;
+        bottom: -5px;
+        right: 10px;
+        display: block;
+        background: url(../imagens/lider_menor.png) no-repeat;
+    }
+    /*--------------------------- DEPUTADO - 568px */
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado {
+        padding: 0px 20px 0px 25px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado {
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .imagem-deputado {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido {
+        position: absolute;
+        top: 25%;
+        right: 0px;
+        padding: 0px 0px 0px 20px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido a {
+        position: relative;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido span {
+        display: none;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido span {
+        width: 20px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        left: -1em;
+        display: block;
+        background: url(../imagens/lista-lider.png) no-repeat;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado img {
+        border-radius: 10%;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .partido {
+        font-family: 'oswald_regularregular';
+        color: #8FA143;
+        font-size: 13px;
+        line-height: 13px;
+        text-transform: uppercase;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome {
+        font-family: 'oswald_regularregular';
+        font-size: 10px;
+        line-height: 22px;
+        color: #162B52;
+        text-transform: uppercase;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+
+
+    .img_share{
+        position: absolute;
+        width: 71px;
+        height: 21px;
+        background: url(../imagens/botao-compartilhar.png) no-repeat;
+        margin-left: -49px;
+        border-radius:4px;
+
+
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.area {
+        width: 50px;
+        height: 51px;
+        display: block;
+        font-size: 12px;
+        font-family: 'maven_proregular';
+        text-align: center;
+        color: #ffffff;
+        position: absolute;
+        top: -24px;
+        left: 20px;
+        padding: 23px 0px 0px 0px;
+        background: url(../imagens/base_secao.png) right no-repeat;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.descricao {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        color: #172B53;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left;
+        margin: 0px 0px 0px 0px;
+        padding: 10px 40px 10px 25px;
+        background: url(../imagens/icone_07.png) 98% 10% no-repeat;
+
+    }
+
+    .principal.regimento .container .controle-conteudo a.subsecao span.descricao {
+
+        font-size: 14px;       
+        padding: 0px 0px 21px 20px;
+    }
+
+    .radio-fundo{
+        height: 360px;
+    }
+
+    .radio-microfone {
+        height: 115px;
+    }
+    .radio-miolo {
+        width: 165px;
+        height: 165px;
+    }
+
+    .player {
+        height: 120px;
+        width: 120px;
+    }
+
+    .player .buffering {
+        width: 110px;
+        height: 110px;
+    }
+
+    .player .triangle {
+
+    }
+
+
+    .radio-rodape {
+        width: 300px;
+        background-image: url(../imagens/radio-rodape-2.png);
+    }
+
+
+}
+
+
+/* ----------- iPhone 4 and 4S Teste ok----------- */
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    body {
+        font-size: 10px;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li a {
+        width: 200px;
+    }
+
+    .superior .logotipo {
+        padding: 22px 70px 15px 70px !important;
+    }
+
+    .menu ul li a, .menu ul li a:visited {
+        width: auto;
+        height: auto;
+        display: block;
+        font-family: 'maven_probold';
+        font-size: 16px;
+        color: #2d3e5c;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 6px 0px 5px 0px !important;
+        background: url(../imagens/menu-esquerda.png) left repeat-y, url(../imagens/menu-direita.png) right repeat-y;
+    }
+
+    /*--------------------------- PRINCIPAL - 480px */
+    .principal .container .controle-conteudo {
+        min-height: auto;
+    }
+
+    .principal .container .controle-conteudo .conteudo {
+        min-height: 231px;
+
+    }
+
+    /*--------------------------- SUPERIOR - MAX 480px */
+    .superior .superior_interna .titulo {
+        padding: 0px 20px 0px 20px;
+        z-index: 0;
+        position: relative;
+    }
+
+    .superior .superior_interna h1 {
+        font-size: 1.6em;
+        margin: 22px 0px 0px 0px;
+    }
+
+    .superior .superior_interna .voltar a.icone {
+        width: 30px;
+        height: 24px;
+        box-sizing: content-box;
+        padding: 20px 20px 5px 10px;
+        z-index: 1;
+        position: relative;
+        background: url(../imagens/icone_01.png) 15px 20px no-repeat;
+    }
+
+    .superior .superior_interna .busca a.icone {
+        width: 25px;
+        height: 26px;
+        float: right;
+        box-sizing: content-box;
+        padding: 20px 20px 5px 20px;
+        z-index: 1;
+        position: relative;
+        background: url(../imagens/icone_02.png) 25px 20px no-repeat;
+    }
+
+    .principal .container .controle-conteudo .conteudo .controle-imagem span {
+        display: none;
+    }
+
+    /*--------------------------- SUPERIOR - MAX 480px */
+    .geral.fixed .principal.agenda {
+        margin-top: 73px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker table {
+        width: 100%;
+        margin: 0px auto 0px auto;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-title {
+        width: 280px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker .ui-datepicker-header {
+        width: 280px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-next.ui-corner-all {
+        top: 6px;
+        right: 30px;
+    }
+
+    .principal.agenda .container .conteudo .ui-datepicker-prev.ui-corner-all {
+        top: 6px;
+        left: 30px;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos {
+        width: 100%;
+        height: auto;
+        float: left;
+        overflow: hidden;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        font-size: 24px;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        list-style: none;
+        border-bottom: 2px solid #84868A;
+    }
+
+    .principal.agenda .container .conteudo ul.eventos li a {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        font-size: 18px;
+        color: #172b53;
+        box-sizing: border-box;
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding: 20px 45px 20px 20px;
+        background: url(../imagens/icone_07.png) 93% no-repeat;
+    }
+
+    /*--------------------------- RESULTADO BUSCA - 480px */
+    .label_resultado {
+        text-align: center;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2,
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado h2 a {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo .conteudo .resultado p {
+        text-align: left;
+    }
+
+    .principal.busca_resultado .container .controle-conteudo {
+        text-align: left;
+    }
+
+    /*--------------------------- CONTEÚDO - 480px */
+    .principal .container .controle-conteudo .conteudo .controle-imagem.lider span {
+        width: 120px;
+        height: 37px;
+        position: absolute;
+        bottom: -5px;
+        right: 10px;
+        display: block;
+        background: url(../imagens/lider_menor.png) no-repeat;
+    }
+
+    /*--------------------------- DEPUTADO - 480px */
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado {
+        padding: 0px 20px 0px 25px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado {
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .imagem-deputado {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido {
+        position: absolute;
+        top: 25%;
+        right: 0px;
+        padding: 0px 0px 0px 20px;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido a {
+        position: relative;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome_partido span {
+        display: none;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado.lider a.link-deputado .nome_partido span {
+        width: 20px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        left: -1em;
+        display: block;
+        background: url(../imagens/lista-lider.png) no-repeat;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado img {
+        border-radius: 10%;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .partido {
+        font-family: 'oswald_regularregular';
+        color: #8FA143;
+        font-size: 13px;
+        line-height: 13px;
+        text-transform: uppercase;
+    }
+
+    .principal.deputado .container .controle-conteudo .conteudo .lista-deputado a.link-deputado .nome {
+        font-family: 'oswald_regularregular';
+        font-size: 10px;
+        line-height: 22px;
+        color: #162B52;
+        text-transform: uppercase;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .principal .container .controle-conteudo .conteudo.formulario p.endereco {
+        font-size: 12px;
+        text-align: center;
+        margin: 30px 0px -66px 0px;
+        padding: 0px 0px 0px 10px;
+    }
+
+    .img_share{
+       position: absolute;
+       width: 64px;
+       height: 19px;
+       background: url(../imagens/botao-compartilhar.png) no-repeat;
+       margin-left: -45px;
+      border-radius: 4px;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.area {
+        width: 50px;
+        height: 51px;
+        display: block;
+        font-size: 12px;
+        font-family: 'maven_proregular';
+        text-align: center;
+        color: #ffffff;
+        position: absolute;
+        top: -24px;
+        left: 20px;
+        padding: 23px 0px 0px 0px;
+        background: url(../imagens/base_secao.png) right no-repeat;
+    }
+
+    .principal.regimento .container .controle-conteudo a.secao span.descricao {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        color: #172B53;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left;
+        margin: 0px 0px 0px 0px;
+        padding: 10px 40px 10px 25px;
+        background: url(../imagens/icone_07.png) 98% 10% no-repeat;
+
+    }
+
+    .principal.regimento .container .controle-conteudo a.subsecao span.descricao {
+
+        font-size: 14px;       
+        padding: 0px 0px 21px 20px;
+
+    }
+
+    .fale-conosco{
+        height:670px;
+    }
+
+
+    .radio-fundo{
+        height: 270px;
+    }
+
+    .radio-microfone {
+        height: 85px;
+    }
+    .radio-miolo {
+        width: 160px;
+        height: 160px;
+    }
+
+    .player .triangle {
+        margin: -11px 0 0 -5px;
+        border-top: 10px solid transparent;
+        border-left: 15px solid #ffffff;
+        border-bottom: 10px solid transparent;
+    }
+
+    .player .buffering {
+        width: 90px;
+        height: 90px;
+    }
+
+    .player {
+        height: 100px;
+        width: 100px;
+    }
+
+    .radio-rodape {
+        width: 299px;
+        background-image: url(../imagens/radio-rodape-fundo.png) ;
+    }
+
+
+}
+
+
+.botao-azul {
+    background: #172a4b;
+}
+
+
+a.menu-tvalerj.botao-azul.ui-link {
+    background: #172B53 url("../imagens/fundo-tvalerj.png") center center no-repeat !important;
+    background-position: center center !important;
+    color: #ffffff;
+}
+
+a.menu-tvalerj.botao-azul.ui-link img {
+    max-height: 60px;
+    margin: 0px 0 0px 0;
+}
+
+a.menu-radioalerj.botao-azul.ui-link {
+    background: #172B53 url("../imagens/fundo-radioalerj.png") center center no-repeat !important;
+    background-position: center center !important;
+    color: #ffffff;
+}
+
+a.menu-radioalerj.botao-azul.ui-link img {
+    max-height: 35px;
+    margin: 8px 0 8px 0;
+}
+
+a.menu-noticias.botao-azul.ui-link {
+    background: #172B53 url("../imagens/fundo-noticias.png") center center no-repeat !important;
+    color: #ffffff;
+}
+
+a.menu-noticias.botao-azul.ui-link img {
+    max-height: 20px;
+    margin: 15px 0 15px 0;
+}
+
+
+a.menu-aloalerj.botao-azul.ui-link {
+}
+
+a.menu-aloalerj.botao-azul.ui-link img {
+    margin: 0px 0 0px 0;
+}
+
+.menu-item {
+    max-height: 120px;
+    padding: 30px 0px 30px 0px;
+}
+
+.menu-image {
+    height: 40px;
+}
+
+.video-wrapper {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.radio-content {
+    /*background-color: #000000;*/
+    /*background-image: url("/templates/mv/img/radio-alerj-phone.png");*/
+    /*background-position: center center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    /*background-size: cover;*/
+    background-color: #02204d;
+}
+
+.radio-content img {
+    /*margin-top: 20px;*/
+    width: 100%;
+}
+
+.radio-content .ao-vivo {
+    margin-top: 20px;
+}
+
+.radio-content audio {
+    background-color: #172b53;
+    margin-top: 15px;
+    width: 90%;
+}
+
+
+
+
+
+
+
+.menu2 ul {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 6px 0px 8px;
+}
+
+.menu2 ul li {
+    list-style: none;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    position: relative;
+    background: #f5f6ec;
+    border-top: 1px solid #8fa143;
+    border-bottom: 1px solid #8fa143;
+}
+
+.menu2 ul li:first-child {
+    border-top: 2px solid #8fa143;
+}
+
+.menu2 ul li:last-child {
+    border-top: 1px solid #8fa143;
+    border-bottom: 2px solid #8fa143;
+}
+
+.menu2 ul li span.fio_01 {
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    background: url(../imagens/fio-01.png) repeat-x;
+}
+
+.menu2 ul li span.fio_02 {
+    width: 100%;
+    height: 4px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 1;
+    background: url(../imagens/fio-02.png) repeat-x;
+}
+
+.menu2 ul li a,
+.menu2 ul li a:visited {
+    width: auto;
+    height: auto;
+    display: block;
+    font-family: 'maven_probold';
+    font-size: 1.5em;
+    color: #2d3e5c;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    margin: 0px 0px 0px 0px;
+    background: url(../imagens/menu-esquerda.png) left repeat-y, url(../imagens/menu-direita.png) right repeat-y;
+}
+
+.menu2 ul li a:hover {
+    color: #2d3e5c;
+    text-decoration: none;
+}
+.radio2 {
+    background: #f0f;
+    height: 400px;
+}
+
+
+.container2 {
+    height:100%;
+}
+
+.fill{
+    width:100%;
+    height:100%;
+    min-height:100%;
+    background-color:#990000;
+    padding:10px;
+    color:#efefef;
+}
+
+.portal_alerj {
+    margin-top: -40px !important;
+}
+
+.portal_alerj_sem_menu {
+    margin-top: -80px !important;
+}
