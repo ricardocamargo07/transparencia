@@ -1,3 +1,33 @@
+.well {
+    text-align: left;
+    background: #fff;
+    border: 1px solid #a8ab76;
+    -webkit-box-shadow: 5px 5px 1px 0px rgba(215,216,210,1);
+    -moz-box-shadow: 5px 5px 1px 0px rgba(215,216,210,1);
+    box-shadow: 5px 5px 1px 0px rgba(215,216,210,1);
+
+
+    /*
+    padding-bottom: 20px;
+    margin: 20px 10px;
+    border-radius: 10px;
+    padding: 20px 30px;
+
+    */
+
+}
+
+
+.well h4 {
+    color: #ff6600;
+}
+
+.well p {
+    font-size: 95%;
+    /* margin: 0 32px 10px; */
+}
+
+
 .tabelas h3{
     color: #ffffff;
 }
@@ -275,6 +305,20 @@
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
