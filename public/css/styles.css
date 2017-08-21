@@ -1107,3 +1107,17 @@ and (orientation: landscape) {
 .grafico001 {
     width: 100%;
 }
+
+
+.container-full.titulo-portal .row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.row.content-transparencia {
+    margin: 0;
+}
+
+.row.content-transparencia h3{
+    margin-bottom: 15px;
+}

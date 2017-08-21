@@ -40,7 +40,7 @@
             @endif
 
             <div class="fundo transparencia">
-                <div class="container titulo-portal text-center">
+                <div class="container-full titulo-portal text-center">
                     <div class="row">
                         <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3">
                             <h1>Portal da Transparência</h1>
