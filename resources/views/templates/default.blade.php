@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="/css/tabelas.css">
 
-        @if (request()->get('client') == 'app')
+        @if (isApp())
             <link rel="stylesheet" href="/css/client-app.css">
         @endif
 
@@ -33,7 +33,7 @@
 
     <body>
         <div id="app">
-            @if (request()->get('client') !== 'app')
+            @if (isApp())
                 @include('templates.superior')
 
                 @include('templates.menu')

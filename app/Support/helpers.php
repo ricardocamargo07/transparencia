@@ -18,3 +18,16 @@ function array_utf8_encode($dat)
 
     return $ret;
 }
+
+function isApp() {
+    $isApp =
+        request()->get('client') == 'app' ||
+        session('isApp')
+    ;
+
+    if ($isApp) {
+        session()->put('isApp', $isApp);
+    }
+
+    return $isApp;
+}
