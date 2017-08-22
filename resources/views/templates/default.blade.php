@@ -33,7 +33,7 @@
 
     <body>
         <div id="app">
-            @if (isApp())
+            @if (!isApp())
                 @include('templates.superior')
 
                 @include('templates.menu')
