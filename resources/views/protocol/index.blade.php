@@ -35,7 +35,9 @@
                                 @endforeach
                             @endif
 
-                            <div class="g-recaptcha" data-sitekey="6LfiAiEUAAAAADcMGXqc13vAJ53XkOwslJseW3Le" data-callback="enableBtn"></div>
+                            @if (app()->environment('production'))
+                                <div class="g-recaptcha" data-sitekey="6LfiAiEUAAAAADcMGXqc13vAJ53XkOwslJseW3Le" data-callback="enableBtn"></div>
+                            @endif
 
                             <div class="row form-botoes">
                                 <div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4">
@@ -59,11 +61,13 @@
 @stop
 
 @section('javascript')
-    <script>
-        jQuery("#submitButton").addClass('hidden');
+    @if (app()->environment('production'))
+        <script>
+            jQuery("#submitButton").addClass('hidden');
 
-        var enableBtn = function enableBtn() {
-            jQuery("#submitButton").removeClass('hidden');
-        };
-    </script>
+            var enableBtn = function enableBtn() {
+                jQuery("#submitButton").removeClass('hidden');
+            };
+        </script>
+    @endif
 @stop
