@@ -65,12 +65,22 @@
                                 <div class="col-md-10">
                                     @if ($protocol['answer'])
                                         {{ $protocol['answer'] }}
+
+                                        @if (isset($protocol['files']))
+                                            <br><br>
+                                            <h4>Arquivos relacionados</h4>
+
+                                            @foreach($protocol['files'] as $file)
+                                                <p>
+                                                    <a href="{{ $file['url'] }}" target="_blank">{{ $file['arquivo'] }}</a>
+                                                </p>
+                                            @endforeach
+                                        @endif
                                     @else
                                         Ainda não há resposta para este pedido.
                                     @endif
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

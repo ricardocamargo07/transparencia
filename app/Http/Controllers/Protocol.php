@@ -7,8 +7,6 @@ use Exception;
 use App\Support\Encodable;
 use Illuminate\Http\Request;
 use App\Protocol as ProtocolModel;
-use Symfony\Component\Debug\Exception\FatalErrorException;
-use Symfony\Component\Debug\Exception\FatalThrowableError;
 
 class Protocol extends Controller
 {

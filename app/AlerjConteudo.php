@@ -21,4 +21,9 @@ class AlerjConteudo extends Alerj
 
         static::addGlobalScope(new Published());
     }
+
+    public function arquivos()
+    {
+        return $this->hasMany(AlerjArquivo::class, 'idConteudo');
+    }
 }

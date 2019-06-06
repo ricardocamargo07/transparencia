@@ -9,4 +9,12 @@ class AlerjArquivo extends Alerj
     protected $primaryKey = 'idArquivo';
 
     protected $hidden = ['blob'];
+
+    public function getUrlAttribute()
+    {
+        return $this->makeUrl(
+            config('app.webservice.urls.file'),
+            $this->id
+        );
+    }
 }

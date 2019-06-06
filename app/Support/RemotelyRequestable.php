@@ -52,17 +52,4 @@ trait RemotelyRequestable
 
         return json_decode($json, true);
     }
-
-    private function makeUrl($url, $parameters)
-    {
-        $parameters = collect((array) $parameters)->map(function ($item) {
-            return $this->encode($item);
-        })->toArray();
-
-        if (count($parameters) == 0) {
-            $parameters = ['','','','',''];
-        }
-
-        return vsprintf($url, $parameters);
-    }
 }

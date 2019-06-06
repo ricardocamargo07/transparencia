@@ -2,17 +2,18 @@
 
 namespace App;
 
-use App\Support\DataRequest;
 use Cache;
 use HTMLPurifier;
 use App\Support\Datable;
 use HTMLPurifier_Config;
+use App\Support\Linkable;
 use App\Support\Cacheable;
+use App\Support\DataRequest;
 use App\Support\RemotelyRequestable;
 
 class Webservice
 {
-    use RemotelyRequestable, Datable, Cacheable;
+    use RemotelyRequestable, Datable, Cacheable, Linkable;
 
     private $purifier;
 
@@ -142,14 +143,6 @@ class Webservice
         }
 
         return route('report', [$id]);
-    }
-
-    private function makeFileUrl($id)
-    {
-        return $this->makeUrl(
-            config('app.webservice.urls.file'),
-            $id
-        );
     }
 
     private function purify($html)

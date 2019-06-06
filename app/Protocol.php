@@ -5,15 +5,25 @@ namespace App;
 use DB;
 use DateTime;
 use App\Support\Datable;
+use App\Support\Linkable;
 use App\Support\Cacheable;
 use App\Support\DataRequest;
 use App\Support\RemotelyRequestable;
 
 class Protocol
 {
-    use RemotelyRequestable, Datable, Cacheable;
+    use RemotelyRequestable, Datable, Cacheable, Linkable;
 
     protected $cacheEnabled = false;
+
+    private function addUrlToFiles($arquivos)
+    {
+        return collect($arquivos)->map(function($file) {
+            $file['url'] = $this->makeFileUrl($file['idArquivo']);
+
+            return $file;
+        })->toArray();
+    }
 
     private function createAllAlternatives($id)
     {
@@ -158,6 +168,7 @@ class Protocol
                 'person_id' => $data['identidade'],
                 'user_id' => $data['idUsuario'],
                 'featured' => $data['destaque'] == 'S',
+                'files' => $this->addUrlToFiles($data['arquivos']),
             ];
         }
 

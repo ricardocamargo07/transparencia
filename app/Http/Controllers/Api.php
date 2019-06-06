@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\AlerjArquivo;
-use App\AlerjCategoria;
 use App\AlerjConteudo;
-use App\AlerjInformacao;
 use App\AlerjProtocolo;
+use App\AlerjCategoria;
+use App\AlerjInformacao;
 use App\Support\Encodable;
 
 class Api extends Controller
@@ -25,7 +25,7 @@ class Api extends Controller
 
     private function findProtocolo($year, $number)
     {
-        return AlerjProtocolo::where('ano', $year)->where('numero', $number)->first();
+        return AlerjProtocolo::with('arquivos')->where('ano', $year)->where('numero', $number)->first();
     }
 
     public function informacao($id = null)
@@ -47,7 +47,16 @@ class Api extends Controller
 
     public function conteudo($id)
     {
-        return $this->find($id, AlerjConteudo::class, null, true, 'protocolo');
+        return $this->find($id, AlerjConteudo::class, ['arquivos'], true, 'protocolo');
+    }
+
+    public function conteudoArquivos($id)
+    {
+        if ($data = $this->find($id, AlerjConteudo::class, 'arquivos', false)->first()) {
+            return $this->response($data->arquivos);
+        }
+
+        return null;
     }
 
     public function protocolo($year, $number)

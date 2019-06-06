@@ -2,9 +2,9 @@
 
 namespace App;
 
-use App\Support\DataRequest;
 use Cache;
 use App\Support\Cacheable;
+use App\Support\DataRequest;
 use App\Support\RemotelyRequestable;
 
 abstract class BaseArrayModel
